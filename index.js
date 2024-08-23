@@ -44,7 +44,8 @@ for (const eventFile of eventsFolder) {
     }
 }
 
-// call custom stockCheck event
-setInterval(() => client.emit('stockCheck', client), 60000)
+// Call stockCheck every 10 minutes
+client.emit('stockCheck', client)
+setInterval(() => client.emit('stockCheck', client), 10 * 60 * 1000)
 
 client.login(process.env.TOKEN)
