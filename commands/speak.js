@@ -37,7 +37,7 @@ module.exports = {
         const channel = interaction.options.getChannel('channel') || interaction.channel
 
         if (signature) {
-            text += `\n${signature}`
+            text += `\n\n- ${signature}`
         }
 
         const message = await channel.send({ content: text.toString() })

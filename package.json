@@ -16,6 +16,7 @@
   },
   "scripts": {
     "start": "bun run index.js",
-    "restart": "tmux send-keys -t 0 C-c && tmux send-keys -t 0 'bun start' C-m"
+    "restart": "tmux send-keys -t 0 C-c && tmux send-keys -t 0 'bun start' C-m",
+    "publish": "bun run publish.js"
   }
 }
