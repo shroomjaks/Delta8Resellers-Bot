@@ -1,5 +1,7 @@
 const { BaseClient, BaseInteraction } =  require('discord.js')
 
+const pocketbase = require('pocketbase')
+
 module.exports = {
     event: 'stockCheck',
     once: false,
