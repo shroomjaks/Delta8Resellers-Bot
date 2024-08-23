@@ -1,7 +1,5 @@
 const { Events, WebhookClient, EmbedBuilder } = require('discord.js')
 
-const puppeteer = require('puppeteer-core')
-
 module.exports = {
     event: Events.ClientReady,
     once: true,
@@ -20,13 +18,5 @@ module.exports = {
             .setColor('#05ef9d')
 
         await client.logHook.send({ embeds: [embed] })
-
-        // -- puppeteer -- //
-
-        client.browser = await puppeteer.launch({
-            executablePath: '/usr/bin/chromium',
-            headless: true,
-            args: ['--no-sandbox'],
-        })
     }
 }
