@@ -1,0 +1,32 @@
+const { Events, WebhookClient, EmbedBuilder } = require('discord.js')
+
+const puppeteer = require('puppeteer-core')
+
+module.exports = {
+    event: Events.ClientReady,
+    once: true,
+    execute: async function (client) {
+        console.log(`Logged in as ${client.user.username}`)
+
+        client.readyTime = Date.now()
+        client.logHook = new WebhookClient({ url: 'https://discord.com/api/webhooks/1276620993720225833/C4g1-L9bYl8F5r7XLViIMUoqObna7trRWOHL_MhQwLoVdza5BTTwlB9K6PdNotP2Uaar' })
+
+        const discordTime = Math.floor(client.readyTime / 1000)
+
+        const embed = new EmbedBuilder()
+            .setTitle('Bot Online')
+            .setDescription(`Bot online @ <t:${discordTime}:T>`)
+            .setTimestamp(client.readyTime)
+            .setColor('#05ef9d')
+
+        await client.logHook.send({ embeds: [embed] })
+
+        // -- puppeteer -- //
+
+        client.browser = await puppeteer.launch({
+            executablePath: '/usr/bin/chromium',
+            headless: true,
+            args: ['--no-sandbox'],
+        })
+    }
+}

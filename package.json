@@ -1,0 +1,21 @@
+{
+  "name": "d8r",
+  "module": "index.js",
+  "type": "commonjs",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "discord.js": "^14.15.3",
+    "dotenv": "^16.4.5",
+    "lowdb": "^7.0.1",
+    "puppeteer-core": "^23.1.1"
+  },
+  "scripts": {
+    "start": "bun run index.js",
+    "restart": "tmux send-keys -t 0 C-c && tmux send-keys -t 0 'bun start' C-m"
+  }
+}
