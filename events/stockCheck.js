@@ -38,6 +38,8 @@ module.exports = {
 
             await page.goto(product.url, { waitUntil: 'domcontentloaded' })
 
+            const stock = await page.$('.stock')
+
             const stockText = await page.$eval('.stock', element => element.innerText)
             const productTitleText = await page.$eval('.product_title', element => element.innerText)
 
