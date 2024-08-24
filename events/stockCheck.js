@@ -58,16 +58,20 @@ module.exports = {
 
             if (stocked === true) {
                 const embed = new EmbedBuilder()
-                    .setTitle('Product Restocked')
-                    .setDescription(`Product at ${product.url} has been restocked.`)
+                    .setTitle(product.name)
+                    .setDescription(`This product has been restocked.`)
+                    .setThumbnail(product.imageUrl)
+                    .setURL(product.url)
                     .setTimestamp(Date.now())
                     .setColor('#05ef9d')
 
                 await client.updateChannel.send({ embeds: [embed] })
             }  else {
                 const embed = new EmbedBuilder()
-                    .setTitle('Product Out of Stock')
-                    .setDescription(`Product at ${product.url} is out of stock.`)
+                    .setTitle(product.name)
+                    .setDescription(`This product is now out of stock.`)
+                    .setThumbnail(product.imageUrl)
+                    .setURL(product.url)
                     .setTimestamp(Date.now())
                     .setColor('#FF0000')
 
