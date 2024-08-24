@@ -38,24 +38,16 @@ module.exports = {
 
             await page.goto(product.url, { waitUntil: 'domcontentloaded' })
 
-            let stock
+            const stock = await page.$('.stock').catch(() => null)
 
-            try {
-                stock = await page.$('.stock')
-            } catch (e) {
-                stock = false
-            }
-
-            const stockText = await page.$eval('.stock', element => element.innerText)
+            const stockText = await page.$eval('.stock', element => element.innerText).catch(() => null)
             const productTitleText = await page.$eval('.product_title', element => element.innerText)
 
             let stocked = product.stocked
 
             if (!stock) {
-                console.log(`${product.name} is stocked`)
                 stocked = true
             } else if (stock && stockText !== 'This product is currently out of stock and unavailable.') {
-                console.log(`${product.name} is stocked`)
                 stocked = true
             }
 

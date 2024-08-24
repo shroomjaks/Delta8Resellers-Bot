@@ -36,16 +36,10 @@ module.exports = {
 
         await page.goto(productUrl, { waitUntil: 'domcontentloaded' })
 
-        let stock
-
-        try {
-            stock = await page.$('.stock')
-        } catch (e) {
-            stock = false
-        }
+        const stock = await page.$('.stock').catch(() => null)
 
         const productTitleText = await page.$eval('.product_title', element => element.innerText)
-        const stockText = await page.$eval('.stock', element => element.innerText)
+        const stockText = await page.$eval('.stock', element => element.innerText).catch(() => null)
         const imageUrl = await page.$eval('div.iconic-woothumbs-images__slide:nth-child(2) > img:nth-child(1)', element => element.src)
 
         let stocked = false
