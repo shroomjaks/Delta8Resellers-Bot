@@ -52,11 +52,11 @@ module.exports = {
                 stocked = true
             }
 
-            console.log(`Product: ${productTitleText} Stocked: ${stocked}`)
-
             await page.close()
 
             if (product.stocked === stocked) continue
+
+            console.log(`Product: ${productTitleText} Stocked: ${stocked}`)
 
             if (stocked === true) {
                 const embed = new EmbedBuilder()
@@ -79,6 +79,10 @@ module.exports = {
 
                 await client.updateChannel.send({ embeds: [embed] })
             }
+
+            products[products.indexOf(product)].stocked = stocked
         }
+
+        db.set('products', products)
     }
 }
