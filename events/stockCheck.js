@@ -54,9 +54,9 @@ module.exports = {
 
             await page.close()
 
-            if (product.stocked === stocked) continue
-
             console.log(`Product: ${productTitleText} Stocked: ${stocked}`)
+
+            if (product.stocked === stocked) continue
 
             if (stocked === true) {
                 const embed = new EmbedBuilder()
