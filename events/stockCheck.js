@@ -36,10 +36,7 @@ module.exports = {
         for (const product of products) {
             const page = await client.browser.newPage()
 
-            await page.goto(product.url)
-
-            const productTitle = await page.waitForSelector('.product_title', { timeout: 15000 }).catch(e => { })
-            const stock = await page.waitForSelector('.stock', { timeout: 5000 }).catch(e => { })
+            await page.goto(product.url, { waitUntil: 'domcontentloaded' })
 
             const stockText = await page.$eval('.stock', element => element.innerText)
             const productTitleText = await page.$eval('.product_title', element => element.innerText)
