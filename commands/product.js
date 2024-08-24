@@ -37,7 +37,7 @@ module.exports = {
         await page.goto(productUrl)
 
         const productTitle = await page.waitForSelector('.product_title', { timeout: 15000 }).catch(e => { })
-        const stock = await page.waitForSelector('.stock', { timeout: 15000 }).catch(e => { })
+        let stock = await page.waitForSelector('.stock', { timeout: 15000 }).catch(e => { stock = null })
         const image = await page.waitForSelector('div.iconic-woothumbs-images__slide:nth-child(2) > img:nth-child(1)', { timeout: 15000 }).catch(e => { })
 
         const productTitleText = await page.$eval('.product_title', element => element.innerText)
