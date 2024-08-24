@@ -11,6 +11,8 @@ const commands = []
 for (const commandFile of commandsFolder) {
     const command = require(path.join(__dirname, 'commands', commandFile))
 
+    console.log(command.name)
+
     commands.push({
         name: command.name,
         description: command.description,
@@ -22,6 +24,8 @@ const rest = new REST({ version: '10' }).setToken(process.env.TOKEN)
 
 try {
     console.log('Started refreshing application (/) commands.')
+
+    console.log(commands)
 
     await rest.put(Routes.applicationGuildCommands(process.env.CLIENT_ID, process.env.GUILD_ID), { body: commands })
 

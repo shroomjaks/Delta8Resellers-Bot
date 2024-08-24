@@ -1,7 +1,7 @@
 const { BaseInteraction, BaseClient, PermissionsBitField, ApplicationCommandOptionType, CommandInteraction, ChatInputCommandInteraction } = require('discord.js')
 
 module.exports = {
-    name: 'kick',
+    name: 'kicks',
     description: 'Kicks a member.',
     options: [
         {

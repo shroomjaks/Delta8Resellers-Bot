@@ -1,7 +1,7 @@
 const { BaseClient, PermissionsBitField, ApplicationCommandOptionType, ChatInputCommandInteraction } = require('discord.js')
 
 module.exports = {
-    name: 'ban',
+    name: 'bans',
     description: 'Bans a member.',
     options: [
         {

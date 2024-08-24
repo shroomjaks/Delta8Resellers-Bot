@@ -3,8 +3,8 @@ const { BaseInteraction, BaseClient, PermissionsBitField, ApplicationCommandOpti
 const parseDuration = require('parse-duration')
 
 module.exports = {
-    name: 'timeout',
-    description: 'Times out a member.',
+    name: 'mute',
+    description: 'Time outs a member.',
     options: [
         {
             name: 'member',
@@ -14,7 +14,7 @@ module.exports = {
         },
         {
             name: 'duration',
-            description: 'How long to timeout the member. (1d, 3 days, 10 minutes, 5m)',
+            description: '(1d, 3 days, 10 minutes, 5m)',
             type: ApplicationCommandOptionType.String,
             required: true
         },
@@ -41,7 +41,7 @@ module.exports = {
         const durationMs = parseDuration(duration)
 
         if (!member.manageable) return await interaction.reply({ content: 'I can\'t timeout this user!', ephemeral: true })
-            
+
         await member.timeout({ timeout: durationMs, reason: reason })
 
         await interaction.reply({ content: `Successfully timed out **${member.user.username}**.` })
