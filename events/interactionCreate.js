@@ -31,7 +31,11 @@ module.exports = {
 
             await client.logHook.send({ embeds: [embed] })
 
-            await interaction.reply({ content: 'There was an error while executing this command.', ephemeral: true })
+            if (interaction.deferred) {
+                await interaction.editReply({ content: 'An error occurred while executing this command.', ephemeral: true })
+            } else {
+                await interaction.reply({ content: 'An error occurred while executing this command.', ephemeral: true })
+            }
         }
     }
 }

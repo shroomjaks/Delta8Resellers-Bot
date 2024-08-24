@@ -1,20 +1,21 @@
 const { BaseClient } = require('discord.js')
 
-const { JSONFilePreset } = require('lowdb')
+const JSONdb = require('simple-json-db')
+const db = new JSONdb('database.json')
 
 const puppeteer = require('puppeteer-core')
 
 module.exports = {
     event: 'stockCheck',
     once: false,
-    disabled: true,
+    disabled: false,
     /**
      * 
      * @param {BaseClient} client 
      */
     execute: async function (client) {
         if (!client.db) {
-            client.db = await JSONFilePreset('../database.json', { posts: [] })
+            client.db = db
         }
 
         if (!client.browser) {
@@ -25,7 +26,12 @@ module.exports = {
             })
         }
 
-        const { products } = client.db.data
+        let products = db.get('products')
+
+        if (!products) {
+            products = []
+            db.set('products', products)
+        }
 
         for (const product of products) {
             const page = await client.browser.newPage()
@@ -34,10 +40,38 @@ module.exports = {
 
             const stock = await page.waitForSelector('.stock', { timeout: 5000 }).catch(e => { })
 
+            const stockText = await page.$eval('.stock', element => element.innerText)
+
+            let stocked = product.stocked
+
             if (!stock) {
-                console.log('Product not out of stock')
-            } else if (stock && innerText !== 'This product is currently out of stock and unavailable.') {
-                console.log('Product is not out of stock')
+                console.log(`${product.name} is stocked`)
+                stocked = true
+            } else if (stock && stockText !== 'This product is currently out of stock and unavailable.') {
+                console.log(`${product.name} is stocked`)
+                stocked = true
+            }
+
+            await page.close()
+
+            if (product.stocked === stocked) continue
+
+            if (stocked === true) {
+                const embed = new EmbedBuilder()
+                    .setTitle('Product Restocked')
+                    .setDescription(`Product at ${product.url} has been restocked.`)
+                    .setTimestamp(Date.now())
+                    .setColor('#05ef9d')
+
+                await client.updateChannel.send({ embeds: [embed] })
+            }  else {
+                const embed = new EmbedBuilder()
+                    .setTitle('Product Out of Stock')
+                    .setDescription(`Product at ${product.url} is out of stock.`)
+                    .setTimestamp(Date.now())
+                    .setColor('#FF0000')
+
+                await client.updateChannel.send({ embeds: [embed] })
             }
         }
     }
