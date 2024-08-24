@@ -1,7 +1,7 @@
 const { BaseClient, PermissionsBitField, ApplicationCommandOptionType, ChatInputCommandInteraction } = require('discord.js')
 
 module.exports = {
-    name: 'bans',
+    name: 'ban',
     description: 'Bans a member.',
     options: [
         {
@@ -17,7 +17,7 @@ module.exports = {
             required: false
         },
         {
-            name: 'deleteMessages',
+            name: 'deletemssages',
             description: 'Whether or not to delete messages from this user less than 1 week old.',
             type: ApplicationCommandOptionType.Boolean,
             required: false

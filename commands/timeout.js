@@ -3,7 +3,7 @@ const { BaseInteraction, BaseClient, PermissionsBitField, ApplicationCommandOpti
 const parseDuration = require('parse-duration')
 
 module.exports = {
-    name: 'mute',
+    name: 'timeout',
     description: 'Time outs a member.',
     options: [
         {
