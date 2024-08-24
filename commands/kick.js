@@ -30,7 +30,8 @@ module.exports = {
         const reason = interaction.options.getString('reason')
 
         if (!member.kickable) return await interaction.reply({ content: 'I can\'t kick this user!', ephemeral: true })
-            
+        if (interaction.member === member) return await interaction.reply({ content: 'You can\'t kick yourself!', ephemeral: true })
+
         await member.kick({ reason: reason })
 
         await interaction.reply({ content: `Successfully kicked **${member.user.username}**.` })

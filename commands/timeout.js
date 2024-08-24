@@ -4,7 +4,7 @@ const parseDuration = require('parse-duration')
 
 module.exports = {
     name: 'timeout',
-    description: 'Time outs a member.',
+    description: 'Timeouts a member.',
     options: [
         {
             name: 'member',
@@ -41,6 +41,7 @@ module.exports = {
         const durationMs = parseDuration(duration)
 
         if (!member.manageable) return await interaction.reply({ content: 'I can\'t timeout this user!', ephemeral: true })
+            if (interaction.member === member) return await interaction.reply({ content: 'You can\'t timeout yourself!', ephemeral: true })
 
         await member.timeout({ timeout: durationMs, reason: reason })
 
