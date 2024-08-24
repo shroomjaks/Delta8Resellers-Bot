@@ -25,7 +25,7 @@ for (const commandFile of commandsFolder) {
 for (const eventFile of eventsFolder) {
     const event = require(path.join(__dirname, 'events', eventFile))
 
-    if (event?.disabled) return
+    if (event?.disabled === true) return
 
     try {
         if (event.once) {

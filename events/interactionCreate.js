@@ -3,6 +3,7 @@ const { Events, BaseInteraction, BaseClient, EmbedBuilder } = require('discord.j
 module.exports = {
     event: Events.InteractionCreate,
     once: false,
+    disabled: false,
     /**
      * 
      * @param {BaseInteraction} interaction 

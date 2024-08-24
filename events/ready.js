@@ -3,6 +3,7 @@ const { Events, WebhookClient, EmbedBuilder } = require('discord.js')
 module.exports = {
     event: Events.ClientReady,
     once: true,
+    disabled: false,
     execute: async function (client) {
         console.log(`Logged in as ${client.user.username}`)
 
