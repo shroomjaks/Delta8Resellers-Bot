@@ -52,6 +52,8 @@ module.exports = {
                 stocked = true
             }
 
+            console.log(`Product: ${productTitleText} Stocked: ${stocked}`)
+
             await page.close()
 
             if (product.stocked === stocked) continue
