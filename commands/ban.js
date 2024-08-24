@@ -41,6 +41,7 @@ module.exports = {
         if (deleteMessages) deleteMessageSeconds = 604800
 
         if (!member.bannable) return await interaction.reply({ content: 'I can\'t kick this user!', ephemeral: true })
+        if (interaction.member === member) return await interaction.reply({ content: 'You can\'t ban yourself!', ephemeral: true })
             
         await member.ban({ reason: reason, deleteMessageSeconds: deleteMessageSeconds })
 
