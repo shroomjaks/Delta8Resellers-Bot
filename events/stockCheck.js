@@ -38,9 +38,13 @@ module.exports = {
 
             await page.goto(product.url, { waitUntil: 'domcontentloaded' })
 
-            let stock = await page.$('.stock').catch(e => {
+            let stock
+
+            try {
+                stock = await page.$('.stock')
+            } catch (e) {
                 stock = false
-            })
+            }
 
             const stockText = await page.$eval('.stock', element => element.innerText)
             const productTitleText = await page.$eval('.product_title', element => element.innerText)
@@ -79,7 +83,7 @@ module.exports = {
 
                     await user.send({ embeds: [embed] })
                 }
-            }  else {
+            } else {
                 const embed = new EmbedBuilder()
                     .setTitle(product.name)
                     .setDescription(`This product is now out of stock.`)

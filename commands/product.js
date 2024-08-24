@@ -36,9 +36,13 @@ module.exports = {
 
         await page.goto(productUrl, { waitUntil: 'domcontentloaded' })
 
-        let stock = await page.$('.stock').catch(e => {
+        let stock
+
+        try {
+            stock = await page.$('.stock')
+        } catch (e) {
             stock = false
-        })
+        }
 
         const productTitleText = await page.$eval('.product_title', element => element.innerText)
         const stockText = await page.$eval('.stock', element => element.innerText)
@@ -56,16 +60,16 @@ module.exports = {
 
         await page.close()
 
-        client.db.set('products', 
+        client.db.set('products',
             [
-                ...client.db.get('products'), 
-                { 
+                ...client.db.get('products'),
+                {
                     uuid: uuid(productTitleText),
                     name: productTitleText,
-                    url: productUrl, 
-                    stocked, 
-                    imageUrl, 
-                    restockReminders: [interaction.user.id] 
+                    url: productUrl,
+                    stocked,
+                    imageUrl,
+                    restockReminders: [interaction.user.id]
                 }
             ]
         )
