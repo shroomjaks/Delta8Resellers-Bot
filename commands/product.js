@@ -1,5 +1,7 @@
 const { EmbedBuilder, ApplicationCommandOptionType, ChatInputCommandInteraction, BaseClient } = require('discord.js')
 
+const uuid = require('uuid-by-string')
+
 module.exports = {
     name: 'product',
     description: 'Adds a product to be watched in the update log channel.',
@@ -26,11 +28,11 @@ module.exports = {
         if (!urlRegex.test(productUrl)) return await interaction.reply({ content: 'Invalid URL.', ephemeral: true })
         if (!productUrl.startsWith('https://delta8resellers.com/product/')) return await interaction.reply({ content: 'Not a product URL.', ephemeral: true })
 
+        if (client.db.get('products').find(product => product.url === productUrl)) return await interaction.reply({ content: 'Product is already being watched.', ephemeral: true })
+
         await interaction.deferReply({ ephemeral: true })
 
         const page = await client.browser.newPage()
-
-        console.log(productUrl)
 
         await page.goto(productUrl)
 
@@ -58,11 +60,12 @@ module.exports = {
             [
                 ...client.db.get('products'), 
                 { 
-                    name: productTitleText, 
+                    uuid: uuid(productTitleText),
+                    name: productTitleText,
                     url: productUrl, 
                     stocked, 
                     imageUrl, 
-                    restockReminder: [interaction.user.id] 
+                    restockReminders: [interaction.user.id] 
                 }
             ]
         )

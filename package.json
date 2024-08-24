@@ -13,7 +13,8 @@
     "dotenv": "^16.4.5",
     "parse-duration": "^1.1.0",
     "puppeteer-core": "^23.1.1",
-    "simple-json-db": "^2.0.0"
+    "simple-json-db": "^2.0.0",
+    "uuid-by-string": "^4.0.0"
   },
   "scripts": {
     "start": "bun run index.js",

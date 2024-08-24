@@ -1,4 +1,4 @@
-const { BaseClient } = require('discord.js')
+const { BaseClient, EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require('discord.js')
 
 const JSONdb = require('simple-json-db')
 const db = new JSONdb('database.json')
@@ -68,6 +68,14 @@ module.exports = {
                     .setColor('#05ef9d')
 
                 await client.updateChannel.send({ embeds: [embed] })
+
+                const restockReminders = product.restockReminders
+
+                for (const userId of restockReminders) {
+                    const user = await client.users.fetch(userId)
+
+                    await user.send({ embeds: [embed] })
+                }
             }  else {
                 const embed = new EmbedBuilder()
                     .setTitle(product.name)
@@ -76,8 +84,17 @@ module.exports = {
                     .setURL(product.url)
                     .setTimestamp(Date.now())
                     .setColor('#FF0000')
+                    .setFooter({ text: 'Press the button below to be reminded when this product is restocked.' })
 
-                await client.updateChannel.send({ embeds: [embed] })
+                const reminderButton = new ButtonBuilder()
+                    .setCustomID(product.uuid)
+                    .setLabel('Remind Me')
+                    .setStyle(ButtonStyle.PRIMARY)
+
+                const actionRow = new ActionRowBuilder()
+                    .addComponent(reminderButton)
+
+                await client.updateChannel.send({ embeds: [embed], components: [actionRow] })
             }
 
             products[products.indexOf(product)].stocked = stocked
