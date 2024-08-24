@@ -54,8 +54,19 @@ module.exports = {
 
         await page.close()
 
-        client.db.set('products', [...client.db.get('products'), { name: productTitleText, url: productUrl, stocked, imageUrl }])
+        client.db.set('products', 
+            [
+                ...client.db.get('products'), 
+                { 
+                    name: productTitleText, 
+                    url: productUrl, 
+                    stocked, 
+                    imageUrl, 
+                    restockReminder: [interaction.user.id] 
+                }
+            ]
+        )
 
-        await interaction.editReply({ content: `Product added for restock watching, right now this product is ${stocked ? 'in stock!' : 'out of stock.'}`, ephemeral: true })
+        await interaction.editReply({ content: `Product added for restock watching, right now this product is ${stocked ? 'in stock!' : 'out of stock.'} You will get a ping when the product is back in stock.`, ephemeral: true })
     }
 }
