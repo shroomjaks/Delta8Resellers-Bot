@@ -7,6 +7,7 @@ const puppeteer = require('puppeteer-core')
 module.exports = {
     event: 'stockCheck',
     once: false,
+    disabled: true,
     /**
      * 
      * @param {BaseClient} client 
