@@ -36,9 +36,9 @@ module.exports = {
 
         await page.goto(productUrl)
 
-        const productTitle = await page.waitForSelector('.product_title', { timeout: 60000 }).catch(e => { })
-        const stock = await page.waitForSelector('.stock', { timeout: 60000 }).catch(e => { })
-        const image = await page.waitForSelector('div.iconic-woothumbs-images__slide:nth-child(2) > img:nth-child(1)')
+        const productTitle = await page.waitForSelector('.product_title', { timeout: 15000 }).catch(error => { console.error(error) })
+        const stock = await page.waitForSelector('.stock', { timeout: 15000 }).catch(error => { console.error(error) })
+        const image = await page.waitForSelector('div.iconic-woothumbs-images__slide:nth-child(2) > img:nth-child(1)', { timeout: 15000 }).catch(error => { console.error(error) })
 
         const productTitleText = await page.$eval('.product_title', element => element.innerText)
         const stockText = await page.$eval('.stock', element => element.innerText)
@@ -70,6 +70,6 @@ module.exports = {
             ]
         )
 
-        await interaction.editReply({ content: `Product added for restock watching, right now this product is ${stocked ? 'in stock!' : 'out of stock.'} You will get a ping when the product is back in stock.`, ephemeral: true })
+        await interaction.editReply({ content: `Product added for restock watching, right now this product is ${stocked ? 'in stock!' : 'out of stock.'} You will get a message when the product is back in stock.`, ephemeral: true })
     }
 }
