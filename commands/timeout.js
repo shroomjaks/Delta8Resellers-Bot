@@ -1,6 +1,7 @@
 const { BaseInteraction, BaseClient, PermissionsBitField, ApplicationCommandOptionType, CommandInteraction, ChatInputCommandInteraction } = require('discord.js')
 
 const parseDuration = require('parse-duration')
+const humanizeDuration = require('humanize-duration')
 
 module.exports = {
     name: 'timeout',
@@ -39,12 +40,15 @@ module.exports = {
         const reason = interaction.options.getString('reason')
 
         const durationMs = parseDuration(duration)
+        const durationHuman = humanizeDuration(durationMs)
+
+        console.log(durationMs)
 
         if (!member.manageable) return await interaction.reply({ content: 'I can\'t timeout this user!', ephemeral: true })
-            if (interaction.member === member) return await interaction.reply({ content: 'You can\'t timeout yourself!', ephemeral: true })
+        if (interaction.member === member) return await interaction.reply({ content: 'You can\'t timeout yourself!', ephemeral: true })
 
-        await member.timeout({ timeout: durationMs, reason: reason })
+        await member.timeout(durationMs, reason)
 
-        await interaction.reply({ content: `Successfully timed out **${member.user.username}**.` })
+        await interaction.reply({ content: `Successfully timed out **${member.user.username}** for **${durationHuman}**.` })
     }
 }
