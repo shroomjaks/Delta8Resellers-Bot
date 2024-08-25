@@ -69,9 +69,7 @@ module.exports = {
                 const message = await client.updateChannel.send({ embeds: [embed] })
                 await message.crosspost()
 
-                const restockReminders = product.restockReminders
-
-                for (const userId of restockReminders) {
+                for (const userId of product.restockReminders) {
                     const user = await client.users.fetch(userId)
 
                     await user.send({ embeds: [embed] })
