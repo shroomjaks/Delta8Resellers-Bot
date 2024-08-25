@@ -11,6 +11,8 @@ module.exports = {
      * @param {Client} client 
      */
     execute: async function (reaction, user, client) {
+        console.log(reaction)
+
         if (reaction.message.id !== '1277129869565759510') return
         if (user.bot) return await reaction.remove()
 
