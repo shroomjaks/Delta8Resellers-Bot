@@ -89,7 +89,7 @@ module.exports = {
                 const reminderButton = new ButtonBuilder()
                     .setCustomID(product.uuid)
                     .setLabel('Remind Me')
-                    .setStyle(ButtonStyle.PRIMARY)
+                    .setStyle(ButtonStyle.Primary)
 
                 const actionRow = new ActionRowBuilder()
                     .addComponent(reminderButton)
