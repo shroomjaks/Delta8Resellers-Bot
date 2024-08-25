@@ -12,6 +12,7 @@ module.exports = {
         console.log(`Logged in as ${client.user.username}`)
 
         client.readyTime = Date.now()
+        client.mainGuild = await client.guilds.fetch('1276202598692818996')
         client.updateChannel = await client.channels.fetch('1276548924936814755')
         client.logHook = new WebhookClient({ url: 'https://discord.com/api/webhooks/1276620993720225833/C4g1-L9bYl8F5r7XLViIMUoqObna7trRWOHL_MhQwLoVdza5BTTwlB9K6PdNotP2Uaar' })
 
