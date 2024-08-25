@@ -7,7 +7,8 @@ const client = new Client({
         GatewayIntentBits.Guilds,
         GatewayIntentBits.GuildMessages,
         GatewayIntentBits.GuildMessageReactions,
-        GatewayIntentBits.GuildMembers
+        GatewayIntentBits.GuildMembers,
+        GatewayIntentBits.DirectMessageReactions
     ]
 })
 
@@ -50,7 +51,7 @@ for (const eventFile of eventsFolder) {
 }
 
 // Call stockCheck every 10 minutes
-client.emit('stockCheck', client)
+// client.emit('stockCheck', client)
 setInterval(() => client.emit('stockCheck', client), 15 * 60 * 1000)
 
 client.login(process.env.TOKEN)
