@@ -51,7 +51,7 @@ module.exports = {
             stocked = true
         }
 
-        console.log(`Product: ${productTitleText} Stocked: ${stocked}`)
+        console.log(`\nAdding product: ${productTitleText} Stocked: ${stocked}\n`)
 
         await page.close()
 
