@@ -29,6 +29,16 @@
             "restockReminders": [
                 "540302379027791902"
             ]
+        },
+        {
+            "uuid": "2faf34bc-b3af-5310-bca8-d0b21091103c",
+            "name": "Hidden Hills Live Resin Gummy Belts | 3000mg",
+            "url": "https://delta8resellers.com/product/hidden-hills-gummies-3000mg/",
+            "stocked": false,
+            "imageUrl": "https://delta8resellers.com/wp-content/uploads/2022/12/hidden-hills-gummies-3000mg-rainbow-belts.jpg",
+            "restockReminders": [
+                "540302379027791902"
+            ]
         }
     ]
 }

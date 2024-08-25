@@ -1,4 +1,4 @@
-const { BaseClient, EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require('discord.js')
+const { BaseClient, EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, Message } = require('discord.js')
 
 const JSONdb = require('simple-json-db')
 const db = new JSONdb('database.json')
@@ -66,7 +66,8 @@ module.exports = {
                     .setTimestamp(Date.now())
                     .setColor('#05ef9d')
 
-                await client.updateChannel.send({ embeds: [embed] })
+                const message = await client.updateChannel.send({ embeds: [embed] })
+                await message.crosspost()
 
                 const restockReminders = product.restockReminders
 
