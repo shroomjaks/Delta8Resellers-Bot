@@ -18,7 +18,5 @@ module.exports = {
         const memberRole = await client.mainGuild.roles.fetch('1276298509255184394')
     
         await member.roles.add(memberRole)
-
-        await reaction.remove()
     }
 }
