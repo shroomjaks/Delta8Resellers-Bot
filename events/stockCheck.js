@@ -94,7 +94,8 @@ module.exports = {
                 const actionRow = new ActionRowBuilder()
                     .addComponent(reminderButton)
 
-                await client.updateChannel.send({ embeds: [embed], components: [actionRow] })
+                const message = await client.updateChannel.send({ embeds: [embed], components: [actionRow] })
+                await message.crosspost()
             }
 
             products[products.indexOf(product)].stocked = stocked
