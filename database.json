@@ -39,6 +39,66 @@
             "restockReminders": [
                 "540302379027791902"
             ]
+        },
+        {
+            "uuid": "05d46922-99f8-5b8b-a673-04479ae1f821",
+            "name": "Cake Delta 8 510 Cartridge | 1g",
+            "url": "https://delta8resellers.com/product/cake-delta-8-cartridge-940mg/",
+            "stocked": false,
+            "imageUrl": "https://delta8resellers.com/wp-content/uploads/2021/04/cake-d8-510-cartridge-blueberry-cookies.jpg",
+            "restockReminders": [
+                "540302379027791902"
+            ]
+        },
+        {
+            "uuid": "a5f76510-267f-52e1-b8f2-d354cfad36cb",
+            "name": "Canna River HHC Cartridge | 1000mg",
+            "url": "https://delta8resellers.com/product/canna-river-hhc-cartridge-1000mg/",
+            "stocked": true,
+            "imageUrl": "https://delta8resellers.com/wp-content/uploads/2023/06/Canna-River-HHC-Cartridge-1000mg-Cherry-AK-600x600.webp",
+            "restockReminders": [
+                "540302379027791902"
+            ]
+        },
+        {
+            "uuid": "bee3f1eb-906e-557a-a0f0-2d5b712b38b7",
+            "name": "Canna River HHC Disposable | 2g",
+            "url": "https://delta8resellers.com/product/canna-river-hhc-disposable-2g/",
+            "stocked": true,
+            "imageUrl": "https://delta8resellers.com/wp-content/uploads/2023/07/Canna-River-2G-HHC-Purple-Kush.jpg",
+            "restockReminders": [
+                "540302379027791902"
+            ]
+        },
+        {
+            "uuid": "7e2932ea-5917-5854-b133-bff08ce1dff7",
+            "name": "Wild Orchard THCA Diamonds Live Resin Cartridge | 1.5g",
+            "url": "https://delta8resellers.com/product/wild-orchard-thca-diamonds-live-resin-cartridge-1-5g/",
+            "stocked": true,
+            "imageUrl": "https://delta8resellers.com/wp-content/uploads/2024/07/wild-orcahrd-thca-diamonds-1.5g-cartridge-Cantaloupe-Crush.jpg",
+            "restockReminders": [
+                "540302379027791902"
+            ]
+        },
+        {
+            "uuid": "4f1cb947-1b1c-5008-a98f-66d8d50d5af1",
+            "name": "Wild Orchard THCA Diamonds Live Resin Disposable | 500mg",
+            "url": "https://delta8resellers.com/product/wild-orchard-thca-diamonds-live-resin-disposable-500g/",
+            "stocked": true,
+            "imageUrl": "https://delta8resellers.com/wp-content/uploads/2023/09/wild-orchard-THCa-Diamond-.5G-WatermelonSplash.jpg",
+            "restockReminders": [
+                "540302379027791902"
+            ]
+        },
+        {
+            "uuid": "dc1d4a48-db80-509d-bb16-240f896a0526",
+            "name": "Wild Orchard THCA Diamonds Live Resin Disposable | 2g",
+            "url": "https://delta8resellers.com/product/wild-orchard-thca-diamonds-live-resin-disposable-2g/",
+            "stocked": true,
+            "imageUrl": "https://delta8resellers.com/wp-content/uploads/2023/09/wild-orchard-THCa-Diamond-2G-TigerBlood.jpg",
+            "restockReminders": [
+                "540302379027791902"
+            ]
         }
     ]
 }
