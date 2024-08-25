@@ -22,6 +22,7 @@ module.exports = {
     execute: async function (interaction, client) {
         let productUrl = interaction.options.getString('url')
         productUrl = productUrl.split('?')[0]
+        if (productUrl.endsWith('/')) productUrl = productUrl.slice(0, -1)
 
         const urlRegex = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/
 
