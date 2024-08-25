@@ -69,6 +69,6 @@ module.exports = {
             ]
         )
 
-        await interaction.editReply({ content: `Product added for restock watching, right now this product is ${stocked ? 'in stock!' : 'out of stock.'} You will get a message when the product is back in stock.`, ephemeral: true })
+        await interaction.editReply({ content: `Product added for restock watching, right now this product is ${stocked ? 'in stock!' : 'out of stock. You will get a message when the product is back in stock.'}`, ephemeral: true })
     }
 }
