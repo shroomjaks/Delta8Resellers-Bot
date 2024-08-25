@@ -33,6 +33,8 @@ module.exports = {
             db.set('products', products)
         }
 
+        console.log('Checking stock...')
+
         for (const product of products) {
             const page = await client.browser.newPage()
 
@@ -53,7 +55,7 @@ module.exports = {
 
             await page.close()
 
-            console.log(`Product: ${productTitleText} Stocked: ${stocked}`)
+            console.info(`Product: ${productTitleText} Stocked: ${stocked}`)
 
             if (product.stocked === stocked) continue
 
@@ -100,5 +102,7 @@ module.exports = {
         }
 
         db.set('products', products)
+
+        console.log('Stock check complete.\n')
     }
 }
