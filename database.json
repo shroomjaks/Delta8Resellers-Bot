@@ -99,6 +99,16 @@
             "restockReminders": [
                 "540302379027791902"
             ]
+        },
+        {
+            "uuid": "5857a184-776e-5897-aa6b-e7ad6de9cd88",
+            "name": "Canna River Delta 8 Disposable | 2g",
+            "url": "https://delta8resellers.com/product/canna-river-delta-8-disposable-2g",
+            "stocked": true,
+            "imageUrl": "https://delta8resellers.com/wp-content/uploads/2023/07/Canna-River-2G-D8-Cherry-AK.jpg",
+            "restockReminders": [
+                "540302379027791902"
+            ]
         }
     ]
 }
