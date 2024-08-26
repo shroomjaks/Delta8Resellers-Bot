@@ -57,7 +57,7 @@ module.exports = {
 
             await page.close()
 
-            console.info(`Product: ${productTitleText} Stocked: ${stocked}`)
+            console.info(`Product: ${productTitleText} Stocked: ${product.stocked}`)
 
             if (oldStocked === product.stocked) continue
 

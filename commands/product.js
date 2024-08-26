@@ -43,12 +43,14 @@ module.exports = {
         const stockText = await page.$eval('.stock', element => element.innerText).catch(() => null)
         const imageUrl = await page.$eval('div.iconic-woothumbs-images__slide:nth-child(2) > img:nth-child(1)', element => element.src)
 
-        let stocked = false
+        let stocked
 
         if (!stock) {
             stocked = true
         } else if (stock && stockText !== 'This product is currently out of stock and unavailable.') {
             stocked = true
+        } else {
+            stocked = false
         }
 
         console.log(`\nAdding product: ${productTitleText} Stocked: ${stocked}\n`)
