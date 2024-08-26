@@ -45,21 +45,23 @@ module.exports = {
             const stockText = await page.$eval('.stock', element => element.innerText).catch(() => null)
             const productTitleText = await page.$eval('.product_title', element => element.innerText)
 
-            let stocked = product.stocked
+            const oldStocked = product.stocked
 
             if (!stock) {
-                stocked = true
+                product.stocked = true
             } else if (stock && stockText !== 'This product is currently out of stock and unavailable.') {
-                stocked = true
+                product.stocked = true
+            } else {
+                product.stocked = false
             }
 
             await page.close()
 
             console.info(`Product: ${productTitleText} Stocked: ${stocked}`)
 
-            if (product.stocked === stocked) continue
+            if (oldStocked === product.stocked) continue
 
-            if (stocked === true) {
+            if (product.stocked === true) {
                 const embed = new EmbedBuilder()
                     .setTitle(product.name)
                     .setDescription(`This product has been restocked.`)
@@ -74,7 +76,11 @@ module.exports = {
                 for (const userId of product.restockReminders) {
                     const user = await client.users.fetch(userId)
 
-                    await user.send({ embeds: [embed] })
+                    try {
+                        await user.send({ embeds: [embed] })
+                    } catch (error) {
+                        console.error(error)
+                    }
                 }
             } else {
                 const embed = new EmbedBuilder()
@@ -98,7 +104,7 @@ module.exports = {
                 await message.crosspost()
             }
 
-            products[products.indexOf(product)].stocked = stocked
+            products[products.indexOf(product)].stocked = product.stocked
         }
 
         db.set('products', products)

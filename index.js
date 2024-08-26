@@ -50,7 +50,7 @@ for (const eventFile of eventsFolder) {
     }
 }
 
-// Call stockCheck every 10 minutes
+// Call stockCheck every 15 minutes
 // client.emit('stockCheck', client)
 setInterval(() => client.emit('stockCheck', client), 15 * 60 * 1000)
 

@@ -41,16 +41,17 @@ module.exports = {
         } else if (interaction.isButton()) {
             const uuid = interaction.customId
 
-            let product = client.db.get('products').find(product => product.uuid === uuid)
+            let products = client.db.get('products')
+            let product = products.find(product => product.uuid === uuid)
 
             if (!product) return await interaction.reply({ content: 'Product not found.', ephemeral: true })
 
             product.restockReminders.push(interaction.user.id)
+            
+            products = products.filter(product => product.uuid !== uuid)
+            products.push(product)
 
-            client.db.set('products', [
-                ...client.db.get('products'),
-                product
-            ])
+            client.db.set('products', products)
 
             await interaction.reply({ content: 'You will be notified when this product is restocked.', ephemeral: true })
         }
