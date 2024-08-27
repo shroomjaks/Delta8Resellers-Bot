@@ -28,8 +28,9 @@ module.exports = {
 
         setInterval(() => client.emit('stockCheck', client), 15 * 60 * 1000)
 
-        for (command of client.commands) {
-            if (command.initialize) command.initialize(client)
-        }
+        const verifyChannel = await client.channels.fetch('1276212096601686067')
+        const verifyMessage = await verifyChannel.messages.fetch('1277129869565759510')
+
+        await verifyMessage.react('✅')
     }
 }
