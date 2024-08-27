@@ -11,6 +11,10 @@ const client = new Client({
         GatewayIntentBits.DirectMessageReactions
     ]
 })
+
+const fs = require('fs')
+const path = require('path')
+
 const commandsFolder = fs.readdirSync(path.join(__dirname,  'commands'))
 const eventsFolder = fs.readdirSync(path.join(__dirname, 'events'))
 

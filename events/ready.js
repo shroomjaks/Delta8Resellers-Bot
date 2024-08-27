@@ -1,9 +1,5 @@
 const { Events, WebhookClient, EmbedBuilder, BaseClient, Client } = require('discord.js')
 
-const fs = require('fs')
-const path = require('path')
-
-
 module.exports = {
     event: Events.ClientReady,
     once: true,
