@@ -14,11 +14,9 @@ module.exports = {
      */
     execute: async function (client) {
         console.log(`Logged in as ${client.user.username}`)
-
-        console.log(__dirname)
-
-        const commandsFolder = fs.readdirSync(path.join('..', 'commands'))
-        const eventsFolder = fs.readdirSync(path.join('..', 'events'))
+        
+        const commandsFolder = fs.readdirSync(path.join(__dirname, '..', 'commands'))
+        const eventsFolder = fs.readdirSync(path.join(__dirname, '..', 'events'))
 
         client.commands = []
 
