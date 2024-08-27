@@ -1,7 +1,7 @@
 {
   "name": "d8r",
   "module": "index.js",
-  "type": "commonjs",
+  "type": "module",
   "devDependencies": {
     "@types/bun": "latest"
   },
