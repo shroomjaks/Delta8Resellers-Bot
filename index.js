@@ -37,8 +37,6 @@ for (const eventFile of eventsFolder) {
         } else {
             client.on(event.event, (...args) => event.execute(...args, client))
         }
-
-        if (event.initialize) event.initialize(client)
     } catch (error) {
         console.error(error)
 
