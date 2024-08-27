@@ -25,9 +25,5 @@ module.exports = {
             .setColor('#05ef9d')
 
         await client.logHook.send({ embeds: [embed] })
-
-        // const verify = await client.channels.cache.get('1276212096601686067').messages.fetch('1277129869565759510')
-
-        // verify.react('✅')
     }
 }
