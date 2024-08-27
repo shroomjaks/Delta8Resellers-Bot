@@ -37,6 +37,8 @@ for (const eventFile of eventsFolder) {
         } else {
             client.on(event.event, (...args) => event.execute(...args, client))
         }
+
+        if (event.initialize) event.initialize(client)
     } catch (error) {
         console.error(error)
 
@@ -51,7 +53,7 @@ for (const eventFile of eventsFolder) {
 }
 
 // Call stockCheck every 15 minutes
-client.emit('stockCheck', client)
+// client.emit('stockCheck', client)
 setInterval(() => client.emit('stockCheck', client), 15 * 60 * 1000)
 
 client.login(process.env.TOKEN)

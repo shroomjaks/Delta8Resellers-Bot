@@ -13,7 +13,7 @@ module.exports = {
      * 
      * @param {BaseClient} client 
      */
-    execute: async function (client) {
+    initialize: async function (client) {
         if (!client.db) {
             client.db = db
         }
@@ -25,7 +25,8 @@ module.exports = {
                 args: ['--no-sandbox'],
             })
         }
-
+    },
+    execute: async function (client) {
         let products = db.get('products')
 
         if (!products) {
