@@ -14,44 +14,6 @@ module.exports = {
      */
     execute: async function (client) {
         console.log(`Logged in as ${client.user.username}`)
-        
-        const commandsFolder = fs.readdirSync(path.join(__dirname, '..', 'commands'))
-        const eventsFolder = fs.readdirSync(path.join(__dirname, '..', 'events'))
-
-        client.commands = []
-
-        for (const commandFile of commandsFolder) {
-            const command = require(path.join(__dirname, '..', 'commands', commandFile))
-
-            client.commands.push(command)
-        }
-
-        for (const eventFile of eventsFolder) {
-            const event = require(path.join(__dirname, '..', 'events', eventFile))
-
-            if (event?.disabled) continue
-            if (event.event === Events.ClientReady) continue
-
-            try {
-                if (event.once) {
-                    client.once(event.event, (...args) => event.execute(...args, client))
-                } else {
-                    client.on(event.event, (...args) => event.execute(...args, client))
-                }
-
-                if (event.initialize) event.initialize(client)
-            } catch (error) {
-                console.error(error)
-
-                const embed = new EmbedBuilder()
-                    .setTitle(`Event ${event.event} Error`)
-                    .setDescription(error.toString())
-                    .setTimestamp(Date.now())
-                    .setColor('#FF0000')
-
-                client.logHook.send({ embeds: [embed] })
-            }
-        }
 
         client.readyTime = Date.now()
         client.mainGuild = await client.guilds.fetch('1276202598692818996')
@@ -69,5 +31,9 @@ module.exports = {
         await client.logHook.send({ embeds: [embed] })
 
         setInterval(() => client.emit('stockCheck', client), 15 * 60 * 1000)
+
+        for (command of client.commands) {
+            if (command.initialize) command.initialize(client)
+        }
     }
 }
