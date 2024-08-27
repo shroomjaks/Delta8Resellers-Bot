@@ -1,5 +1,9 @@
 const { Events, WebhookClient, EmbedBuilder, BaseClient, Client } = require('discord.js')
 
+const fs = require('fs')
+const path = require('path')
+
+
 module.exports = {
     event: Events.ClientReady,
     once: true,
@@ -10,6 +14,46 @@ module.exports = {
      */
     execute: async function (client) {
         console.log(`Logged in as ${client.user.username}`)
+
+        console.log(__dirname)
+
+        const commandsFolder = fs.readdirSync(path.join('..', 'commands'))
+        const eventsFolder = fs.readdirSync(path.join('..', 'events'))
+
+        client.commands = []
+
+        for (const commandFile of commandsFolder) {
+            const command = require(path.join(__dirname, '..', 'commands', commandFile))
+
+            client.commands.push(command)
+        }
+
+        for (const eventFile of eventsFolder) {
+            const event = require(path.join(__dirname, '..', 'events', eventFile))
+
+            if (event?.disabled) continue
+            if (event.event === Events.ClientReady) continue
+
+            try {
+                if (event.once) {
+                    client.once(event.event, (...args) => event.execute(...args, client))
+                } else {
+                    client.on(event.event, (...args) => event.execute(...args, client))
+                }
+
+                if (event.initialize) event.initialize(client)
+            } catch (error) {
+                console.error(error)
+
+                const embed = new EmbedBuilder()
+                    .setTitle(`Event ${event.event} Error`)
+                    .setDescription(error.toString())
+                    .setTimestamp(Date.now())
+                    .setColor('#FF0000')
+
+                client.logHook.send({ embeds: [embed] })
+            }
+        }
 
         client.readyTime = Date.now()
         client.mainGuild = await client.guilds.fetch('1276202598692818996')
@@ -25,5 +69,7 @@ module.exports = {
             .setColor('#05ef9d')
 
         await client.logHook.send({ embeds: [embed] })
+
+        setInterval(() => client.emit('stockCheck', client), 15 * 60 * 1000)
     }
 }
