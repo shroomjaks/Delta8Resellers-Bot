@@ -20,6 +20,8 @@ const eventsFolder = fs.readdirSync(path.join(__dirname, 'events'))
 
 client.commands = []
 
+client.log = require('./utils/log')
+
 for (const commandFile of commandsFolder) {
     const command = require(path.join(__dirname, 'commands', commandFile))
 
@@ -38,28 +40,21 @@ for (const eventFile of eventsFolder) {
             client.on(event.event, (...args) => event.execute(...args, client))
         }
     } catch (error) {
-        console.error(error)
-
-        const embed = new EmbedBuilder()
-            .setTitle(`Event ${event.event} Error`)
-            .setDescription(error.toString())
-            .setTimestamp(Date.now())
-            .setColor('#FF0000')
-
-        client.logHook.send({ embeds: [embed] })
+        client.log.error(error)
     }
 }
 
 client.login(process.env.TOKEN)
 
 process.on('unhandledRejection', function (error) {
-    console.error(error)
+    client.log.error(error)
+})
 
-    const embed = new EmbedBuilder()
-        .setTitle('Unhandled Rejection')
-        .setDescription(error.toString())
-        .setTimestamp(Date.now())
-        .setColor('#FF0000')
+process.on('uncaughtException', function (error) {
+    client.log.error(error)
+})
 
-    client.logHook.send({ embeds: [embed] })
+// Call when the process is terminated
+process.on('exit', async function () {
+    await client.log.offline(Date.now())
 })

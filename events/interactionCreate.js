@@ -22,15 +22,7 @@ module.exports = {
                     await interaction.reply({ content: 'You do not have the required permissions to execute this command.', ephemeral: true })
                 }
             } catch (error) {
-                console.error(error)
-
-                const embed = new EmbedBuilder()
-                    .setTitle(`Command ${interaction.commandName} Error`)
-                    .setDescription(error.toString())
-                    .setTimestamp(Date.now())
-                    .setColor('#FF0000')
-
-                await client.logHook.send({ embeds: [embed] })
+                client.log.error(error)
 
                 if (interaction.deferred) {
                     await interaction.editReply({ content: 'An error occurred while executing this command.', ephemeral: true })
