@@ -9,8 +9,6 @@ const commands = []
 for (const commandFile of commandsFolder) {
     const command = require(path.join(__dirname, 'commands', commandFile))
 
-    console.log(command.name)
-
     commands.push({
         name: command.name,
         description: command.description,
