@@ -4,8 +4,6 @@ const webhook = new WebhookClient({ url: 'https://discord.com/api/webhooks/12766
 
 module.exports = {
     online: async function (date) {
-        client.readyTime = date
-        
         const discordDate = Math.floor(date / 1000)
 
         const embed = new EmbedBuilder()

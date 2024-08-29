@@ -11,6 +11,7 @@ module.exports = {
     execute: async function (client) {
         console.log(`Logged in as ${client.user.username}`)
 
+        client.readyTime = Date.now()
         client.log.online(Date.now())
 
         client.mainGuild = await client.guilds.fetch('1276202598692818996')
