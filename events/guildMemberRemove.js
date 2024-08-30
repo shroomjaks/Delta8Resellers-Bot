@@ -13,9 +13,8 @@ module.exports = {
         const welcomeLeave = await client.channels.fetch('1277409930546122822')
 
         const embed = new EmbedBuilder()
-            .setTitle(`Goodbye ${member.user.username}...`)
+            .setTitle(`Goodbye, ${member.user.username}...`)
             .setDescription(`${member.user.username} has left.\nFrom all of us, we wish you the best!`)
-            .setFooter('Have a good one!')
             .setThumbnail(member.displayAvatarURL({ size: 512 }))
             .setColor('#ffc801')
 

@@ -109,6 +109,16 @@
             "restockReminders": [
                 "540302379027791902"
             ]
+        },
+        {
+            "uuid": "b60cb236-26ca-5b59-bbb5-0688adb342b5",
+            "name": "Also Known As THCA Flower | 3.5g",
+            "url": "https://delta8resellers.com/product/also-known-as-thca-flower-3-5g",
+            "stocked": false,
+            "imageUrl": "https://delta8resellers.com/wp-content/uploads/2024/06/aka-3.5g-thca-flower-sour-diesel.jpg",
+            "restockReminders": [
+                "540302379027791902"
+            ]
         }
     ]
 }
