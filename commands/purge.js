@@ -14,7 +14,7 @@ module.exports = {
             name: 'channel',
             description: 'Defaults to the current channel.',
             type: ApplicationCommandOptionType.Channel,
-            required: true
+            required: false
         }
     ],
     permissions: [
@@ -28,6 +28,9 @@ module.exports = {
     execute: async function (interaction, client) {
         const amount = interaction.options.getInteger('amount')
         const channel = interaction.options.getChannel('channel') || interaction.channel
+
+        if (amount < 1) return await interaction.reply({ content: 'Amount cannot be less than 1.', ephemeral: true })
+        if (amount > 100) return await interaction.reply({ content: 'Amount cannot be greater than 100.', ephemeral: true })
 
         await channel.bulkDelete(amount)
 
