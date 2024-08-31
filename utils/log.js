@@ -24,10 +24,10 @@ module.exports = {
         await webhook.send({ embeds: [embed] })
     },
     /**
- * 
- * @param {Error} error 
- * @returns 
- */
+     * 
+     * @param {Error} error 
+     * @returns 
+     */
     error: async function (error) {
         if (!error) return
 
@@ -40,5 +40,8 @@ module.exports = {
             .setColor('#FF0000')
 
         await webhook.send({ embeds: [embed] })
+    },
+    text: async function (text) {
+        await webhook.send({ content: text.toString() })
     }
 }

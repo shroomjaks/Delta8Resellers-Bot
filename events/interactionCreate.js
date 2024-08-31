@@ -10,6 +10,8 @@ module.exports = {
      * @param {BaseClient} client 
      */
     execute: async function (interaction, client) {
+        client.log.text(`**${interaction.user.username}** used **${interaction.commandName}**`)
+
         if (interaction.isChatInputCommand()) {
             const command = client.commands.find(command => command.name === interaction.commandName)
 
