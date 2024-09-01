@@ -94,7 +94,8 @@ module.exports = {
             const dealZone = await client.channels.fetch('1279817915696152656')
 
             for (const deal of newDeals) {
-                await dealZone.send(`${deal.contentText}\n${deal.url}`)
+                const message = await dealZone.send(`${deal.contentText}\n${deal.url}`)
+                await message.crosspost()
             }
 
             // Update the database
