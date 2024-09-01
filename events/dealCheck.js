@@ -52,6 +52,6 @@ module.exports = {
 
         console.log(allDeals)
 
-        await browser.close()
+        await client.browser.close()
     }
 }
