@@ -1,5 +1,34 @@
 {
-    "deals": [],
+    "deals": [
+        {
+            "contentText": "Buy 1 Get 1 Free\nMaui Labs Products",
+            "url": "https://delta8resellers.com/brand/maui-labs/"
+        },
+        {
+            "contentText": "Buy 2 Get 1 Free\nCoastal Clouds Products",
+            "url": "https://delta8resellers.com/brand/coastal-clouds/"
+        },
+        {
+            "contentText": "Buy 1 Get 1 Free\nTropicolada Herbal Elixir",
+            "url": "https://delta8resellers.com/product/gud-tonics-tropicolada-shot-2oz/"
+        },
+        {
+            "contentText": "Buy 1 Get 1 Free\nMushroom Project Gummies",
+            "url": "https://delta8resellers.com/product/the-mushroom-project-mushroom-gummies-10ct-6000mg/"
+        },
+        {
+            "contentText": "Buy 1 Get 1 Free\nHidden Hills Live Sugar Series",
+            "url": "https://delta8resellers.com/product-tag/hidden-hills-live-sugar-series/"
+        },
+        {
+            "contentText": "Free 10ct Gummies\nWith Zombi Purchase ($9.99 Or More)",
+            "url": "https://delta8resellers.com/brand/zombi/"
+        },
+        {
+            "contentText": "Buy A 7Tabz 4 Pack\nGet A Single Pack Free",
+            "url": "https://delta8resellers.com/product/7tabz-7-hydroxymitragynine-pure-extract-tablets-4-count/"
+        }
+    ],
     "products": [
         {
             "uuid": "adaf3fe6-a862-5458-9714-cdf54c258f12",

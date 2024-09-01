@@ -51,22 +51,35 @@ module.exports = {
 		// 		</a>
 		// 	</div></div>
         
-        const dealsElements = await page.$$('.owl-item')
+        // Get all deals with class owl-item active and owl-item
 
-        const allDeals = await Promise.all(dealsElements.map(async function (element) {
-            const contentText = await element.$eval('.bf-card-content', element => element.innerText)
-            const url = await element.$eval('.bf-deals-content', element => element.href)
+        const allDeals = await page.evaluate(function () {
+            let deals = []
 
-            return {
-                contentText,
-                url
+            const dealCards = document.querySelectorAll('.owl-item, .owl-item.active')
+
+            for (const dealCard of dealCards) {
+                const contentText = dealCard.querySelector('.bf-card-content')
+                const url = dealCard.querySelector('.bf-deals-content')
+
+                if (!contentText || !url) continue
+
+                deals.push({
+                    contentText: contentText.innerText,
+                    url: url.href
+                })
             }
-        }))
+
+            // Filter duplicates before returning
+            deals = deals.filter((deal, index, self) => self.findIndex(d => d.url === deal.url) === index)
+
+            return deals
+        })
 
         console.log(`Deal check finished, found ${allDeals.length} deals`)
 
         // Check if there are any new deals
-        const newDeals = allDeals.filter(deal => !deals.some(d => d.url === deal.url))
+        const newDeals = allDeals.filter(deal => !deals.some(d => d.url === deal))
 
         if (newDeals.length > 0) {
             console.log(`${newDeals.length} new deals found!`)
