@@ -51,36 +51,17 @@ module.exports = {
 		// 		</a>
 		// 	</div></div>
         
-        const allDeals = await page.evaluate(function () {
-            const owlItemActive = document.querySelectorAll('owl-item active')
-            const owlItem = document.querySelectorAll('owl-item')
+        const dealsElements = await page.$$('.owl-item')
 
-            // Extract href and content text for both owl-item and owl-item active
+        const allDeals = await Promise.all(dealsElements.map(async function (element) {
+            const contentText = await element.$eval('.bf-card-content', element => element.innerText)
+            const url = await element.$eval('.bf-deals-content', element => element.href)
 
-            const deals = []
-
-            for (const item of owlItem) {
-                const a = item.querySelector('a')
-                const content = item.querySelector('.bf-card-content')
-
-                deals.push({
-                    url: a.href,
-                    contentText: content.innerText
-                })
+            return {
+                contentText,
+                url
             }
-
-            for (const item of owlItemActive) {
-                const a = item.querySelector('a')
-                const content = item.querySelector('.bf-card-content')
-
-                deals.push({
-                    url: a.href,
-                    contentText: content.innerText
-                })
-            }
-
-            return deals
-        })
+        }))
 
         console.log(`Deal check finished, found ${allDeals.length} deals`)
 
