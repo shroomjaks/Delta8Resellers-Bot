@@ -78,8 +78,8 @@ module.exports = {
 
         console.log(`Deal check finished, found ${allDeals.length} deals`)
 
-        // Check if there are any new deals
-        const newDeals = allDeals.filter(deal => !deals.some(d => d.url === deal))
+        // Filter only new deals
+        const newDeals = allDeals.filter(deal => !deals.find(d => d.url === deal.url))
 
         if (newDeals.length > 0) {
             console.log(`${newDeals.length} new deals found!`)
@@ -96,6 +96,6 @@ module.exports = {
             db.set('deals', allDeals)
         }
 
-        await client.browser.close()
+        await page.close()
     }
 }

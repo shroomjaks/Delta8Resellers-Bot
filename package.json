@@ -6,14 +6,14 @@
     "@types/bun": "latest"
   },
   "peerDependencies": {
-    "typescript": "^5.0.0"
+    "typescript": "^5.5.4"
   },
   "dependencies": {
     "discord.js": "^14.15.3",
     "dotenv": "^16.4.5",
     "humanize-duration": "^3.32.1",
     "parse-duration": "^1.1.0",
-    "puppeteer-core": "^23.1.1",
+    "puppeteer-core": "^23.2.1",
     "simple-json-db": "^2.0.0",
     "uuid-by-string": "^4.0.0"
   },
