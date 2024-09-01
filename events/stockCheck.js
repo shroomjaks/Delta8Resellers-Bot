@@ -1,4 +1,4 @@
-const { BaseClient, EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, Message } = require('discord.js')
+const { BaseClient, EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require('discord.js')
 
 const JSONdb = require('simple-json-db')
 const db = new JSONdb('database.json')
@@ -41,7 +41,6 @@ module.exports = {
             await page.goto(product.url, { waitUntil: 'domcontentloaded' })
 
             const stock = await page.$('.stock').catch(() => null)
-
             const stockText = await page.$eval('.stock', element => element.innerText).catch(() => null)
             const productTitleText = await page.$eval('.product_title', element => element.innerText)
 

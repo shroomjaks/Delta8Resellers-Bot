@@ -23,5 +23,6 @@ module.exports = {
         await verifyMessage.react('✅')
 
         setInterval(() => client.emit('stockCheck', client), 15 * 60 * 1000)
+        client.emit('dealCheck')
     }
 }
