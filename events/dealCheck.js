@@ -1,4 +1,4 @@
-const { BaseClient } = require('discord.js')
+const { Client } = require('discord.js')
 
 const JSONdb = require('simple-json-db')
 const db = new JSONdb('database.json')
@@ -11,7 +11,7 @@ module.exports = {
     disabled: false,
     /**
      * 
-     * @param {BaseClient} client 
+     * @param {Client} client 
      */
     execute: async function (client) {
         if (!client.db) {
@@ -44,13 +44,34 @@ module.exports = {
 
             // Extract href and content text
             return Array.from(dealCards).map(function (card) {
-                const href = card.getAttribute('href')
+                const url = card.getAttribute('href')
                 const contentText = card.querySelector('.bf-card-content').innerText.trim()
-                return { href, contentText }
+                return { url, contentText }
             })
         })
 
-        console.log(allDeals)
+        console.log('Deal check finished.')
+
+        // Check if there are any new deals
+        const newDeals = allDeals.filter(function (deal) {
+            return !deals.some(function (oldDeal) {
+                return oldDeal.url === deal.url
+            })
+        })
+
+        if (newDeals.length > 0) {
+            console.log('New deals found!')
+
+            // Notify the channel
+            const dealZone = await client.channels.fetch('1279817915696152656')
+
+            for (const deal of newDeals) {
+                await dealZone.send(`${deal.contentText}\n${deal.url}`)
+            }
+
+            // Update the database
+            db.set('deals', allDeals)
+        }
 
         await client.browser.close()
     }
