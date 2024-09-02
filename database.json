@@ -49,7 +49,7 @@
             "restockReminders": [
                 "540302379027791902"
             ],
-            "allFlavors": [
+            "allStrains": [
                 "ALASKAN THUNDER FVKD",
                 "FORBIDDEN FRUIT",
                 "LA KUSH CAKE",
@@ -60,7 +60,7 @@
                 "SPACE CAKE",
                 "WATERMELON ZKITTLEZ"
             ],
-            "stockedFlavors": []
+            "stockedStrains": []
         },
         {
             "uuid": "54432e48-f51e-5698-82bd-c8522648702a",
@@ -71,7 +71,7 @@
             "restockReminders": [
                 "540302379027791902"
             ],
-            "allFlavors": [
+            "allStrains": [
                 "ALIEN KUSH",
                 "BLUE DREAM",
                 "MIMOSA",
@@ -109,7 +109,7 @@
             "restockReminders": [
                 "540302379027791902"
             ],
-            "allFlavors": [
+            "allStrains": [
                 "BLUE DREAM",
                 "BLUE RAZZ",
                 "CHERRY AK",
@@ -139,7 +139,7 @@
             "restockReminders": [
                 "540302379027791902"
             ],
-            "allFlavors": [
+            "allStrains": [
                 "BLUE DREAM",
                 "BLUE RAZZ",
                 "CHERRY AK",
@@ -169,7 +169,7 @@
             "restockReminders": [
                 "540302379027791902"
             ],
-            "allFlavors": [
+            "allStrains": [
                 "CANTALOUPE CRUSH",
                 "FRUIT PUNCH",
                 "PEACHES AND CREAM",
@@ -188,7 +188,7 @@
             "restockReminders": [
                 "540302379027791902"
             ],
-            "allFlavors": [
+            "allStrains": [
                 "CANTALOUPE CRUSH",
                 "FRUIT PUNCH",
                 "PEACHES AND CREAM",
@@ -207,7 +207,7 @@
             "restockReminders": [
                 "540302379027791902"
             ],
-            "allFlavors": [
+            "allStrains": [
                 "CANTALOUPE CRUSH",
                 "FRUIT PUNCH",
                 "PEACHES AND CREAM",
@@ -226,7 +226,7 @@
             "restockReminders": [
                 "540302379027791902"
             ],
-            "allFlavors": [
+            "allStrains": [
                 "BLUE DREAM",
                 "BLUE RAZZ",
                 "CHERRY AK",
@@ -256,7 +256,7 @@
             "restockReminders": [
                 "540302379027791902"
             ],
-            "allFlavors": [
+            "allStrains": [
                 "LA KUSH",
                 "PURPLE COOKIES",
                 "SOUR DIESEL"
