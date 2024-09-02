@@ -48,7 +48,19 @@
             "imageUrl": "https://delta8resellers.com/wp-content/uploads/2024/01/fvkd-exotics-thca-rosin-3.5g-disposable-la-kush-cake.jpg",
             "restockReminders": [
                 "540302379027791902"
-            ]
+            ],
+            "allFlavors": [
+                "ALASKAN THUNDER FVKD",
+                "FORBIDDEN FRUIT",
+                "LA KUSH CAKE",
+                "BLUEBERRY KUSH",
+                "FRUIT PUNCH",
+                "MANDARIN COOKIES",
+                "WEDDING CAKE",
+                "SPACE CAKE",
+                "WATERMELON ZKITTLEZ"
+            ],
+            "stockedFlavors": []
         },
         {
             "uuid": "54432e48-f51e-5698-82bd-c8522648702a",
@@ -58,6 +70,14 @@
             "imageUrl": "https://delta8resellers.com/wp-content/uploads/2024/07/fvkd-sugar-thca-3.5g-disposable-blue-dream.jpg",
             "restockReminders": [
                 "540302379027791902"
+            ],
+            "allFlavors": [
+                "ALIEN KUSH",
+                "BLUE DREAM",
+                "MIMOSA",
+                "GRANDADDY PURP",
+                "STRAWBERRY COUGH",
+                "TROPICANA COOKIES"
             ]
         },
         {
@@ -88,6 +108,26 @@
             "imageUrl": "https://delta8resellers.com/wp-content/uploads/2023/06/Canna-River-HHC-Cartridge-1000mg-Cherry-AK-600x600.webp",
             "restockReminders": [
                 "540302379027791902"
+            ],
+            "allFlavors": [
+                "BLUE DREAM",
+                "BLUE RAZZ",
+                "CHERRY AK",
+                "GLUEBERRY EXPRESS",
+                "GREEN CRACK",
+                "HAWAIIAN SNOWCAP",
+                "HINDU HONEYCRISP",
+                "LEMON JACK",
+                "MANGO CAKE",
+                "PURPLE KUSH",
+                "RAINBOW SHERBET",
+                "STRAWBERRY FIELDS",
+                "STRAWBERRY TARTZ",
+                "TAHITI LIME",
+                "TROPICANA KUSH",
+                "WATERMELON",
+                "WEDDING CAKE",
+                "PINEAPPLE EXPRESS"
             ]
         },
         {
@@ -98,6 +138,26 @@
             "imageUrl": "https://delta8resellers.com/wp-content/uploads/2023/07/Canna-River-2G-HHC-Purple-Kush.jpg",
             "restockReminders": [
                 "540302379027791902"
+            ],
+            "allFlavors": [
+                "BLUE DREAM",
+                "BLUE RAZZ",
+                "CHERRY AK",
+                "GLUEBERRY EXPRESS",
+                "GREEN CRACK",
+                "HAWAIIAN SNOWCAP",
+                "HINDU HONEYCRISP",
+                "LEMON JACK",
+                "MANGO CAKE",
+                "PURPLE KUSH",
+                "RAINBOW SHERBET",
+                "STRAWBERRY FIELDS",
+                "STRAWBERRY TARTZ",
+                "TAHITI LIME",
+                "TROPICANA KUSH",
+                "WATERMELON",
+                "WEDDING CAKE",
+                "PINEAPPLE EXPRESS"
             ]
         },
         {
@@ -108,6 +168,15 @@
             "imageUrl": "https://delta8resellers.com/wp-content/uploads/2024/07/wild-orcahrd-thca-diamonds-1.5g-cartridge-Cantaloupe-Crush.jpg",
             "restockReminders": [
                 "540302379027791902"
+            ],
+            "allFlavors": [
+                "CANTALOUPE CRUSH",
+                "FRUIT PUNCH",
+                "PEACHES AND CREAM",
+                "TIGERS BLOOD",
+                "WATERMELON SPLASH",
+                "NORTHERN LIGHTS",
+                "TRAINWRECK"
             ]
         },
         {
@@ -118,6 +187,15 @@
             "imageUrl": "https://delta8resellers.com/wp-content/uploads/2023/09/wild-orchard-THCa-Diamond-.5G-WatermelonSplash.jpg",
             "restockReminders": [
                 "540302379027791902"
+            ],
+            "allFlavors": [
+                "CANTALOUPE CRUSH",
+                "FRUIT PUNCH",
+                "PEACHES AND CREAM",
+                "TIGERS BLOOD",
+                "WATERMELON SPLASH",
+                "NORTHERN LIGHTS",
+                "TRAINWRECK"
             ]
         },
         {
@@ -128,6 +206,15 @@
             "imageUrl": "https://delta8resellers.com/wp-content/uploads/2023/09/wild-orchard-THCa-Diamond-2G-TigerBlood.jpg",
             "restockReminders": [
                 "540302379027791902"
+            ],
+            "allFlavors": [
+                "CANTALOUPE CRUSH",
+                "FRUIT PUNCH",
+                "PEACHES AND CREAM",
+                "TIGERS BLOOD",
+                "WATERMELON SPLASH",
+                "NORTHERN LIGHTS",
+                "TRAINWRECK"
             ]
         },
         {
@@ -138,6 +225,26 @@
             "imageUrl": "https://delta8resellers.com/wp-content/uploads/2023/07/Canna-River-2G-D8-Cherry-AK.jpg",
             "restockReminders": [
                 "540302379027791902"
+            ],
+            "allFlavors": [
+                "BLUE DREAM",
+                "BLUE RAZZ",
+                "CHERRY AK",
+                "GLUEBERRY EXPRESS",
+                "GREEN CRACK",
+                "HAWAIIAN SNOWCAP",
+                "HINDU HONEYCRISP",
+                "LEMON JACK",
+                "MANGO CAKE",
+                "PURPLE KUSH",
+                "RAINBOW SHERBET",
+                "STRAWBERRY FIELDS",
+                "STRAWBERRY TARTZ",
+                "TAHITI LIME",
+                "TROPICANA KUSH",
+                "WATERMELON",
+                "WEDDING CAKE",
+                "PINEAPPLE EXPRESS"
             ]
         },
         {
@@ -148,6 +255,11 @@
             "imageUrl": "https://delta8resellers.com/wp-content/uploads/2024/06/aka-3.5g-thca-flower-sour-diesel.jpg",
             "restockReminders": [
                 "540302379027791902"
+            ],
+            "allFlavors": [
+                "LA KUSH",
+                "PURPLE COOKIES",
+                "SOUR DIESEL"
             ]
         }
     ]
