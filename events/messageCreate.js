@@ -22,7 +22,7 @@ module.exports = {
                 code = code.replace('```js', '')
                 code = code.replace('```', '').trim()
 
-                const result = evalInContext(code, { client: client, message: message })
+                evalInContext(code, { client: client, message: message })
 
                 await message.channel.send({ content: 'Ran code successfully!' })
             } catch (error) {

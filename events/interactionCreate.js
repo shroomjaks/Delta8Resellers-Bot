@@ -39,6 +39,7 @@ module.exports = {
             let product = products.find(product => product.uuid === uuid)
 
             if (!product) return await interaction.reply({ content: 'Product not found.', ephemeral: true })
+            if (product.restockReminders.includes(interaction.user.id)) return await interaction.reply({ content: 'You are already subscribed to a restock reminder for this product.', ephemeral: true })
 
             product.restockReminders.push(interaction.user.id)
             
