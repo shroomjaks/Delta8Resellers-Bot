@@ -92,7 +92,7 @@ module.exports = {
                     .setFooter({ text: 'Press the button below to be reminded when this product is restocked.' })
 
                 const reminderButton = new ButtonBuilder()
-                    .setCustomID(product.uuid)
+                    .setCustomId(product.uuid)
                     .setLabel('Remind Me')
                     .setStyle(ButtonStyle.Primary)
 
