@@ -24,5 +24,7 @@ module.exports = {
 
         setInterval(() => client.emit('stockCheck', client), 15 * 60 * 1000)
         setInterval(() => client.emit('dealCheck', client), 65 * 60 * 1000)
+
+        globalThis['client'] = client
     }
 }

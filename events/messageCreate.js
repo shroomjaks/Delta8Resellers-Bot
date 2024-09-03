@@ -1,9 +1,5 @@
 const { Events, Client, Message } = require('discord.js')
 
-function evalInContext(js, context) {
-    return function () { return eval(js) }.call(context)
-}
-
 module.exports = {
     event: Events.MessageCreate,
     once: false,
@@ -22,7 +18,7 @@ module.exports = {
                 code = code.replace('```js', '')
                 code = code.replace('```', '').trim()
 
-                evalInContext(code, { client: client, message: message })
+                await Object.getPrototypeOf(async function() {}).constructor(code)()
 
                 await message.channel.send({ content: 'Ran code successfully!' })
             } catch (error) {
