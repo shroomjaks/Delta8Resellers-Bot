@@ -97,7 +97,7 @@ module.exports = {
                     .setStyle(ButtonStyle.Primary)
 
                 const actionRow = new ActionRowBuilder()
-                    .addComponent(reminderButton)
+                    .addComponents(reminderButton)
 
                 const message = await client.updateChannel.send({ embeds: [embed], components: [actionRow] })
                 await message.crosspost()
