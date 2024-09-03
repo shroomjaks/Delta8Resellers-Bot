@@ -24,6 +24,8 @@ module.exports = {
 
                 // run code
                 const result = evalInContext(code, { message, client })
+
+                await message.channel.send({ content: result })
             } catch (error) {
                 await message.channel.send({ content: error.message })
             }
