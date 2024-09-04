@@ -6,8 +6,7 @@ const client = new Client({
         GatewayIntentBits.GuildMessages,
         GatewayIntentBits.MessageContent,
         GatewayIntentBits.GuildMessageReactions,
-        GatewayIntentBits.GuildMembers,
-        GatewayIntentBits.DirectMessageReactions
+        GatewayIntentBits.GuildMembers
     ]
 })
 
@@ -51,9 +50,4 @@ process.on('unhandledRejection', function (error) {
 
 process.on('uncaughtException', function (error) {
     client.log.error(error)
-})
-
-// Call when the process is terminated
-process.on('exit', async function () {
-    await client.log.offline(Date.now())
 })

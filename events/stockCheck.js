@@ -26,10 +26,6 @@ module.exports = {
             const stock = await page.$('.stock').catch(() => null)
             const stockText = await page.$eval('.stock', element => element.innerText).catch(() => null)
             const productTitleText = await page.$eval('.product_title', element => element.innerText)
-            
-            const availableStrains = await page.$$eval('#pa_flavor option')
-
-            console.log(availableStrains)
 
             const oldStocked = product.stocked
 

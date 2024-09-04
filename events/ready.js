@@ -1,4 +1,4 @@
-const { Events, WebhookClient, EmbedBuilder, BaseClient, Client } = require('discord.js')
+const { Events, Client } = require('discord.js')
 
 const JSONdb = require('simple-json-db')
 const db = new JSONdb('database.json')
@@ -36,17 +36,12 @@ module.exports = {
         // Set the global client so it can be accessed from eval
         globalThis['client'] = client
 
-        // Set db and browser on the client
-        if (!client.db) {
-            client.db = db
-        }
+        client.db = db
 
-        if (!client.browser) {
-            client.browser = await puppeteer.launch({
-                executablePath: '/usr/bin/chromium',
-                headless: true,
-                args: ['--no-sandbox'],
-            })
-        }
+        client.browser = await puppeteer.launch({
+            executablePath: '/usr/bin/chromium',
+            headless: true,
+            args: ['--no-sandbox'],
+        })
     }
 }
