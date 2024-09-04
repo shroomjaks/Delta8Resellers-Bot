@@ -44,6 +44,6 @@ module.exports = {
             args: ['--no-sandbox'],
         })
 
-        client.emit('stockCheck', client)
+        // client.emit('stockCheck', client)
     }
 }
