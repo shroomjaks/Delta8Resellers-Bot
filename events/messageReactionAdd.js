@@ -1,4 +1,4 @@
-const { Events, BaseClient, Client, MessageReaction, User } = require('discord.js')
+const { Events, Client, MessageReaction, User, MessageReactionEventDetails } = require('discord.js')
 
 module.exports = {
     event: Events.MessageReactionAdd,
@@ -8,6 +8,7 @@ module.exports = {
      * 
      * @param {MessageReaction} reaction
      * @param {User} user 
+     * @param {MessageReactionEventDetails} details
      * @param {Client} client 
      */
     execute: async function (reaction, user, details, client) {
