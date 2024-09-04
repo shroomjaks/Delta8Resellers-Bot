@@ -43,5 +43,7 @@ module.exports = {
             headless: true,
             args: ['--no-sandbox'],
         })
+
+        client.emit('stockCheck', client)
     }
 }

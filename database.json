@@ -134,26 +134,6 @@
             "stockedStrains": []
         },
         {
-            "uuid": "7e2932ea-5917-5854-b133-bff08ce1dff7",
-            "name": "Wild Orchard THCA Diamonds Live Resin Cartridge | 1.5g",
-            "url": "https://delta8resellers.com/product/wild-orchard-thca-diamonds-live-resin-cartridge-1-5g",
-            "stocked": false,
-            "imageUrl": "https://delta8resellers.com/wp-content/uploads/2024/07/wild-orcahrd-thca-diamonds-1.5g-cartridge-Cantaloupe-Crush.jpg",
-            "restockReminders": [
-                "540302379027791902"
-            ],
-            "allStrainNames": [
-                "Cantaloupe Crush",
-                "Fruit Punch",
-                "Peaches and Cream",
-                "Tigers Blood",
-                "Watermelon Splash",
-                "Northern Lights",
-                "Trainwreck"
-            ],
-            "stockedStrains": []
-        },
-        {
             "uuid": "4f1cb947-1b1c-5008-a98f-66d8d50d5af1",
             "name": "Wild Orchard THCA Diamonds Live Resin Disposable | 500mg",
             "url": "https://delta8resellers.com/product/wild-orchard-thca-diamonds-live-resin-disposable-500g",
@@ -301,6 +281,27 @@
                 "Strawberry Shortcake",
                 "Tangie Banana",
                 "Watermelon Sangria"
+            ],
+            "stockedStrains": []
+        },
+        {
+            "uuid": "7e2932ea-5917-5854-b133-bff08ce1dff7",
+            "name": "Wild Orchard THCA Diamonds Live Resin Cartridge | 1.5g",
+            "url": "https://delta8resellers.com/product/wild-orchard-thca-diamonds-live-resin-cartridge-1-5g",
+            "stocked": false,
+            "imageUrl": "https://delta8resellers.com/wp-content/uploads/2024/07/wild-orcahrd-thca-diamonds-1.5g-cartridge-Cantaloupe-Crush.jpg",
+            "restockReminders": [
+                "540302379027791902",
+                "856639315743604807"
+            ],
+            "allStrainNames": [
+                "Cantaloupe Crush",
+                "Fruit Punch",
+                "Peaches and Cream",
+                "Tigers Blood",
+                "Watermelon Splash",
+                "Northern Lights",
+                "Trainwreck"
             ],
             "stockedStrains": []
         }
