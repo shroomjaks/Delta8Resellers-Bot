@@ -43,6 +43,8 @@ module.exports = {
             const stock = await page.$('.stock').catch(() => null)
             const stockText = await page.$eval('.stock', element => element.innerText).catch(() => null)
             const productTitleText = await page.$eval('.product_title', element => element.innerText)
+            // const flavors = await page.$eval('#pa_flavor')
+            // const flavorOptions = await flavors.$$eval('option', options => options.map(option => option.innerText))
 
             const oldStocked = product.stocked
 
