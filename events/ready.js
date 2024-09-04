@@ -20,10 +20,6 @@ module.exports = {
         client.readyTime = Date.now()
         client.log.online(Date.now())
 
-        // Set the main guild and update channel
-        client.mainGuild = await client.guilds.fetch('1276202598692818996')
-        client.updateChannel = await client.channels.fetch('1276548924936814755')
-
         // Add a check reaction to the verify message to cache it for later
         const verifyChannel = await client.channels.fetch('1276212096601686067')
         const verifyMessage = await verifyChannel.messages.fetch('1277129869565759510')

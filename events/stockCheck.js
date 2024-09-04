@@ -18,6 +18,8 @@ module.exports = {
 
         console.log('Checking stock...')
 
+        const updateChannel = await client.channels.fetch('1276548924936814755')
+
         for (const product of products) {
             const page = await client.browser.newPage()
 
@@ -52,7 +54,7 @@ module.exports = {
                     .setTimestamp(Date.now())
                     .setColor('#05ef9d')
 
-                const message = await client.updateChannel.send({ embeds: [embed] })
+                const message = await updateChannel.send({ embeds: [embed] })
                 await message.crosspost()
 
                 for (const userId of product.restockReminders) {
@@ -82,7 +84,7 @@ module.exports = {
                 const actionRow = new ActionRowBuilder()
                     .addComponents(reminderButton)
 
-                const message = await client.updateChannel.send({ embeds: [embed], components: [actionRow] })
+                const message = await updateChannel.send({ embeds: [embed], components: [actionRow] })
                 await message.crosspost()
             }
 
