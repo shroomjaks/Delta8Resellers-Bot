@@ -1,10 +1,5 @@
 const { BaseClient, EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require('discord.js')
 
-const JSONdb = require('simple-json-db')
-const db = new JSONdb('database.json')
-
-const puppeteer = require('puppeteer-core')
-
 module.exports = {
     event: 'stockCheck',
     once: false,
@@ -14,23 +9,11 @@ module.exports = {
      * @param {BaseClient} client 
      */
     execute: async function (client) {
-        if (!client.db) {
-            client.db = db
-        }
-
-        if (!client.browser) {
-            client.browser = await puppeteer.launch({
-                executablePath: '/usr/bin/chromium',
-                headless: true,
-                args: ['--no-sandbox'],
-            })
-        }
-
-        let products = db.get('products')
+        let products = client.db.get('products')
 
         if (!products) {
             products = []
-            db.set('products', products)
+            client.db.set('products', products)
         }
 
         console.log('Checking stock...')
@@ -43,8 +26,10 @@ module.exports = {
             const stock = await page.$('.stock').catch(() => null)
             const stockText = await page.$eval('.stock', element => element.innerText).catch(() => null)
             const productTitleText = await page.$eval('.product_title', element => element.innerText)
-            // const flavors = await page.$eval('#pa_flavor')
-            // const flavorOptions = await flavors.$$eval('option', options => options.map(option => option.innerText))
+            
+            const availableStrains = await page.$$eval('#pa_flavor option')
+
+            console.log(availableStrains)
 
             const oldStocked = product.stocked
 
@@ -108,7 +93,7 @@ module.exports = {
             products[products.indexOf(product)].stocked = product.stocked
         }
 
-        db.set('products', products)
+        client.db.set('products', products)
 
         console.log('Stock check complete.\n')
     }

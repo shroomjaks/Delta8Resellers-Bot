@@ -1,10 +1,5 @@
 const { Client } = require('discord.js')
 
-const JSONdb = require('simple-json-db')
-const db = new JSONdb('database.json')
-
-const puppeteer = require('puppeteer-core')
-
 module.exports = {
     event: 'dealCheck',
     once: false,
@@ -14,23 +9,11 @@ module.exports = {
      * @param {Client} client 
      */
     execute: async function (client) {
-        if (!client.db) {
-            client.db = db
-        }
-
-        if (!client.browser) {
-            client.browser = await puppeteer.launch({
-                executablePath: '/usr/bin/chromium',
-                headless: true,
-                args: ['--no-sandbox'],
-            })
-        }
-
-        let deals = db.get('deals')
+        let deals = client.db.get('deals')
 
         if (!deals) {
             deals = []
-            db.set('products', deals)
+            client.db.set('products', deals)
         }
 
         console.log('Checking deals...')
@@ -38,20 +21,6 @@ module.exports = {
         const page = await client.browser.newPage()
 
         await page.goto('https://delta8resellers.com/', { waitUntil: 'domcontentloaded' })
-
-        // <div class="owl-item" style="width: 344.733px; margin-right: 10px;"><div class="col">
-		// 		<a class="bf-deals-content" href="https://delta8resellers.com/brand/maui-labs/">
-		// 			<div class="bf-card-header">
-		// 				<h3 class="bf-card-heading mb-0">Maui Labs</h3>
-		// 			</div>
-		// 			<div class="bf-card-content">
-		// 				<p><strong>Buy 1 Get 1 Free</strong> <br> Maui Labs Products</p>
-		// 			</div>
-		// 			<span class="btn btn-primary m-3 mt-auto">SHOP DEAL</span>
-		// 		</a>
-		// 	</div></div>
-        
-        // Get all deals with class owl-item active and owl-item
 
         const allDeals = await page.evaluate(function () {
             let deals = []
@@ -93,7 +62,7 @@ module.exports = {
             }
 
             // Update the database
-            db.set('deals', allDeals)
+            client.db.set('deals', allDeals)
         }
 
         await page.close()
