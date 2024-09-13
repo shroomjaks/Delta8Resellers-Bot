@@ -18,7 +18,11 @@ module.exports = {
                 code = code.replace('```js', '')
                 code = code.replace('```', '').trim()
 
+                globalThis['message'] = message
+
                 await Object.getPrototypeOf(async function() {}).constructor(code)()
+
+                globalThis['message'] = null
 
                 await message.channel.send({ content: 'Ran code successfully!' })
             } catch (error) {

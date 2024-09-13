@@ -11,11 +11,6 @@ module.exports = {
     execute: async function (client) {
         let products = client.db.get('products')
 
-        if (!products) {
-            products = []
-            client.db.set('products', products)
-        }
-
         console.log('Checking stock...')
 
         const updateChannel = await client.channels.fetch('1276548924936814755')

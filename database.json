@@ -21,7 +21,11 @@
             "url": "https://delta8resellers.com/product-tag/hidden-hills-live-sugar-series/"
         },
         {
-            "contentText": "Free 10ct Gummies\nWith Zombi Purchase ($9.99 Or More)",
+            "contentText": "15% Off Urb Products\nWith Code: FLYHIGH15",
+            "url": "https://delta8resellers.com/brand/urb/"
+        },
+        {
+            "contentText": "Free D9 Gummies\nWith Zombi Purchase ($9.99 Or More)",
             "url": "https://delta8resellers.com/brand/zombi/"
         },
         {
@@ -68,37 +72,6 @@
                 "Granddaddy Purp",
                 "Strawberry Cough",
                 "Tropicana Cookies"
-            ],
-            "stockedStrains": []
-        },
-        {
-            "uuid": "a5f76510-267f-52e1-b8f2-d354cfad36cb",
-            "name": "Canna River HHC Cartridge | 1000mg",
-            "url": "https://delta8resellers.com/product/canna-river-hhc-cartridge-1000mg",
-            "stocked": true,
-            "imageUrl": "https://delta8resellers.com/wp-content/uploads/2023/06/Canna-River-HHC-Cartridge-1000mg-Cherry-AK-600x600.webp",
-            "restockReminders": [
-                "540302379027791902"
-            ],
-            "allStrainNames": [
-                "Blue Dream",
-                "Blue Razz",
-                "Cherry AK",
-                "Glueberry Express",
-                "Green Crack",
-                "Hawaiian Snowcap",
-                "Hindu Honeycrisp",
-                "Lemon Jack",
-                "Mango Cake",
-                "Purple Kush",
-                "Rainbow Sherbet",
-                "Strawberry Fields",
-                "Strawberry Tartz",
-                "Tahiti Lime",
-                "Tropicana Kush",
-                "Watermelon",
-                "Wedding Cake",
-                "Pineapple Express"
             ],
             "stockedStrains": []
         },
@@ -288,11 +261,13 @@
             "uuid": "7e2932ea-5917-5854-b133-bff08ce1dff7",
             "name": "Wild Orchard THCA Diamonds Live Resin Cartridge | 1.5g",
             "url": "https://delta8resellers.com/product/wild-orchard-thca-diamonds-live-resin-cartridge-1-5g",
-            "stocked": false,
+            "stocked": true,
             "imageUrl": "https://delta8resellers.com/wp-content/uploads/2024/07/wild-orcahrd-thca-diamonds-1.5g-cartridge-Cantaloupe-Crush.jpg",
             "restockReminders": [
                 "540302379027791902",
-                "856639315743604807"
+                "856639315743604807",
+                "557647328568279060",
+                "1018373360142520440"
             ],
             "allStrainNames": [
                 "Cantaloupe Crush",
@@ -302,6 +277,45 @@
                 "Watermelon Splash",
                 "Northern Lights",
                 "Trainwreck"
+            ],
+            "stockedStrains": []
+        },
+        {
+            "uuid": "a5f76510-267f-52e1-b8f2-d354cfad36cb",
+            "name": "Canna River HHC Cartridge | 1000mg",
+            "url": "https://delta8resellers.com/product/canna-river-hhc-cartridge-1000mg",
+            "stocked": false,
+            "imageUrl": "https://delta8resellers.com/wp-content/uploads/2023/06/Canna-River-HHC-Cartridge-1000mg-Cherry-AK-600x600.webp",
+            "restockReminders": [
+                "540302379027791902",
+                "856639315743604807",
+                "508107273533521930",
+                "464142567760461824",
+                "774894498709766194",
+                "652591275094310927",
+                "678750952613871636",
+                "854677345687175268",
+                "949503325974458388"
+            ],
+            "allStrainNames": [
+                "Blue Dream",
+                "Blue Razz",
+                "Cherry AK",
+                "Glueberry Express",
+                "Green Crack",
+                "Hawaiian Snowcap",
+                "Hindu Honeycrisp",
+                "Lemon Jack",
+                "Mango Cake",
+                "Purple Kush",
+                "Rainbow Sherbet",
+                "Strawberry Fields",
+                "Strawberry Tartz",
+                "Tahiti Lime",
+                "Tropicana Kush",
+                "Watermelon",
+                "Wedding Cake",
+                "Pineapple Express"
             ],
             "stockedStrains": []
         }
