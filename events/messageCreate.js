@@ -13,10 +13,11 @@ module.exports = {
         if (message.author.id !== '540302379027791902') return
 
         if (message.content.startsWith('.eval')) {
+            const regex = /\.eval|```|```js/g;
+
+
             try {
-                let code = message.content.replace('.eval', '')
-                code = code.replace('```js', '')
-                code = code.replace('```', '').trim()
+                const code = message.content.replace(regex, '')
 
                 globalThis['message'] = message
                 const result = await eval(code)
