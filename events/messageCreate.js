@@ -19,7 +19,7 @@ module.exports = {
                 const code = message.content.replace(regex, '')
 
                 globalThis['message'] = message
-                const result = await eval(code)
+                const result = await Object.getPrototypeOf(async function() {}).constructor(code)()
                 globalThis['message'] = null
 
                 if (result) {
