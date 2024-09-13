@@ -14,7 +14,7 @@ module.exports = {
     execute: async function (message, client) {
         if (message.author.id !== '540302379027791902') return
 
-        if (message.content.startsWith('.eval')) {
+        if (message.content.startsWith('```js')) {
             try {
                 const code = message.content.replace(regex, '')
 
