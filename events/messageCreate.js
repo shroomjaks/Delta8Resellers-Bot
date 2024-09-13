@@ -19,9 +19,7 @@ module.exports = {
                 code = code.replace('```', '').trim()
 
                 globalThis['message'] = message
-
-                const result = await Object.getPrototypeOf(async function() {}).constructor(code)()
-
+                const result = await eval(code)
                 globalThis['message'] = null
 
                 if (result) {
