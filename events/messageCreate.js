@@ -20,11 +20,13 @@ module.exports = {
 
                 globalThis['message'] = message
 
-                await Object.getPrototypeOf(async function() {}).constructor(code)()
+                const result = await Object.getPrototypeOf(async function() {}).constructor(code)()
 
                 globalThis['message'] = null
 
-                await message.channel.send({ content: 'Ran code successfully!' })
+                if (result) {
+                    await message.channel.send({ content: result.toString() })
+                }
             } catch (error) {
                 await message.channel.send({ content: error.message })
             }
