@@ -1,5 +1,7 @@
 const { Events, Client, Message } = require('discord.js')
 
+const regex = /\.eval|```|js/g
+
 module.exports = {
     event: Events.MessageCreate,
     once: false,
@@ -13,9 +15,6 @@ module.exports = {
         if (message.author.id !== '540302379027791902') return
 
         if (message.content.startsWith('.eval')) {
-            const regex = /\.eval|```|```js/g;
-
-
             try {
                 const code = message.content.replace(regex, '')
 
