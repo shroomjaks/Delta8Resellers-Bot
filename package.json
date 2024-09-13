@@ -9,7 +9,7 @@
     "typescript": "^5.5.4"
   },
   "dependencies": {
-    "discord.js": "^14.16.1",
+    "discord.js": "^14.16.2",
     "dotenv": "^16.4.5",
     "humanize-duration": "^3.32.1",
     "parse-duration": "^1.1.0",
