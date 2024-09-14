@@ -17,6 +17,7 @@ const commandsFolder = fs.readdirSync(path.join(__dirname,  'commands'))
 const eventsFolder = fs.readdirSync(path.join(__dirname, 'events'))
 
 client.commands = []
+client.events = []
 
 client.log = require('./utils/log')
 
@@ -28,6 +29,8 @@ for (const commandFile of commandsFolder) {
 
 for (const eventFile of eventsFolder) {
     const event = require(path.join(__dirname, 'events', eventFile))
+
+    client.events.push(event)
 
     if (event?.disabled) continue
 
