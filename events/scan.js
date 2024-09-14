@@ -3,7 +3,7 @@ const { Client } = require('discord.js')
 module.exports = {
     event: 'msgscan',
     once: false,
-    disabled: false,
+    disabled: true,
     /**
      * 
      * @param {Client} client 
