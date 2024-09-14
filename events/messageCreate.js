@@ -13,6 +13,8 @@ module.exports = {
      */
     execute: async function (message, client) {
         if (message.author.bot) return
+        if (message.content.length < 1) return
+        if (!message.guild) return
 
         let profile = client.xp.get(message.author.id)
 
