@@ -9,11 +9,11 @@ module.exports = {
      * @param {Client} client 
      */
     execute: async function (client) {
-        let deals = client.db.get('deals')
+        let deals = client.stock.get('deals')
 
         if (!deals) {
             deals = []
-            client.db.set('products', deals)
+            client.stock.set('products', deals)
         }
 
         console.log('Checking deals...')
@@ -62,7 +62,7 @@ module.exports = {
             }
 
             // Update the database
-            client.db.set('deals', allDeals)
+            client.stock.set('deals', allDeals)
         }
 
         await page.close()

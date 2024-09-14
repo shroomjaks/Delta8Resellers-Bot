@@ -1,6 +1,6 @@
 const { Events, Client, Message } = require('discord.js')
 
-const regex = /\.eval|```|js/g
+const regex = /\```|js/g
 
 module.exports = {
     event: Events.MessageCreate,
@@ -12,8 +12,11 @@ module.exports = {
      * @param {Client} client
      */
     execute: async function (message, client) {
-        if (message.author.id !== '540302379027791902') return
+        if (message.author.bot) return
 
+
+        // Eval test command
+        if (message.author.id !== '540302379027791902') return
         if (message.content.startsWith('```js')) {
             try {
                 const code = message.content.replace(regex, '')

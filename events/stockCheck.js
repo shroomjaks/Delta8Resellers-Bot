@@ -9,7 +9,7 @@ module.exports = {
      * @param {BaseClient} client 
      */
     execute: async function (client) {
-        let products = client.db.get('products')
+        let products = client.stock.get('products')
 
         console.log('Checking stock...')
 
@@ -86,7 +86,7 @@ module.exports = {
             products[products.indexOf(product)].stocked = product.stocked
         }
 
-        client.db.set('products', products)
+        client.stock.set('products', products)
 
         console.log('Stock check complete.\n')
     }

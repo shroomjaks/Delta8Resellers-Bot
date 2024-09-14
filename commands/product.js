@@ -43,7 +43,7 @@ module.exports = {
 
         const titleUuid = uuid(productTitleText)
 
-        const products = client.db.get('products')
+        const products = client.stock.get('products')
         if (products.find(product => product.uuid === titleUuid)) {
             await page.close()
             return await interaction.editReply({ content: 'This product is already being watched.', ephemeral: true })
@@ -63,7 +63,7 @@ module.exports = {
 
         await page.close()
 
-        client.db.set('products',
+        client.stock.set('products',
             [
                 ...products,
                 {

@@ -1,7 +1,8 @@
 const { Events, Client } = require('discord.js')
 
 const JSONdb = require('simple-json-db')
-const db = new JSONdb('database.json')
+const stock = new JSONdb('./database/stock.json')
+const xp = new JSONdb('./database/xp.json')
 
 const puppeteer = require('puppeteer-core')
 
@@ -32,7 +33,8 @@ module.exports = {
         // Set the global client so it can be accessed from eval
         globalThis['client'] = client
 
-        client.db = db
+        client.stock = stock
+        client.xp = xp
 
         client.browser = await puppeteer.launch({
             executablePath: '/usr/bin/chromium',
