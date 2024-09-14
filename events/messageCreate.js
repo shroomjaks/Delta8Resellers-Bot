@@ -16,39 +16,41 @@ module.exports = {
         if (message.content.length < 1) return
         if (!message.guild) return
 
-        let profile = client.xp.get(message.author.id)
+        if (message.channelId === '1276566237840805898') {
+            let profile = client.xp.get(message.author.id)
 
-        if (!profile) {
-            profile = {
-                xp: 0,
-                level: 0,
-                messageCount: 0
+            if (!profile) {
+                profile = {
+                    xp: 0,
+                    level: 0,
+                    messageCount: 0
+                }
+
+                client.xp.set(message.author.id, profile)
             }
+
+            // Between 15 and 25 per message
+            const xpAmount = Math.floor(Math.random() * 11) + 15
+
+            profile.xp += xpAmount
+
+            const levelUpXP = (5 * (Math.pow(profile.level, 2)) + (50 * profile.level) + 100 - profile.xp)
+
+            if (profile.xp >= levelUpXP) {
+                profile.level++
+                profile.xp = 0
+
+                const levelUp = await message.channel.send({ content: `Congratulations, ${message.author.username}! You have leveled up to level **${profile.level}**.` })
+
+                setTimeout(async () => {
+                    await levelUp.delete()
+                }, 10000)
+            }
+
+            profile.messageCount++
 
             client.xp.set(message.author.id, profile)
         }
-
-        // Between 15 and 25 per message
-        const xpAmount = Math.floor(Math.random() * 11) + 15
-
-        profile.xp += xpAmount
-
-        const levelUpXP = (5 * (Math.pow(profile.level, 2)) + (50 * profile.level) + 100 - profile.xp)
-
-        if (profile.xp >= levelUpXP) {
-            profile.level++
-            profile.xp = 0
-
-            const levelUp = await message.channel.send({ content: `Congratulations, ${message.author.username}! You have leveled up to level **${profile.level}**.` })
-
-            setTimeout(async () => {
-                await levelUp.delete()
-            }, 10000)
-        }
-
-        profile.messageCount++
-
-        client.xp.set(message.author.id, profile)
 
         // Eval test command
         if (message.author.id !== '540302379027791902') return
@@ -57,7 +59,7 @@ module.exports = {
                 const code = message.content.replace(regex, '')
 
                 globalThis['message'] = message
-                const result = await Object.getPrototypeOf(async function() {}).constructor(code)()
+                const result = await Object.getPrototypeOf(async function () { }).constructor(code)()
                 globalThis['message'] = null
 
                 await message.delete()
