@@ -12,6 +12,8 @@ module.exports = {
         const commandsFolder = fs.readdirSync(path.join(__dirname, '..', 'commands'))
         const eventsFolder = fs.readdirSync(path.join(__dirname, '..', 'events'))
 
+        console.log(commandsFolder, eventsFolder)
+
         const newCommands = []
 
         for (const commandFile of commandsFolder) {
