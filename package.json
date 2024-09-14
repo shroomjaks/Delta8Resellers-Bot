@@ -9,6 +9,7 @@
     "typescript": "^5.5.4"
   },
   "dependencies": {
+    "@napi-rs/canvas": "^0.1.55",
     "discord.js": "^14.16.2",
     "dotenv": "^16.4.5",
     "humanize-duration": "^3.32.1",
