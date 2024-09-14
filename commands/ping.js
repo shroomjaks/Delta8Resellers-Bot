@@ -7,8 +7,6 @@ module.exports = {
     description: 'Checks the bot latency in milliseconds.',
     permissions: [],
     execute: async function (interaction, client) {
-        console.log('hi')
-
         const processMemoryMB = Math.round(process.memoryUsage().heapUsed / 1024 / 1024)
 
         const systemUptime = Math.floor((Date.now() / 1000) - os.uptime())
