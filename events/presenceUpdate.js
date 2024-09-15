@@ -15,8 +15,6 @@ module.exports = {
         if (oldPresence.status === newPresence.status) return
         if (newPresence.user.bot) return
 
-        console.log(`${newPresence.user.displayName} was ${oldPresence.status}, now they are ${newPresence.status}.`)
-
         if (oldPresence.status === 'offline') {
             client.lastonline.set(newPresence.userId, Date.now())
         }
