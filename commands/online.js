@@ -2,6 +2,8 @@ const { ApplicationCommandOptionType, ChatInputCommandInteraction, Client, Embed
 
 const { getAverageColor } = require('fast-average-color-node')
 
+const path = require('path')
+
 const JSONdb = require('simple-json-db')
 
 const online = new JSONdb(path.join(__dirname, '..', 'database', 'online.json'))
@@ -34,15 +36,15 @@ module.exports = {
             return await interaction.reply({ content: 'I have no data on this user.', ephemeral: true })
         }
 
-        const online = Math.floor(lastonline / 1000)
-        const offline = Math.floor(lastoffline / 1000)
+        const onlineSeconds = Math.floor(lastonline / 1000)
+        const offlineSeconds = Math.floor(lastoffline / 1000)
 
         const avatar = user.displayAvatarURL({ dynamic: true, size: 512 })
         const avatarColor = await getAverageColor(avatar)
 
         const embed = new EmbedBuilder()
             .setTitle(user.displayName)
-            .setDescription(`Last seen online: <t:${online}:R>\nLast seen offline: <t:${offline}:R>`)
+            .setDescription(`Last seen online: <t:${onlineSeconds}:R>\nLast seen offline: <t:${offlineSeconds}:R>`)
             .setThumbnail(avatar)
             .setColor(avatarColor.hex)
 
