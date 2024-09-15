@@ -11,7 +11,13 @@ module.exports = {
      * @param {Client} client 
      */
     execute: async function (oldPresence, newPresence, client) {
-        if (newPresence.status === 'online' || newPresence.status === 'dnd' || newPresence.status === 'idle' || newPresence.status === 'invisible' && oldPresence.status === 'offline') {
+        if (!oldPresence || !newPresence) return
+        if (oldPresence.status === newPresence.status) return
+        if (newPresence.user.bot) return
+
+        console.log(`${newPresence.user.displayName} was ${oldPresence.status}, now they are ${newPresence.status}.`)
+
+        if (oldPresence.status === 'offline') {
             client.lastonline.set(newPresence.userId, Date.now())
         }
     }
