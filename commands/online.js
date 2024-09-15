@@ -1,7 +1,6 @@
 const { ApplicationCommandOptionType, ChatInputCommandInteraction, Client, EmbedBuilder } = require('discord.js')
 
-const { FastAverageColor } = require('fast-average-color')
-const colorExtractor = new FastAverageColor()
+const { getAverageColor } = require('fast-average-color-node')
 
 module.exports = {
     name: 'lastonline',
@@ -25,11 +24,11 @@ module.exports = {
 
         const lastonline = client.lastonline.get(user.id)
 
-        if (!lastonline) return await interaction.reply({ content: 'Last date online unknown.' })
+        if (!lastonline) return await interaction.reply({ content: 'Last date online unknown.', ephemeral: true })
 
         const discordTime = Math.floor(lastonline / 1000)
         const avatar = user.displayAvatarURL({ size: 512 })
-        const avatarColor = await colorExtractor.getColorAsync(avatar)
+        const avatarColor = await getAverageColor(avatar)
 
         const embed = new EmbedBuilder()
             .setTitle(user.displayName)
