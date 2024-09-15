@@ -1,9 +1,11 @@
 const { Events, Presence, Client } = require('discord.js')
 
+const path = require('path')
+
 const JSONdb = require('simple-json-db')
 
-const online = new JSONdb('../database/online.json')
-const offline = new JSONdb('../database/offline.json')
+const online = new JSONdb(path.join('..', 'database', 'online.json'))
+const offline = new JSONdb(path.join('..', 'database', 'offline.json'))
 
 module.exports = {
     event: Events.PresenceUpdate,
