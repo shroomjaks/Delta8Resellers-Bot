@@ -4,7 +4,6 @@ const JSONdb = require('simple-json-db')
 
 const stock = new JSONdb('./database/stock.json')
 const xp = new JSONdb('./database/xp.json')
-const lastonline = new JSONdb('./database/online.json')
 
 const puppeteer = require('puppeteer-core')
 
@@ -37,7 +36,6 @@ module.exports = {
 
         client.stock = stock
         client.xp = xp
-        client.lastonline = lastonline
 
         client.browser = await puppeteer.launch({
             executablePath: '/usr/bin/chromium',

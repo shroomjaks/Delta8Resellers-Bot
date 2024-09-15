@@ -1,4 +1,9 @@
-const { Events, Presence, Client, User } = require('discord.js')
+const { Events, Presence, Client } = require('discord.js')
+
+const JSONdb = require('simple-json-db')
+
+const online = new JSONdb('../database/online.json')
+const offline = new JSONdb('../database/offline.json')
 
 module.exports = {
     event: Events.PresenceUpdate,
@@ -11,12 +16,16 @@ module.exports = {
      * @param {Client} client 
      */
     execute: async function (oldPresence, newPresence, client) {
-        if (!oldPresence.status || !newPresence.status) return
+        if (!oldPresence || !newPresence) return
         if (oldPresence.status === newPresence.status) return
         if (newPresence.user.bot) return
 
         if (oldPresence.status === 'offline') {
-            client.lastonline.set(newPresence.userId, Date.now())
+            online.set(newPresence.userId, Date.now())
+        }
+
+        if (newPresence.status === 'offline') {
+            offline.set(newPresence.userId, Date.now())
         }
     }
 }
