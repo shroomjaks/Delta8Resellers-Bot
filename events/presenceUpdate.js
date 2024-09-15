@@ -4,8 +4,8 @@ const path = require('path')
 
 const JSONdb = require('simple-json-db')
 
-const online = new JSONdb(path.join('..', 'database', 'online.json'))
-const offline = new JSONdb(path.join('..', 'database', 'offline.json'))
+const online = new JSONdb(path.join(__dirname, '..', 'database', 'online.json'))
+const offline = new JSONdb(path.join(__dirname, '..', 'database', 'offline.json'))
 
 module.exports = {
     event: Events.PresenceUpdate,
