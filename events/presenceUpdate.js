@@ -11,7 +11,7 @@ module.exports = {
      * @param {Client} client 
      */
     execute: async function (oldPresence, newPresence, client) {
-        if (!oldPresence || !newPresence) return
+        if (!oldPresence.status || !newPresence.status) return
         if (oldPresence.status === newPresence.status) return
         if (newPresence.user.bot) return
 
