@@ -58,9 +58,9 @@ module.exports = {
             try {
                 const code = message.content.replace(regex, '')
 
-                globalThis['message'] = message
+                globalThis['msg'] = message
                 const result = await Object.getPrototypeOf(async function () { }).constructor(code)()
-                globalThis['message'] = null
+                globalThis['msg'] = null
 
                 await message.delete()
 
