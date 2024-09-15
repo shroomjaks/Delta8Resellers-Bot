@@ -39,14 +39,7 @@ module.exports = {
 
         context.drawImage(profilePicture, 100, 215, 768, 768)
 
-        // Set width to be scaled according to the length of the username
-        let usernamePxWidth = 150
-
-        if (user.username.length > 10) {
-            usernamePxWidth = 100 - (user.username.length - 10) * 5
-        }
-
-        context.font = `bold ${usernamePxWidth}px trebuchet ms`
+        context.font = `bold 150px trebuchet ms`
         context.fillStyle = '#ffffff'
 
         context.fillText(user.username, 980, 415)
