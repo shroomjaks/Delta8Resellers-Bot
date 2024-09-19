@@ -85,7 +85,7 @@
                     "strainName": "Watermelon Zkittlez"
                 }
             ],
-            "stockedStrains": []
+            "strainStock": []
         },
         {
             "uuid": "59b6cd88-da3b-5117-ac1f-d47839caf844",
@@ -122,7 +122,7 @@
                     "strainName": "Tropicana Cookies"
                 }
             ],
-            "stockedStrains": []
+            "strainStock": []
         },
         {
             "uuid": "7fe997e9-115c-506d-967a-f1253fa82be5",
@@ -207,7 +207,7 @@
                     "strainName": "Pineapple Express"
                 }
             ],
-            "stockedStrains": []
+            "strainStock": []
         },
         {
             "uuid": "0d8b482e-96e8-5b86-8c44-32c3c2092f8a",
@@ -248,7 +248,7 @@
                     "strainName": "Trainwreck"
                 }
             ],
-            "stockedStrains": []
+            "strainStock": []
         },
         {
             "uuid": "4c8ff92a-fe42-5feb-8d3a-f2d3ef012180",
@@ -289,7 +289,7 @@
                     "strainName": "Trainwreck"
                 }
             ],
-            "stockedStrains": []
+            "strainStock": []
         },
         {
             "uuid": "b05d81af-d5f4-58eb-8a55-3fba62f36a8f",
@@ -374,7 +374,7 @@
                     "strainName": "Pineapple Express"
                 }
             ],
-            "stockedStrains": []
+            "strainStock": []
         },
         {
             "uuid": "dcec47b6-3113-57d7-9ccc-378aafc2bbb4",
@@ -399,7 +399,7 @@
                     "strainName": "Sour Diesel"
                 }
             ],
-            "stockedStrains": []
+            "strainStock": []
         },
         {
             "uuid": "d27e8422-7dfe-5f00-8139-4e6fd743b91f",
@@ -448,7 +448,7 @@
                     "strainName": "Peach Mango Watermelon"
                 }
             ],
-            "stockedStrains": []
+            "strainStock": []
         },
         {
             "uuid": "f933528b-3118-54ee-a49d-8ba99bf294bd",
@@ -501,7 +501,7 @@
                     "strainName": "Island Peach"
                 }
             ],
-            "stockedStrains": []
+            "strainStock": []
         },
         {
             "uuid": "b8da5b18-15cf-52d1-8ddf-6827ab8c0336",
@@ -538,7 +538,7 @@
                     "strainName": "Watermelon Sangria"
                 }
             ],
-            "stockedStrains": []
+            "strainStock": []
         },
         {
             "uuid": "97c81f63-c7f5-5e2e-afbe-f33aa29eb29f",
@@ -582,7 +582,7 @@
                     "strainName": "Trainwreck"
                 }
             ],
-            "stockedStrains": []
+            "strainStock": []
         },
         {
             "uuid": "7ecf6be3-1f22-558d-ae5a-5896520dbd80",
@@ -681,7 +681,7 @@
                     "strainName": "Pineapple Express"
                 }
             ],
-            "stockedStrains": []
+            "strainStock": []
         }
     ]
 }
