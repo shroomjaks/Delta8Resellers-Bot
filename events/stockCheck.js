@@ -55,6 +55,8 @@ module.exports = {
 
                 dbStock.imageUrl = strainImage
 
+                console.log(dbStock.stock)
+
                 if (dbStock.stock === strainStockAmount) continue
 
                 if (dbStock.stock === 0 && strainStockAmount > 1) {
@@ -79,8 +81,8 @@ module.exports = {
                         }
                     }
 
-                    dbStock.sendLimitedStockWarning = false
-                } else if (strainStockAmount <= 15 && dbStock.sendLimitedStockWarning === false) {
+                    dbStock.sentLimitedStockWarning = false
+                } else if (strainStockAmount <= 15 && dbStock.sentLimitedStockWarning === false) {
                     const embed = new EmbedBuilder()
                         .setTitle(product.name)
                         .setDescription(`Only ${strainStockAmount} "${stockedStrainNames[stockedStrainValues.indexOf(strainValue)]}" left! ⚠️`)
