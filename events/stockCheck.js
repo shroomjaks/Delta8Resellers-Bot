@@ -30,43 +30,6 @@ module.exports = {
 
             const unstockedStrains = product.allStrains.filter(strain => !stockedStrainValues.includes(strain.strainValue))
 
-            for (const strainValue of stockedStrainValues) {
-                await page.select('#pa_flavor', strainValue)
-
-                // Get .stock element text
-                const strainStock = await page.$eval('.stock', element => element.innerText).catch(() => null)
-
-                console.log(strainStock)
-
-                const strainStockAmount = parseInt(strainStock.match(/\d+/g))
-
-                const dbStock = product.strainStock.find(strain => strain.strainValue === strainValue)
-            
-                if (!dbStock) {
-                    product.strainStock.push({
-                        strainValue: strainValue,
-                        strainName: stockedStrainNames[stockedStrainValues.indexOf(strainValue)],
-                        stock: strainStockAmount
-                    })
-                } else {
-                    dbStock.stock = strainStockAmount
-                }
-            }
-
-            for (const strain of unstockedStrains) {
-                const dbStock = product.strainStock.find(strain => strain.strainValue === strain.strainValue)
-
-                if (dbStock) {
-                    dbStock.stock = 0
-                } else {
-                    product.strainStock.push({
-                        strainValue: strain.strainValue,
-                        strainName: strain.strainName,
-                        stock: 0
-                    })
-                }
-            }
-
             const oldStocked = product.stocked
 
             if (!stock) {
@@ -77,9 +40,94 @@ module.exports = {
                 product.stocked = false
             }
 
-            await page.close()
-
             console.info(`Product: ${productTitleText} Stocked: ${product.stocked}`)
+
+            for (const strainValue of stockedStrainValues) {
+                await page.select('#pa_flavor', strainValue)
+
+                // Get .stock element text
+                const strainStock = await page.$eval('.stock', element => element.innerText).catch(() => null)
+                const strainStockAmount = parseInt(strainStock.match(/\d+/g))
+                const strainImage = await page.$eval('.iconic-woothumbs-images__image', element => element.src).catch(() => null)
+
+                console.log(`Strain: ${stockedStrainNames[stockedStrainValues.indexOf(strainValue)]}, Amount: ${strainStockAmount}`)
+
+                const dbStock = product.strainStock.find(strain => strain.strainValue === strainValue)
+
+                dbStock.imageUrl = strainImage
+
+                if (dbStock.stock === strainStockAmount) continue
+                
+                if (dbStock.stock === 0 && strainStockAmount > 1) {
+                    const embed = new EmbedBuilder()
+                        .setTitle(product.name)
+                        .setDescription(`Strain "${stockedStrainNames[stockedStrainValues.indexOf(strainValue)]}" is now in stock. 🎉`)
+                        .setThumbnail(product.imageUrl)
+                        .setURL(product.url)
+                        .setTimestamp(Date.now())
+                        .setColor('#05ef9d')
+
+                    const message = await updateChannel.send({ embeds: [embed] })
+                    await message.crosspost()
+
+                    for (const userId of dbStock.restockReminders) {
+                        const user = await client.users.fetch(userId)
+
+                        try {
+                            await user.send({ embeds: [embed] })
+                        } catch (error) {
+                            console.error(error)
+                        }
+                    }
+
+                    dbStock.sendLimitedStockWarning = false
+                } else if (strainStockAmount <= 10 && dbStock.sendLimitedStockWarning === false) {
+                    const embed = new EmbedBuilder()
+                        .setTitle(product.name)
+                        .setDescription(`Only 10 strains of "${stockedStrainNames[stockedStrainValues.indexOf(strainValue)]}" left! ⚠️`)
+                        .setThumbnail(product.imageUrl)
+                        .setURL(product.url)
+                        .setTimestamp(Date.now())
+                        .setColor('#FFA500')
+
+                    const message = await updateChannel.send({ embeds: [embed] })
+                    await message.crosspost()
+                }
+
+                dbStock.stock = strainStockAmount
+            }
+
+            for (const strain of unstockedStrains) {
+                const dbStock = product.strainStock.find(dbStrain => dbStrain.strainValue === strain.strainValue)
+
+                console.log(`Strain: ${strain.strainName}, Amount: 0`)
+
+                if (dbStock.stock === 0) continue 
+
+                dbStock.stock = 0
+
+                const embed = new EmbedBuilder()
+                    .setTitle(product.name)
+                    .setDescription(`Strain "${strain.strainName}" is now out of stock.`)
+                    .setThumbnail(product.imageUrl)
+                    .setURL(product.url)
+                    .setTimestamp(Date.now())
+                    .setColor('#FF0000')
+                    .setFooter({ text: 'Press the button below to be reminded when this strain is restocked.' })
+
+                const reminderButton = new ButtonBuilder()
+                    .setCustomId(`strain:${strain.strainValue}`)
+                    .setLabel('Remind Me')
+                    .setStyle(ButtonStyle.Primary)
+
+                const actionRow = new ActionRowBuilder()
+                    .addComponents(reminderButton)
+
+                const message = await updateChannel.send({ embeds: [embed], components: [actionRow] })
+                await message.crosspost()
+            }
+
+            await page.close()
 
             if (oldStocked === product.stocked) continue
 
@@ -115,7 +163,7 @@ module.exports = {
                     .setFooter({ text: 'Press the button below to be reminded when this product is restocked.' })
 
                 const reminderButton = new ButtonBuilder()
-                    .setCustomId(product.uuid)
+                    .setCustomId(`product:${product.uuid}`)
                     .setLabel('Remind Me')
                     .setStyle(ButtonStyle.Primary)
 
@@ -125,8 +173,6 @@ module.exports = {
                 const message = await updateChannel.send({ embeds: [embed], components: [actionRow] })
                 await message.crosspost()
             }
-
-            products[products.indexOf(product)].stocked = product.stocked
         }
 
         client.stock.set('products', products)
