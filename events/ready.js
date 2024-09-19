@@ -16,8 +16,6 @@ module.exports = {
      * @param {Client} client 
      */
     execute: async function (client) {
-        console.log(`Logged in as ${client.user.username}`)
-
         // Set the time the client was ready and log it
         client.readyTime = Date.now()
         client.log.online(Date.now())
@@ -43,5 +41,7 @@ module.exports = {
             headless: true,
             args: ['--no-sandbox'],
         })
+
+        console.log(`Logged in as ${client.user.username}`)
     }
 }

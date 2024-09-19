@@ -28,13 +28,16 @@ module.exports = {
             const stockedStrainValues = await page.$$eval('#pa_flavor option', elements => elements.map(element => element.value).filter(value => value !== ''))
             const stockedStrainNames = await page.$$eval('#pa_flavor option', elements => elements.map(element => element.innerText).filter(name => name !== 'Choose an option'))
 
-            const unstockedStrains = product.allStrainNames.filter(strain => !stockedStrainValues.includes(strain.strainValue))
+            const unstockedStrains = product.allStrains.filter(strain => !stockedStrainValues.includes(strain.strainValue))
 
             for (const strainValue of stockedStrainValues) {
                 await page.select('#pa_flavor', strainValue)
 
                 // Get .stock element text
-                const strainStock = await page.$('stock', element => element.innerText).catch(() => null)
+                const strainStock = await page.$eval('.stock', element => element.innerText).catch(() => null)
+
+                console.log(strainStock)
+
                 const strainStockAmount = parseInt(strainStock.match(/\d+/g))
 
                 const dbStock = product.strainStock.find(strain => strain.strainValue === strainValue)
