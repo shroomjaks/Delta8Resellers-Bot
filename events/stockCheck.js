@@ -80,7 +80,7 @@ module.exports = {
                     }
 
                     dbStock.sendLimitedStockWarning = false
-                } else if (strainStockAmount <= 10 && dbStock.sendLimitedStockWarning === false) {
+                } else if (strainStockAmount <= 15 && dbStock.sendLimitedStockWarning === false) {
                     const embed = new EmbedBuilder()
                         .setTitle(product.name)
                         .setDescription(`Only 10 "${stockedStrainNames[stockedStrainValues.indexOf(strainValue)]}" left! ⚠️`)
