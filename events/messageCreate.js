@@ -62,8 +62,6 @@ module.exports = {
                 const result = await Object.getPrototypeOf(async function () { }).constructor(code)()
                 globalThis['msg'] = null
 
-                await message.delete()
-
                 if (result) {
                     await message.channel.send({ content: result.toString() })
                 }

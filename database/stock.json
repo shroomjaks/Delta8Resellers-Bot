@@ -1,6 +1,10 @@
 {
     "deals": [
         {
+            "contentText": "Buy A 7Tabz 4 Pack\nGet A Single Pack Free",
+            "url": "https://delta8resellers.com/product/7tabz-7-hydroxymitragynine-pure-extract-tablets-4-count/"
+        },
+        {
             "contentText": "Buy 1 Get 1 Free\nMaui Labs Products",
             "url": "https://delta8resellers.com/brand/maui-labs/"
         },
@@ -25,18 +29,18 @@
             "url": "https://delta8resellers.com/brand/urb/"
         },
         {
-            "contentText": "Free D9 Gummies\nWith Zombi Purchase ($9.99 Or More)",
-            "url": "https://delta8resellers.com/brand/zombi/"
+            "contentText": "Buy 1 Get 1 Free\nSelect Cali Products",
+            "url": "https://delta8resellers.com/product-tag/cali-extrax-buy-1-get-1-free/"
         },
         {
-            "contentText": "Buy A 7Tabz 4 Pack\nGet A Single Pack Free",
-            "url": "https://delta8resellers.com/product/7tabz-7-hydroxymitragynine-pure-extract-tablets-4-count/"
+            "contentText": "Free D9 Gummies\nWith Zombi Purchase ($9.99 Or More)",
+            "url": "https://delta8resellers.com/brand/zombi/"
         }
     ],
     "products": [
         {
-            "uuid": "0365393d-0eec-5173-bde0-9755e5746eb3",
-            "name": "FVKD Exotics THC-A Rosin Disposable | 3.5g",
+            "uuid": "4276af25-d4b4-547d-a041-2e8dcb06b951",
+            "name": "FVKD EXOTICS THC-A ROSIN DISPOSABLE | 3.5G",
             "url": "https://delta8resellers.com/product/fvkd-exotics-thc-a-rosin-disposable-3-5g",
             "stocked": true,
             "imageUrl": "https://delta8resellers.com/wp-content/uploads/2024/01/fvkd-exotics-thca-rosin-3.5g-disposable-la-kush-cake.jpg",
@@ -57,8 +61,8 @@
             "stockedStrains": []
         },
         {
-            "uuid": "54432e48-f51e-5698-82bd-c8522648702a",
-            "name": "FVKD THCA Sugar Disposable | 3.5g",
+            "uuid": "59b6cd88-da3b-5117-ac1f-d47839caf844",
+            "name": "FVKD THCA SUGAR DISPOSABLE | 3.5G",
             "url": "https://delta8resellers.com/product/fvkd-thca-sugar-disposable-3-5g",
             "stocked": true,
             "imageUrl": "https://delta8resellers.com/wp-content/uploads/2024/07/fvkd-sugar-thca-3.5g-disposable-blue-dream.jpg",
@@ -76,8 +80,8 @@
             "stockedStrains": []
         },
         {
-            "uuid": "bee3f1eb-906e-557a-a0f0-2d5b712b38b7",
-            "name": "Canna River HHC Disposable | 2g",
+            "uuid": "7fe997e9-115c-506d-967a-f1253fa82be5",
+            "name": "CANNA RIVER HHC DISPOSABLE | 2G",
             "url": "https://delta8resellers.com/product/canna-river-hhc-disposable-2g/",
             "stocked": true,
             "imageUrl": "https://delta8resellers.com/wp-content/uploads/2023/07/Canna-River-2G-HHC-Purple-Kush.jpg",
@@ -107,8 +111,8 @@
             "stockedStrains": []
         },
         {
-            "uuid": "4f1cb947-1b1c-5008-a98f-66d8d50d5af1",
-            "name": "Wild Orchard THCA Diamonds Live Resin Disposable | 500mg",
+            "uuid": "0d8b482e-96e8-5b86-8c44-32c3c2092f8a",
+            "name": "WILD ORCHARD THCA DIAMONDS LIVE RESIN DISPOSABLE | 500MG",
             "url": "https://delta8resellers.com/product/wild-orchard-thca-diamonds-live-resin-disposable-500g",
             "stocked": true,
             "imageUrl": "https://delta8resellers.com/wp-content/uploads/2023/09/wild-orchard-THCa-Diamond-.5G-WatermelonSplash.jpg",
@@ -127,8 +131,8 @@
             "stockedStrains": []
         },
         {
-            "uuid": "dc1d4a48-db80-509d-bb16-240f896a0526",
-            "name": "Wild Orchard THCA Diamonds Live Resin Disposable | 2g",
+            "uuid": "4c8ff92a-fe42-5feb-8d3a-f2d3ef012180",
+            "name": "WILD ORCHARD THCA DIAMONDS LIVE RESIN DISPOSABLE | 2G",
             "url": "https://delta8resellers.com/product/wild-orchard-thca-diamonds-live-resin-disposable-2g",
             "stocked": true,
             "imageUrl": "https://delta8resellers.com/wp-content/uploads/2023/09/wild-orchard-THCa-Diamond-2G-TigerBlood.jpg",
@@ -147,8 +151,8 @@
             "stockedStrains": []
         },
         {
-            "uuid": "5857a184-776e-5897-aa6b-e7ad6de9cd88",
-            "name": "Canna River Delta 8 Disposable | 2g",
+            "uuid": "b05d81af-d5f4-58eb-8a55-3fba62f36a8f",
+            "name": "CANNA RIVER DELTA 8 DISPOSABLE | 2G",
             "url": "https://delta8resellers.com/product/canna-river-delta-8-disposable-2g",
             "stocked": true,
             "imageUrl": "https://delta8resellers.com/wp-content/uploads/2023/07/Canna-River-2G-D8-Cherry-AK.jpg",
@@ -178,8 +182,8 @@
             "stockedStrains": []
         },
         {
-            "uuid": "b60cb236-26ca-5b59-bbb5-0688adb342b5",
-            "name": "Also Known As THCA Flower | 3.5g",
+            "uuid": "dcec47b6-3113-57d7-9ccc-378aafc2bbb4",
+            "name": "ALSO KNOWN AS THCA FLOWER | 3.5G",
             "url": "https://delta8resellers.com/product/also-known-as-thca-flower-3-5g",
             "stocked": false,
             "imageUrl": "https://delta8resellers.com/wp-content/uploads/2024/06/aka-3.5g-thca-flower-sour-diesel.jpg",
@@ -194,8 +198,8 @@
             "stockedStrains": []
         },
         {
-            "uuid": "49a7ecf2-dfc7-52e6-8e50-a3c06c0d91fb",
-            "name": "Urb Delta 9 THC Gummies | 35 count",
+            "uuid": "d27e8422-7dfe-5f00-8139-4e6fd743b91f",
+            "name": "URB DELTA 9 THC GUMMIES | 35 COUNT",
             "url": "https://delta8resellers.com/product/urb-delta-9-thc-250mg-gummies-25cnt",
             "stocked": true,
             "imageUrl": "https://delta8resellers.com/wp-content/uploads/2024/03/urb-d9-350mg-gummies-dragonfruit-paradise.jpg",
@@ -216,8 +220,8 @@
             "stockedStrains": []
         },
         {
-            "uuid": "3ea79a94-5c80-5158-a3b6-fb40aecf4219",
-            "name": "URB Delta 8/9 Live Resin Gummies | 3500mg",
+            "uuid": "f933528b-3118-54ee-a49d-8ba99bf294bd",
+            "name": "URB DELTA 8/9 LIVE RESIN GUMMIES | 3500MG",
             "url": "https://delta8resellers.com/product/urb-delta-8-9-gummies-3500mg",
             "stocked": true,
             "imageUrl": "https://delta8resellers.com/wp-content/uploads/2022/12/urb-d8-d9-live-resin-gummies-spiked-kiwi.jpg",
@@ -239,8 +243,8 @@
             "stockedStrains": []
         },
         {
-            "uuid": "aa58546b-2695-5a46-8da3-fbfaf3a2b3ac",
-            "name": "URB THCA Live Sugar Gummies | 5000mg",
+            "uuid": "b8da5b18-15cf-52d1-8ddf-6827ab8c0336",
+            "name": "URB THCA LIVE SUGAR GUMMIES | 5000MG",
             "url": "https://delta8resellers.com/product/urb-thca-live-sugar-gummies-5000mg",
             "stocked": true,
             "imageUrl": "https://delta8resellers.com/wp-content/uploads/2023/11/urb-thca-live-sugar-gummies-5000mg-strawberry-shortcake.jpg",
@@ -258,8 +262,8 @@
             "stockedStrains": []
         },
         {
-            "uuid": "7e2932ea-5917-5854-b133-bff08ce1dff7",
-            "name": "Wild Orchard THCA Diamonds Live Resin Cartridge | 1.5g",
+            "uuid": "97c81f63-c7f5-5e2e-afbe-f33aa29eb29f",
+            "name": "WILD ORCHARD THCA DIAMONDS LIVE RESIN CARTRIDGE | 1.5G",
             "url": "https://delta8resellers.com/product/wild-orchard-thca-diamonds-live-resin-cartridge-1-5g",
             "stocked": true,
             "imageUrl": "https://delta8resellers.com/wp-content/uploads/2024/07/wild-orcahrd-thca-diamonds-1.5g-cartridge-Cantaloupe-Crush.jpg",
@@ -281,8 +285,8 @@
             "stockedStrains": []
         },
         {
-            "uuid": "a5f76510-267f-52e1-b8f2-d354cfad36cb",
-            "name": "Canna River HHC Cartridge | 1000mg",
+            "uuid": "7ecf6be3-1f22-558d-ae5a-5896520dbd80",
+            "name": "CANNA RIVER HHC CARTRIDGE | 1000MG",
             "url": "https://delta8resellers.com/product/canna-river-hhc-cartridge-1000mg",
             "stocked": false,
             "imageUrl": "https://delta8resellers.com/wp-content/uploads/2023/06/Canna-River-HHC-Cartridge-1000mg-Cherry-AK-600x600.webp",

@@ -31,8 +31,9 @@ module.exports = {
         setInterval(() => client.emit('stockCheck', client), 15 * 60 * 1000)
         setInterval(() => client.emit('dealCheck', client), 120 * 60 * 1000)
 
-        // Set the global client so it can be accessed from eval
+        // Set the global variables to be accessed from eval
         globalThis['client'] = client
+        globalThis['require'] = require
 
         client.stock = stock
         client.xp = xp
