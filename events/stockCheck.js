@@ -24,7 +24,6 @@ module.exports = {
             const stockText = await page.$eval('.stock', element => element.innerText).catch(() => null)
             const productTitleText = await page.$eval('.product_title', element => element.innerText)
 
-            // Get option elements under #pa_flavor, excluding no value options
             const stockedStrainValues = await page.$$eval('#pa_flavor option', elements => elements.map(element => element.value).filter(value => value !== ''))
             const stockedStrainNames = await page.$$eval('#pa_flavor option', elements => elements.map(element => element.innerText).filter(name => name !== 'Choose an option'))
 
