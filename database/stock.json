@@ -42,21 +42,48 @@
             "uuid": "4276af25-d4b4-547d-a041-2e8dcb06b951",
             "name": "FVKD EXOTICS THC-A ROSIN DISPOSABLE | 3.5G",
             "url": "https://delta8resellers.com/product/fvkd-exotics-thc-a-rosin-disposable-3-5g",
-            "stocked": true,
             "imageUrl": "https://delta8resellers.com/wp-content/uploads/2024/01/fvkd-exotics-thca-rosin-3.5g-disposable-la-kush-cake.jpg",
+            "stocked": true,
             "restockReminders": [
                 "540302379027791902"
             ],
             "allStrainNames": [
-                "Alaskan Thunder FVKD",
-                "Forbidden Fruit",
-                "LA Kush Cake",
-                "Blueberry Kush",
-                "Fruit Punch",
-                "Mandarin Cookies",
-                "Wedding Cake",
-                "Space Cake",
-                "Watermelon Zkittlez"
+                {
+                    "strainValue": "alaskan-thunder-fvkd",
+                    "strainName": "Alaskan Thunder FVKD"
+                },
+                {
+                    "strainValue": "blueberry-kush",
+                    "strainName": "Blueberry Kush"
+                },
+                {
+                    "strainValue": "forbidden-fruit",
+                    "strainName": "Forbidden Fruit"
+                },
+                {
+                    "strainValue": "fruit-punch",
+                    "strainName": "Fruit Punch"
+                },
+                {
+                    "strainValue": "la-kush-cake",
+                    "strainName": "LA Kush Cake"
+                },
+                {
+                    "strainValue": "mandarin-cookies",
+                    "strainName": "Mandarin Cookies"
+                },
+                {
+                    "strainValue": "space-cake",
+                    "strainName": "Space Cake"
+                },
+                {
+                    "strainValue": "wedding-cake",
+                    "strainName": "Wedding Cake"
+                },
+                {
+                    "strainValue": "watermelon-zkittlez",
+                    "strainName": "Watermelon Zkittlez"
+                }
             ],
             "stockedStrains": []
         },
@@ -64,18 +91,36 @@
             "uuid": "59b6cd88-da3b-5117-ac1f-d47839caf844",
             "name": "FVKD THCA SUGAR DISPOSABLE | 3.5G",
             "url": "https://delta8resellers.com/product/fvkd-thca-sugar-disposable-3-5g",
-            "stocked": true,
             "imageUrl": "https://delta8resellers.com/wp-content/uploads/2024/07/fvkd-sugar-thca-3.5g-disposable-blue-dream.jpg",
+            "stocked": true,
             "restockReminders": [
                 "540302379027791902"
             ],
-            "allStrainNames": [
-                "Alien Kush",
-                "Blue Dream",
-                "Mimosa",
-                "Granddaddy Purp",
-                "Strawberry Cough",
-                "Tropicana Cookies"
+            "allStrains": [
+                {
+                    "strainValue": "alien-kush",
+                    "strainName": "Alien Kush"
+                },
+                {
+                    "strainValue": "blue-dream",
+                    "strainName": "Blue Dream"
+                },
+                {
+                    "strainValue": "mimosa",
+                    "strainName": "Mimosa"
+                },
+                {
+                    "strainValue": "granddady-purp",
+                    "strainName": "Grandaddy Purp"
+                },
+                {
+                    "strainValue": "strawberry-cough",
+                    "strainName": "Strawberry Cough"
+                },
+                {
+                    "strainValue": "tropicana-cookies",
+                    "strainName": "Tropicana Cookies"
+                }
             ],
             "stockedStrains": []
         },
@@ -83,30 +128,84 @@
             "uuid": "7fe997e9-115c-506d-967a-f1253fa82be5",
             "name": "CANNA RIVER HHC DISPOSABLE | 2G",
             "url": "https://delta8resellers.com/product/canna-river-hhc-disposable-2g/",
-            "stocked": true,
             "imageUrl": "https://delta8resellers.com/wp-content/uploads/2023/07/Canna-River-2G-HHC-Purple-Kush.jpg",
+            "stocked": true,
             "restockReminders": [
                 "540302379027791902"
             ],
-            "allStrainNames": [
-                "Blue Dream",
-                "Blue Razz",
-                "Cherry AK",
-                "Glueberry Express",
-                "Green Crack",
-                "Hawaiian Snowcap",
-                "Hindu Honeycrisp",
-                "Lemon Jack",
-                "Mango Cake",
-                "Purple Kush",
-                "Rainbow Sherbet",
-                "Strawberry Fields",
-                "Strawberry Tartz",
-                "Tahiti Lime",
-                "Tropicana Kush",
-                "Watermelon",
-                "Wedding Cake",
-                "Pineapple Express"
+            "allStrains": [
+                {
+                    "strainValue": "blue-dream",
+                    "strainName": "Blue Dream"
+                },
+                {
+                    "strainValue": "blue-razz",
+                    "strainName": "Blue Razz"
+                },
+                {
+                    "strainValue": "cherry-ak",
+                    "strainName": "Cherry AK"
+                },
+                {
+                    "strainValue": "glueberry-express",
+                    "strainName": "Glueberry Express"
+                },
+                {
+                    "strainValue": "green-crack",
+                    "strainName": "Green Crack"
+                },
+                {
+                    "strainValue": "hawaiian-snowcap",
+                    "strainName": "Hawaiian Snowcap"
+                },
+                {
+                    "strainValue": "hindu-honeycrisp",
+                    "strainName": "Hindu Honeycrisp"
+                },
+                {
+                    "strainValue": "lemon-jack",
+                    "strainName": "Lemon Jack"
+                },
+                {
+                    "strainValue": "mango-cake",
+                    "strainName": "Mango Cake"
+                },
+                {
+                    "strainValue": "purple-kush",
+                    "strainName": "Purple Kush"
+                },
+                {
+                    "strainValue": "rainbow-sherbet",
+                    "strainName": "Rainbow Sherbet"
+                },
+                {
+                    "strainValue": "strawberry-fields",
+                    "strainName": "Strawberry Fields"
+                },
+                {
+                    "strainValue": "strawberry-tartz",
+                    "strainName": "Strawberry Tartz"
+                },
+                {
+                    "strainValue": "tahiti-lime",
+                    "strainName": "Tahiti Lime"
+                },
+                {
+                    "strainValue": "tropicana-kush",
+                    "strainName": "Tropicana Kush"
+                },
+                {
+                    "strainValue": "watermelon-zkittles",
+                    "strainName": "Watermelon Zkittlez"
+                },
+                {
+                    "strainValue": "wedding-cake",
+                    "strainName": "Wedding Cake"
+                },
+                {
+                    "strainValue": "pineapple-express",
+                    "strainName": "Pineapple Express"
+                }
             ],
             "stockedStrains": []
         },
@@ -114,19 +213,40 @@
             "uuid": "0d8b482e-96e8-5b86-8c44-32c3c2092f8a",
             "name": "WILD ORCHARD THCA DIAMONDS LIVE RESIN DISPOSABLE | 500MG",
             "url": "https://delta8resellers.com/product/wild-orchard-thca-diamonds-live-resin-disposable-500g",
-            "stocked": true,
             "imageUrl": "https://delta8resellers.com/wp-content/uploads/2023/09/wild-orchard-THCa-Diamond-.5G-WatermelonSplash.jpg",
+            "stocked": true,
             "restockReminders": [
                 "540302379027791902"
             ],
-            "allStrainNames": [
-                "Cantaloupe Crush",
-                "Fruit Punch",
-                "Peaches and Cream",
-                "Tigers Blood",
-                "Watermelon Splash",
-                "Northern Lights",
-                "Trainwreck"
+            "allStrains": [
+                {
+                    "strainValue": "cantaloupe-crush",
+                    "strainName": "Cantaloupe Crush"
+                },
+                {
+                    "strainValue": "fruit-punch",
+                    "strainName": "Fruit Punch"
+                },
+                {
+                    "strainValue": "peaches-and-cream",
+                    "strainName": "Peaches and Cream"
+                },
+                {
+                    "strainValue": "tigers-blood",
+                    "strainName": "Tigers Blood"
+                },
+                {
+                    "strainValue": "watermelon-splash",
+                    "strainName": "Watermelon Splash"
+                },
+                {
+                    "strainValue": "northern-lights",
+                    "strainName": "Northern Lights"
+                },
+                {
+                    "strainValue": "trainwreck",
+                    "strainName": "Trainwreck"
+                }
             ],
             "stockedStrains": []
         },
@@ -134,19 +254,40 @@
             "uuid": "4c8ff92a-fe42-5feb-8d3a-f2d3ef012180",
             "name": "WILD ORCHARD THCA DIAMONDS LIVE RESIN DISPOSABLE | 2G",
             "url": "https://delta8resellers.com/product/wild-orchard-thca-diamonds-live-resin-disposable-2g",
-            "stocked": true,
             "imageUrl": "https://delta8resellers.com/wp-content/uploads/2023/09/wild-orchard-THCa-Diamond-2G-TigerBlood.jpg",
+            "stocked": true,
             "restockReminders": [
                 "540302379027791902"
             ],
-            "allStrainNames": [
-                "Cantaloupe Crush",
-                "Fruit Punch",
-                "Peaches and Cream",
-                "Tigers Blood",
-                "Watermelon Splash",
-                "Northern Lights",
-                "Trainwreck"
+            "allStrains": [
+                {
+                    "strainValue": "cantaloupe-crush",
+                    "strainName": "Cantaloupe Crush"
+                },
+                {
+                    "strainValue": "fruit-punch",
+                    "strainName": "Fruit Punch"
+                },
+                {
+                    "strainValue": "peaches-and-cream",
+                    "strainName": "Peaches and Cream"
+                },
+                {
+                    "strainValue": "tigers-blood",
+                    "strainName": "Tigers Blood"
+                },
+                {
+                    "strainValue": "watermelon-splash",
+                    "strainName": "Watermelon Splash"
+                },
+                {
+                    "strainValue": "northern-lights",
+                    "strainName": "Northern Lights"
+                },
+                {
+                    "strainValue": "trainwreck",
+                    "strainName": "Trainwreck"
+                }
             ],
             "stockedStrains": []
         },
@@ -154,30 +295,84 @@
             "uuid": "b05d81af-d5f4-58eb-8a55-3fba62f36a8f",
             "name": "CANNA RIVER DELTA 8 DISPOSABLE | 2G",
             "url": "https://delta8resellers.com/product/canna-river-delta-8-disposable-2g",
-            "stocked": true,
             "imageUrl": "https://delta8resellers.com/wp-content/uploads/2023/07/Canna-River-2G-D8-Cherry-AK.jpg",
+            "stocked": true,
             "restockReminders": [
                 "540302379027791902"
             ],
-            "allStrainNames": [
-                "Blue Dream",
-                "Blue Razz",
-                "Cherry AK",
-                "Glueberry Express",
-                "Green Crack",
-                "Hawaiian Snowcap",
-                "Hindu Honeycrisp",
-                "Lemon Jack",
-                "Mango Cake",
-                "Purple Kush",
-                "Rainbow Sherbet",
-                "Strawberry Fields",
-                "Strawberry Tartz",
-                "Tahiti Lime",
-                "Tropicana Kush",
-                "Watermelon",
-                "Wedding Cake",
-                "Pineapple Express"
+            "allStrains": [
+                {
+                    "strainValue": "blue-dream",
+                    "strainName": "Blue Dream"
+                },
+                {
+                    "strainValue": "blue-razz",
+                    "strainName": "Blue Razz"
+                },
+                {
+                    "strainValue": "cherry-a-k",
+                    "strainName": "Cherry AK"
+                },
+                {
+                    "strainValue": "glueberry-express",
+                    "strainName": "Glueberry Express"
+                },
+                {
+                    "strainValue": "green-crack",
+                    "strainName": "Green Crack"
+                },
+                {
+                    "strainValue": "hawaiian-snowcap",
+                    "strainName": "Hawaiian Snowcap"
+                },
+                {
+                    "strainValue": "hindu-honeycrisp",
+                    "strainName": "Hindu Honeycrisp"
+                },
+                {
+                    "strainValue": "lemon-jack",
+                    "strainName": "Lemon Jack"
+                },
+                {
+                    "strainValue": "mango-cake",
+                    "strainName": "Mango Cake"
+                },
+                {
+                    "strainValue": "purple-kush",
+                    "strainName": "Purple Kush"
+                },
+                {
+                    "strainValue": "rainbow-sherbet",
+                    "strainName": "Rainbow Sherbet"
+                },
+                {
+                    "strainValue": "strawberry-fields",
+                    "strainName": "Strawberry Fields"
+                },
+                {
+                    "strainValue": "strawberry-tartz",
+                    "strainName": "Strawberry Tartz"
+                },
+                {
+                    "strainValue": "tahiti-lime",
+                    "strainName": "Tahiti Lime"
+                },
+                {
+                    "strainValue": "tropicana-kush",
+                    "strainName": "Tropicana Kush"
+                },
+                {
+                    "strainValue": "watermelon-zkittles",
+                    "strainName": "Watermelon"
+                },
+                {
+                    "strainValue": "wedding-cake",
+                    "strainName": "Wedding Cake"
+                },
+                {
+                    "strainValue": "pineapple-express",
+                    "strainName": "Pineapple Express"
+                }
             ],
             "stockedStrains": []
         },
@@ -185,15 +380,24 @@
             "uuid": "dcec47b6-3113-57d7-9ccc-378aafc2bbb4",
             "name": "ALSO KNOWN AS THCA FLOWER | 3.5G",
             "url": "https://delta8resellers.com/product/also-known-as-thca-flower-3-5g",
-            "stocked": false,
             "imageUrl": "https://delta8resellers.com/wp-content/uploads/2024/06/aka-3.5g-thca-flower-sour-diesel.jpg",
+            "stocked": false,
             "restockReminders": [
                 "540302379027791902"
             ],
-            "allStrainNames": [
-                "LA Kush",
-                "Purple Cookies",
-                "Sour Diesel"
+            "allStrains": [
+                {
+                    "strainValue": "la-kush",
+                    "strainName": "LA Kush"
+                },
+                {
+                    "strainValue": "purple-cookies",
+                    "strainName": "Purple Cookies"
+                },
+                {
+                    "strainValue": "sour-diesel",
+                    "strainName": "Sour Diesel"
+                }
             ],
             "stockedStrains": []
         },
@@ -201,21 +405,48 @@
             "uuid": "d27e8422-7dfe-5f00-8139-4e6fd743b91f",
             "name": "URB DELTA 9 THC GUMMIES | 35 COUNT",
             "url": "https://delta8resellers.com/product/urb-delta-9-thc-250mg-gummies-25cnt",
-            "stocked": true,
             "imageUrl": "https://delta8resellers.com/wp-content/uploads/2024/03/urb-d9-350mg-gummies-dragonfruit-paradise.jpg",
+            "stocked": true,
             "restockReminders": [
                 "540302379027791902"
             ],
-            "allStrainNames": [
-                "Dragon Fruit Paradise",
-                "Lemon",
-                "Sour Blueberry",
-                "Passionfruit Mango",
-                "Prickly Pear Watermelon",
-                "Honeydew Melon",
-                "Dragonberry Lemonade",
-                "Kiwi Lemonade",
-                "Peach Mango Watermelon"
+            "allStrains": [
+                {
+                    "strainValue": "dragon-fruit-paradise",
+                    "strainName": "Dragon Fruit Paradise"
+                },
+                {
+                    "strainValue": "lemon",
+                    "strainName": "Lemon"
+                },
+                {
+                    "strainValue": "sour-blueberry",
+                    "strainName": "Sour Blueberry"
+                },
+                {
+                    "strainValue": "passionfruit-mango",
+                    "strainName": "Passionfruit Mango"
+                },
+                {
+                    "strainValue": "prickly-pear-watermelon",
+                    "strainName": "Prickly Pear Watermelon"
+                },
+                {
+                    "strainValue": "honeydew-melon",
+                    "strainName": "Honeydew Melon"
+                },
+                {
+                    "strainValue": "dragonberry-lemonade",
+                    "strainName": "Dragonberry Lemonade"
+                },
+                {
+                    "strainValue": "kiwi-lemonade",
+                    "strainName": "Kiwi Lemonade"
+                },
+                {
+                    "strainValue": "peach-mango-watermelon",
+                    "strainName": "Peach Mango Watermelon"
+                }
             ],
             "stockedStrains": []
         },
@@ -223,22 +454,52 @@
             "uuid": "f933528b-3118-54ee-a49d-8ba99bf294bd",
             "name": "URB DELTA 8/9 LIVE RESIN GUMMIES | 3500MG",
             "url": "https://delta8resellers.com/product/urb-delta-8-9-gummies-3500mg",
-            "stocked": true,
             "imageUrl": "https://delta8resellers.com/wp-content/uploads/2022/12/urb-d8-d9-live-resin-gummies-spiked-kiwi.jpg",
+            "stocked": true,
             "restockReminders": [
                 "540302379027791902"
             ],
-            "allStrainNames": [
-                "Apple Berri",
-                "Lavish Fresa",
-                "Spiked Kiwi",
-                "Berry Burst",
-                "Blue Watermelon",
-                "Tropical Breeze",
-                "Sour Waterberry",
-                "Ruby Grapefruit",
-                "Passionfruit Margarita",
-                "Island Peach"
+            "allStrains": [
+                {
+                    "strainValue": "apple-berri",
+                    "strainName": "Apple Berri"
+                },
+                {
+                    "strainValue": "lavish-fresa",
+                    "strainName": "Lavish Fresa"
+                },
+                {
+                    "strainValue": "spiked-kiwi",
+                    "strainName": "Spiked Kiwi"
+                },
+                {
+                    "strainValue": "berry-burst",
+                    "strainName": "Berry Burst"
+                },
+                {
+                    "strainValue": "blue-watermelon",
+                    "strainName": "Blue Watermelon"
+                },
+                {
+                    "strainValue": "tropical-breeze",
+                    "strainName": "Tropical Breeze"
+                },
+                {
+                    "strainValue": "sour-waterberry",
+                    "strainName": "Sour Waterberry"
+                },
+                {
+                    "strainValue": "ruby-grapefruit",
+                    "strainName": "Ruby Grapefruit"
+                },
+                {
+                    "strainValue": "passionfruit-margarita",
+                    "strainName": "Passionfruit Margarita"
+                },
+                {
+                    "strainValue": "island-peach",
+                    "strainName": "Island Peach"
+                }
             ],
             "stockedStrains": []
         },
@@ -246,18 +507,36 @@
             "uuid": "b8da5b18-15cf-52d1-8ddf-6827ab8c0336",
             "name": "URB THCA LIVE SUGAR GUMMIES | 5000MG",
             "url": "https://delta8resellers.com/product/urb-thca-live-sugar-gummies-5000mg",
-            "stocked": true,
             "imageUrl": "https://delta8resellers.com/wp-content/uploads/2023/11/urb-thca-live-sugar-gummies-5000mg-strawberry-shortcake.jpg",
+            "stocked": true,
             "restockReminders": [
                 "540302379027791902"
             ],
-            "allStrainNames": [
-                "Guava Gelato",
-                "Papaya Punch",
-                "Sour Blueberry",
-                "Strawberry Shortcake",
-                "Tangie Banana",
-                "Watermelon Sangria"
+            "allStrains": [
+                {
+                    "strainValue": "guava-gelato",
+                    "strainName": "Guava Gelato"
+                },
+                {
+                    "strainValue": "papaya-punch",
+                    "strainName": "Papaya Punch"
+                },
+                {
+                    "strainValue": "sour-blueberry",
+                    "strainName": "Sour Blueberry"
+                },
+                {
+                    "strainValue": "strawberry-shortcake",
+                    "strainName": "Strawberry Shortcake"
+                },
+                {
+                    "strainValue": "tangie-banana",
+                    "strainName": "Tangie Banana"
+                },
+                {
+                    "strainValue": "watermelon-sangria",
+                    "strainName": "Watermelon Sangria"
+                }
             ],
             "stockedStrains": []
         },
@@ -265,22 +544,43 @@
             "uuid": "97c81f63-c7f5-5e2e-afbe-f33aa29eb29f",
             "name": "WILD ORCHARD THCA DIAMONDS LIVE RESIN CARTRIDGE | 1.5G",
             "url": "https://delta8resellers.com/product/wild-orchard-thca-diamonds-live-resin-cartridge-1-5g",
-            "stocked": true,
             "imageUrl": "https://delta8resellers.com/wp-content/uploads/2024/07/wild-orcahrd-thca-diamonds-1.5g-cartridge-Cantaloupe-Crush.jpg",
+            "stocked": true,
             "restockReminders": [
                 "540302379027791902",
                 "856639315743604807",
                 "557647328568279060",
                 "1018373360142520440"
             ],
-            "allStrainNames": [
-                "Cantaloupe Crush",
-                "Fruit Punch",
-                "Peaches and Cream",
-                "Tigers Blood",
-                "Watermelon Splash",
-                "Northern Lights",
-                "Trainwreck"
+            "allStrains": [
+                {
+                    "strainValue": "cantaloupe-crush",
+                    "strainName": "Cantaloupe Crush"
+                },
+                {
+                    "strainValue": "fruit-punch",
+                    "strainName": "Fruit Punch"
+                },
+                {
+                    "strainValue": "peaches-and-cream",
+                    "strainName": "Peaches and Cream"
+                },
+                {
+                    "strainValue": "tigers-blood",
+                    "strainName": "Tigers Blood"
+                },
+                {
+                    "strainValue": "watermelon-splash",
+                    "strainName": "Watermelon Splash"
+                },
+                {
+                    "strainValue": "northern-lights",
+                    "strainName": "Northern Lights"
+                },
+                {
+                    "strainValue": "trainwreck",
+                    "strainName": "Trainwreck"
+                }
             ],
             "stockedStrains": []
         },
@@ -288,8 +588,8 @@
             "uuid": "7ecf6be3-1f22-558d-ae5a-5896520dbd80",
             "name": "CANNA RIVER HHC CARTRIDGE | 1000MG",
             "url": "https://delta8resellers.com/product/canna-river-hhc-cartridge-1000mg",
-            "stocked": false,
             "imageUrl": "https://delta8resellers.com/wp-content/uploads/2023/06/Canna-River-HHC-Cartridge-1000mg-Cherry-AK-600x600.webp",
+            "stocked": false,
             "restockReminders": [
                 "540302379027791902",
                 "856639315743604807",
@@ -307,25 +607,79 @@
                 "885333402432192522",
                 "1128880105788293281"
             ],
-            "allStrainNames": [
-                "Blue Dream",
-                "Blue Razz",
-                "Cherry AK",
-                "Glueberry Express",
-                "Green Crack",
-                "Hawaiian Snowcap",
-                "Hindu Honeycrisp",
-                "Lemon Jack",
-                "Mango Cake",
-                "Purple Kush",
-                "Rainbow Sherbet",
-                "Strawberry Fields",
-                "Strawberry Tartz",
-                "Tahiti Lime",
-                "Tropicana Kush",
-                "Watermelon",
-                "Wedding Cake",
-                "Pineapple Express"
+            "allStrains": [
+                {
+                    "strainValue": "blue-dream",
+                    "strainName": "Blue Dream"
+                },
+                {
+                    "strainValue": "blue-razz",
+                    "strainName": "Blue Razz"
+                },
+                {
+                    "strainValue": "cherry-ak",
+                    "strainName": "Cherry AK"
+                },
+                {
+                    "strainValue": "glueberry-express",
+                    "strainName": "Glueberry Express"
+                },
+                {
+                    "strainValue": "green-crack",
+                    "strainName": "Green Crack"
+                },
+                {
+                    "strainValue": "hawaiian-snowcap",
+                    "strainName": "Hawaiian Snowcap"
+                },
+                {
+                    "strainValue": "hindu-honeycrisp",
+                    "strainName": "Hindu Honeycrisp"
+                },
+                {
+                    "strainValue": "lemon-jack",
+                    "strainName": "Lemon Jack"
+                },
+                {
+                    "strainValue": "mango-cake",
+                    "strainName": "Mango Cake"
+                },
+                {
+                    "strainValue": "purple-kush",
+                    "strainName": "Purple Kush"
+                },
+                {
+                    "strainValue": "rainbow-sherbet",
+                    "strainName": "Rainbow Sherbet"
+                },
+                {
+                    "strainValue": "strawberry-fields",
+                    "strainName": "Strawberry Fields"
+                },
+                {
+                    "strainValue": "strawberry-tartz",
+                    "strainName": "Strawberry Tartz"
+                },
+                {
+                    "strainValue": "tahiti-lime",
+                    "strainName": "Tahiti Lime"
+                },
+                {
+                    "strainValue": "tropicana-kush",
+                    "strainName": "Tropicana Kush"
+                },
+                {
+                    "strainValue": "watermelon-zkittles",
+                    "strainName": "Watermelon"
+                },
+                {
+                    "strainValue": "wedding-cake",
+                    "strainName": "Wedding Cake"
+                },
+                {
+                    "strainValue": "pineapple-express",
+                    "strainName": "Pineapple Express"
+                }
             ],
             "stockedStrains": []
         }
