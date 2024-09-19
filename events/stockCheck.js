@@ -57,12 +57,12 @@ module.exports = {
                 dbStock.imageUrl = strainImage
 
                 if (dbStock.stock === strainStockAmount) continue
-                
+
                 if (dbStock.stock === 0 && strainStockAmount > 1) {
                     const embed = new EmbedBuilder()
                         .setTitle(product.name)
                         .setDescription(`Strain "${stockedStrainNames[stockedStrainValues.indexOf(strainValue)]}" is now in stock. 🎉`)
-                        .setThumbnail(product.imageUrl)
+                        .setThumbnail(dbStock.imageUrl)
                         .setURL(product.url)
                         .setTimestamp(Date.now())
                         .setColor('#05ef9d')
@@ -84,8 +84,8 @@ module.exports = {
                 } else if (strainStockAmount <= 10 && dbStock.sendLimitedStockWarning === false) {
                     const embed = new EmbedBuilder()
                         .setTitle(product.name)
-                        .setDescription(`Only 10 strains of "${stockedStrainNames[stockedStrainValues.indexOf(strainValue)]}" left! ⚠️`)
-                        .setThumbnail(product.imageUrl)
+                        .setDescription(`Only 10 "${stockedStrainNames[stockedStrainValues.indexOf(strainValue)]}" left! ⚠️`)
+                        .setThumbnail(dbStock.imageUrl)
                         .setURL(product.url)
                         .setTimestamp(Date.now())
                         .setColor('#FFA500')
@@ -108,8 +108,8 @@ module.exports = {
 
                 const embed = new EmbedBuilder()
                     .setTitle(product.name)
-                    .setDescription(`Strain "${strain.strainName}" is now out of stock.`)
-                    .setThumbnail(product.imageUrl)
+                    .setDescription(`Strain "${strain.strainName}" is now out of stock. 😢`)
+                    .setThumbnail(strain.imageUrl)
                     .setURL(product.url)
                     .setTimestamp(Date.now())
                     .setColor('#FF0000')
@@ -134,7 +134,7 @@ module.exports = {
             if (product.stocked === true) {
                 const embed = new EmbedBuilder()
                     .setTitle(product.name)
-                    .setDescription(`This product has been restocked.`)
+                    .setDescription(`This entire product has been restocked! 🎉`)
                     .setThumbnail(product.imageUrl)
                     .setURL(product.url)
                     .setTimestamp(Date.now())
@@ -155,7 +155,7 @@ module.exports = {
             } else {
                 const embed = new EmbedBuilder()
                     .setTitle(product.name)
-                    .setDescription(`This product is now out of stock.`)
+                    .setDescription(`This entire product is now out of stock. 😢`)
                     .setThumbnail(product.imageUrl)
                     .setURL(product.url)
                     .setTimestamp(Date.now())
