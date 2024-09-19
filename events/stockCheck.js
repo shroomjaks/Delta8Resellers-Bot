@@ -83,7 +83,7 @@ module.exports = {
                 } else if (strainStockAmount <= 15 && dbStock.sendLimitedStockWarning === false) {
                     const embed = new EmbedBuilder()
                         .setTitle(product.name)
-                        .setDescription(`Only 10 "${stockedStrainNames[stockedStrainValues.indexOf(strainValue)]}" left! ⚠️`)
+                        .setDescription(`Only ${strainStockAmount} "${stockedStrainNames[stockedStrainValues.indexOf(strainValue)]}" left! ⚠️`)
                         .setThumbnail(dbStock.imageUrl)
                         .setURL(product.url)
                         .setTimestamp(Date.now())
