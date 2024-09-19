@@ -25,8 +25,8 @@ module.exports = {
         const verifyMessage = await verifyChannel.messages.fetch('1277129869565759510')
         await verifyMessage.react('✅')
 
-        // Start 15 minute stock and 2 hour deal checks
-        setInterval(() => client.emit('stockCheck', client), 15 * 60 * 1000)
+        // Start 60 minute stock and 2 hour deal checks
+        setInterval(() => client.emit('stockCheck', client), 60 * 60 * 1000)
         setInterval(() => client.emit('dealCheck', client), 120 * 60 * 1000)
 
         // Set the global variables to be accessed from eval
