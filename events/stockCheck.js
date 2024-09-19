@@ -55,8 +55,6 @@ module.exports = {
 
                 dbStock.imageUrl = strainImage
 
-                console.log(dbStock.stock)
-
                 if (dbStock.stock === strainStockAmount) continue
 
                 if (dbStock.stock === 0 && strainStockAmount > 1) {
