@@ -125,7 +125,7 @@ module.exports = {
                         }))
 
                         dbStock.sentLimitedStockWarning = false
-                    } else if (strainStockAmount <= 15 && !dbStock.sentLimitedStockWarning) {
+                    } else if (strainStockAmount <= 10 && !dbStock.sentLimitedStockWarning) {
                         const embed = new EmbedBuilder()
                             .setTitle(product.name)
                             .setDescription(`Only ${strainStockAmount} "${strainName}" left! ⚠️`)
