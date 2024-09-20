@@ -66,8 +66,7 @@ module.exports = {
                         .setTimestamp(Date.now())
                         .setColor('#05ef9d')
 
-                    const message = await updateChannel.send({ embeds: [embed] })
-                    await message.crosspost()
+                    await updateChannel.send({ embeds: [embed] })
 
                     for (const userId of dbStock.restockReminders) {
                         const user = await client.users.fetch(userId)
@@ -89,8 +88,7 @@ module.exports = {
                         .setTimestamp(Date.now())
                         .setColor('#FFA500')
 
-                    const message = await updateChannel.send({ embeds: [embed] })
-                    await message.crosspost()
+                    await updateChannel.send({ embeds: [embed] })
                 }
 
                 dbStock.stock = strainStockAmount
@@ -122,8 +120,7 @@ module.exports = {
                 const actionRow = new ActionRowBuilder()
                     .addComponents(reminderButton)
 
-                const message = await updateChannel.send({ embeds: [embed], components: [actionRow] })
-                await message.crosspost()
+                await updateChannel.send({ embeds: [embed], components: [actionRow] })
             }
 
             await page.close()
@@ -138,9 +135,8 @@ module.exports = {
                     .setURL(product.url)
                     .setTimestamp(Date.now())
                     .setColor('#05ef9d')
-
-                const message = await updateChannel.send({ embeds: [embed] })
-                await message.crosspost()
+                
+                await updateChannel.send({ embeds: [embed] })
 
                 for (const userId of product.restockReminders) {
                     const user = await client.users.fetch(userId)
@@ -169,8 +165,7 @@ module.exports = {
                 const actionRow = new ActionRowBuilder()
                     .addComponents(reminderButton)
 
-                const message = await updateChannel.send({ embeds: [embed], components: [actionRow] })
-                await message.crosspost()
+                await updateChannel.send({ embeds: [embed], components: [actionRow] })
             }
         }
 

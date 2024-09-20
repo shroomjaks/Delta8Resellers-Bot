@@ -1,23 +1,23 @@
 {
     "1272403208635154467": {
-        "xp": 2965,
+        "xp": 3042,
         "level": 30,
-        "messageCount": 1867
+        "messageCount": 1871
     },
     "813777484922486825": {
-        "xp": 17,
+        "xp": 34,
         "level": 11,
-        "messageCount": 151
+        "messageCount": 152
     },
     "967607704203972618": {
-        "xp": 1768,
+        "xp": 1953,
         "level": 24,
-        "messageCount": 1046
+        "messageCount": 1055
     },
     "1018373360142520440": {
-        "xp": 210,
+        "xp": 396,
         "level": 17,
-        "messageCount": 427
+        "messageCount": 437
     },
     "1054271676449312809": {
         "xp": 441,
@@ -25,24 +25,24 @@
         "messageCount": 322
     },
     "1186512883513823244": {
-        "xp": 776,
+        "xp": 904,
         "level": 19,
-        "messageCount": 580
+        "messageCount": 586
     },
     "678750952613871636": {
-        "xp": 693,
+        "xp": 814,
         "level": 28,
-        "messageCount": 1463
+        "messageCount": 1469
     },
     "1207152094927130635": {
-        "xp": 869,
+        "xp": 894,
         "level": 27,
-        "messageCount": 1336
+        "messageCount": 1337
     },
     "932100637481648179": {
-        "xp": 2692,
+        "xp": 2931,
         "level": 35,
-        "messageCount": 2702
+        "messageCount": 2714
     },
     "1281839617502482485": {
         "xp": 0,
@@ -55,9 +55,9 @@
         "messageCount": 53
     },
     "540302379027791902": {
-        "xp": 875,
+        "xp": 1156,
         "level": 23,
-        "messageCount": 900
+        "messageCount": 914
     },
     "823691202548465694": {
         "xp": 525,
@@ -70,9 +70,9 @@
         "messageCount": 10
     },
     "508107273533521930": {
-        "xp": 135,
+        "xp": 158,
         "level": 22,
-        "messageCount": 774
+        "messageCount": 775
     },
     "642913536284033035": {
         "xp": 227,
@@ -105,9 +105,9 @@
         "messageCount": 197
     },
     "1116459846326304884": {
-        "xp": 297,
+        "xp": 318,
         "level": 21,
-        "messageCount": 700
+        "messageCount": 701
     },
     "503979446873620481": {
         "xp": 472,
@@ -115,14 +115,14 @@
         "messageCount": 122
     },
     "856639315743604807": {
-        "xp": 482,
+        "xp": 523,
         "level": 26,
-        "messageCount": 1205
+        "messageCount": 1207
     },
     "449436208020455435": {
-        "xp": 363,
+        "xp": 395,
         "level": 8,
-        "messageCount": 95
+        "messageCount": 97
     },
     "1048724483214680076": {
         "xp": 273,
@@ -165,9 +165,9 @@
         "messageCount": 4
     },
     "884532532857683990": {
-        "xp": 432,
+        "xp": 506,
         "level": 13,
-        "messageCount": 241
+        "messageCount": 245
     },
     "1126588992561873097": {
         "xp": 44,
@@ -180,9 +180,9 @@
         "messageCount": 4
     },
     "314223343177826305": {
-        "xp": 1537,
+        "xp": 1559,
         "level": 24,
-        "messageCount": 1038
+        "messageCount": 1039
     },
     "693803511590289438": {
         "xp": 119,
@@ -310,9 +310,9 @@
         "messageCount": 4
     },
     "364752270945943564": {
-        "xp": 214,
+        "xp": 237,
         "level": 6,
-        "messageCount": 54
+        "messageCount": 55
     },
     "1266652383690362914": {
         "xp": 23,
@@ -405,9 +405,9 @@
         "messageCount": 2
     },
     "692539824309010445": {
-        "xp": 21,
+        "xp": 127,
         "level": 5,
-        "messageCount": 32
+        "messageCount": 37
     },
     "703005073558470694": {
         "xp": 20,
@@ -443,5 +443,20 @@
         "xp": 34,
         "level": 2,
         "messageCount": 9
+    },
+    "1283190057477472391": {
+        "xp": 47,
+        "level": 0,
+        "messageCount": 2
+    },
+    "532440278989275156": {
+        "xp": 0,
+        "level": 1,
+        "messageCount": 3
+    },
+    "1219297682192072786": {
+        "xp": 21,
+        "level": 1,
+        "messageCount": 4
     }
 }
