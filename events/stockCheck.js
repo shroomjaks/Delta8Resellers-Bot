@@ -32,8 +32,19 @@ module.exports = {
                 const unstockedStrains = product.allStrains.filter(strain => !stockedStrainValues.includes(strain.strainValue))
 
                 const oldStocked = product.stocked
-                product.stocked = stock && stockText !== 'This product is currently out of stock and unavailable.'
-
+                
+                if (!stock) {
+                    // If no stock element is found, assume it's in stock (or handle it as you prefer)
+                    product.stocked = true
+                } else if (stockText && !stockText.includes('This product is currently out of stock and unavailable.')) {
+                    // If stockText is found and it's not the "out of stock" message, mark it as stocked
+                    product.stocked = true
+                } else {
+                    // Otherwise, mark it as out of stock
+                    product.stocked = false
+                }
+                
+                
                 // Product restock or out-of-stock status changes
                 if (product.stocked && !oldStocked) {
                     const embed = new EmbedBuilder()
