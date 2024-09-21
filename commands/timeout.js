@@ -1,4 +1,4 @@
-const { BaseInteraction, BaseClient, PermissionsBitField, ApplicationCommandOptionType, CommandInteraction, ChatInputCommandInteraction } = require('discord.js')
+const { ChatInputCommandInteraction, PermissionsBitField, ApplicationCommandOptionType } = require('discord.js')
 
 const parseDuration = require('parse-duration')
 const humanizeDuration = require('humanize-duration')
@@ -6,6 +6,9 @@ const humanizeDuration = require('humanize-duration')
 module.exports = {
     name: 'timeout',
     description: 'Timeouts a member.',
+    permissions: [
+        PermissionsBitField.Flags.ManageMessages
+    ],
     options: [
         {
             name: 'member',
@@ -26,15 +29,11 @@ module.exports = {
             required: false
         },
     ],
-    permissions: [
-        PermissionsBitField.Flags.ManageMessages
-    ],
     /**
      * 
      * @param {ChatInputCommandInteraction} interaction 
-     * @param {BaseClient} client 
      */
-    execute: async function (interaction, client) {
+    execute: async function (interaction) {
         const member = interaction.options.getMember('member')
         const duration = interaction.options.getString('duration')
         const reason = interaction.options.getString('reason')

@@ -3,6 +3,9 @@ const { BaseInteraction, BaseClient, PermissionsBitField, ApplicationCommandOpti
 module.exports = {
     name: 'kick',
     description: 'Kicks a member.',
+    permissions: [
+        PermissionsBitField.Flags.KickMembers
+    ],
     options: [
         {
             name: 'member',
@@ -16,9 +19,6 @@ module.exports = {
             type: ApplicationCommandOptionType.String,
             required: false
         }
-    ],
-    permissions: [
-        PermissionsBitField.Flags.KickMembers
     ],
     /**
      * 

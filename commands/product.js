@@ -1,25 +1,24 @@
-const { EmbedBuilder, ApplicationCommandOptionType, ChatInputCommandInteraction, BaseClient } = require('discord.js')
+const { ChatInputCommandInteraction, ApplicationCommandOptionType } = require('discord.js')
 
 const uuid = require('uuid-by-string')
 
 module.exports = {
     name: 'product',
     description: 'Adds a product to be watched in the update log channel.',
+    permissions: [],
     options: [
         {
-            'name': 'url',
-            'description': 'The URL of the product.',
-            'type': ApplicationCommandOptionType.String,
-            'required': true
+            name: 'url',
+            description: 'The URL of the product.',
+            type: ApplicationCommandOptionType.String,
+            required: true
         }
     ],
-    permissions: [],
     /**
      * 
      * @param {ChatInputCommandInteraction} interaction 
-     * @param {BaseClient} client 
      */
-    execute: async function (interaction, client) {
+    execute: async function (interaction) {
         let productUrl = interaction.options.getString('url')
         productUrl = productUrl.split('?')[0]
         if (productUrl.endsWith('/')) productUrl = productUrl.slice(0, -1)
@@ -70,9 +69,11 @@ module.exports = {
                     uuid: titleUuid,
                     name: productTitleText,
                     url: productUrl,
-                    stocked,
                     imageUrl,
-                    restockReminders: [interaction.user.id]
+                    stocked,
+                    restockReminders: [interaction.user.id],
+                    allStrains: [],
+                    strainStock: []
                 }
             ]
         )

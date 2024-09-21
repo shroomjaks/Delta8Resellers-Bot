@@ -1,8 +1,11 @@
-const { EmbedBuilder, ApplicationCommandOptionType, PermissionsBitField, ChatInputCommandInteraction, Client } = require('discord.js')
+const { ChatInputCommandInteraction, ApplicationCommandOptionType, PermissionsBitField } = require('discord.js')
 
 module.exports = {
     name: 'purge',
     description: 'Purges defined amount of messages in a channel.',
+    permissions: [
+        PermissionsBitField.Flags.ManageMessages
+    ],
     options: [
         {
             name: 'amount',
@@ -17,15 +20,11 @@ module.exports = {
             required: false
         }
     ],
-    permissions: [
-        PermissionsBitField.Flags.ManageMessages
-    ],
     /**
      * 
      * @param {ChatInputCommandInteraction} interaction 
-     * @param {Client} client 
      */
-    execute: async function (interaction, client) {
+    execute: async function (interaction) {
         const amount = interaction.options.getInteger('amount')
         const channel = interaction.options.getChannel('channel') || interaction.channel
 

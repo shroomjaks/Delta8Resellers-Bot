@@ -1,4 +1,4 @@
-const { EmbedBuilder } = require('discord.js')
+const { ChatInputCommandInteraction, EmbedBuilder } = require('discord.js')
 
 const os = require('os')
 
@@ -6,7 +6,12 @@ module.exports = {
     name: 'ping',
     description: 'Checks the bot latency in milliseconds.',
     permissions: [],
-    execute: async function (interaction, client) {
+    options: [],
+    /**
+     * 
+     * @param {ChatInputCommandInteraction} interaction 
+     */
+    execute: async function (interaction) {
         const processMemoryMB = Math.round(process.memoryUsage().heapUsed / 1024 / 1024)
 
         const systemUptime = Math.floor((Date.now() / 1000) - os.uptime())

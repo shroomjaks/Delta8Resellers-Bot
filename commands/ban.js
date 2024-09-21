@@ -3,6 +3,9 @@ const { BaseClient, PermissionsBitField, ApplicationCommandOptionType, ChatInput
 module.exports = {
     name: 'ban',
     description: 'Bans a member.',
+    permissions: [
+        PermissionsBitField.Flags.BanMembers
+    ],
     options: [
         {
             name: 'member',
@@ -22,9 +25,6 @@ module.exports = {
             type: ApplicationCommandOptionType.Boolean,
             required: false
         }
-    ],
-    permissions: [
-        PermissionsBitField.Flags.BanMembers
     ],
     /**
      * 

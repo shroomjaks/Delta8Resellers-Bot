@@ -12,7 +12,8 @@ for (const commandFile of commandsFolder) {
     commands.push({
         name: command.name,
         description: command.description,
-        options: command?.options
+        options: command?.options,
+        autocomplete: command?.autocomplete
     })
 }
 

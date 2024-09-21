@@ -1,8 +1,11 @@
-const { BaseInteraction, BaseClient, PermissionsBitField, ApplicationCommandOptionType } = require('discord.js')
+const { ChatInputCommandInteraction, Client, PermissionsBitField, ApplicationCommandOptionType } = require('discord.js')
 
 module.exports = {
     name: 'speak',
     description: 'Sends and signs a message.',
+    permissions: [
+        PermissionsBitField.Flags.ManageMessages
+    ],
     options: [
         {
             name: 'text',
@@ -23,15 +26,11 @@ module.exports = {
             required: false
         }
     ],
-    permissions: [
-        PermissionsBitField.Flags.ManageMessages
-    ],
     /**
      * 
-     * @param {BaseInteraction} interaction 
-     * @param {BaseClient} client 
+     * @param {ChatInputCommandInteraction} interaction 
      */
-    execute: async function (interaction, client) {
+    execute: async function (interaction) {
         let text = interaction.options.getString('text')
         const signature = interaction.options.getString('signature')
         const channel = interaction.options.getChannel('channel') || interaction.channel
