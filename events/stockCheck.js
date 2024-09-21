@@ -107,9 +107,9 @@ module.exports = {
                     if (dbStock.stock === 0 && strainStockAmount > 1) {
                         const embed = new EmbedBuilder()
                             .setTitle(product.name)
-                            .setDescription(`Strain "${strainName}" is now in stock. 🎉`)
+                            .setDescription(`*${strainName}* is now in stock. 🎉`)
                             .setThumbnail(dbStock.imageUrl)
-                            .setURL(product.url)
+                            .setURL(`${product.url}?attribute_pa_flavor=${strainValue}`)
                             .setTimestamp(Date.now())
                             .setColor('#05ef9d')
 
@@ -128,9 +128,9 @@ module.exports = {
                     } else if (strainStockAmount <= 10 && !dbStock.sentLimitedStockWarning) {
                         const embed = new EmbedBuilder()
                             .setTitle(product.name)
-                            .setDescription(`Only ${strainStockAmount} "${strainName}" left! ⚠️`)
+                            .setDescription(`Only **${strainStockAmount}** *${strainName}* left! ⚠️`)
                             .setThumbnail(dbStock.imageUrl)
-                            .setURL(product.url)
+                            .setURL(`${product.url}?attribute_pa_flavor=${strainValue}`)
                             .setTimestamp(Date.now())
                             .setColor('#FFA500')
 
@@ -152,9 +152,9 @@ module.exports = {
 
                     const embed = new EmbedBuilder()
                         .setTitle(product.name)
-                        .setDescription(`Strain "${strain.strainName}" is now out of stock. 😢`)
+                        .setDescription(`*${strain.strainName}* is now out of stock. 😢`)
                         .setThumbnail(strain.imageUrl)
-                        .setURL(product.url)
+                        .setURL(`${product.url}?attribute_pa_flavor=${strain.strainValue}`)
                         .setTimestamp(Date.now())
                         .setColor('#FF0000')
                         .setFooter({ text: 'Press the button below to be reminded when this strain is restocked.' })
