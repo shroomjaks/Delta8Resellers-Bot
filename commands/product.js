@@ -19,37 +19,33 @@ module.exports = {
      * @param {ChatInputCommandInteraction} interaction 
      */
     execute: async function (interaction) {
-        let productUrl = interaction.options.getString('url')
-        productUrl = productUrl.split('?')[0]
-        if (productUrl.endsWith('/')) productUrl = productUrl.slice(0, -1)
+        let productUrl = interaction.options.getString('url')?.split('?')[0].replace(/\/$/, '')
 
-        const urlRegex = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/
+        // Validate the URL format and the domain
+        const urlRegex = /^https:\/\/(www\.)?delta8resellers\.com\/product\/[-a-zA-Z0-9()@:%_\+.~#?&//=]*$/
 
-        if (!urlRegex.test(productUrl)) return await interaction.reply({ content: 'Invalid URL.', ephemeral: true })
-        if (!productUrl.startsWith('https://delta8resellers.com/product/')) return await interaction.reply({ content: 'Not a product URL.', ephemeral: true })
+        if (!urlRegex.test(productUrl)) {
+            return await interaction.reply({ content: 'Invalid or not a product URL.', ephemeral: true })
+        }
 
         await interaction.deferReply({ ephemeral: true })
 
         const page = await client.browser.newPage()
-
         await page.goto(productUrl, { waitUntil: 'domcontentloaded' })
 
-        const stock = await page.$('.stock').catch(() => null)
-
-        const productTitleText = await page.$eval('.product_title', element => element.innerText)
-        const stockText = await page.$eval('.stock', element => element.innerText).catch(() => null)
-        const imageUrl = await page.$eval('div.iconic-woothumbs-images__slide:nth-child(2) > img:nth-child(1)', element => element.src)
+        const productTitleText = await page.$eval('.product_title', el => el.innerText)
+        const stockText = await page.$eval('.stock', el => el.innerText).catch(() => null)
+        const imageUrl = await page.$eval('div.iconic-woothumbs-images__slide:nth-child(2) > img', el => el.src)
 
         const titleUuid = uuid(productTitleText)
-
         const products = client.stock.get('products')
-        if (products.find(product => product.uuid === titleUuid)) {
+        if (products.some(product => product.uuid === titleUuid)) {
             await page.close()
+
             return await interaction.editReply({ content: 'This product is already being watched.', ephemeral: true })
         }
 
-        let stocked
-
+        // Determine stock status
         if (!stock) {
             stocked = true
         } else if (stock && stockText !== 'This product is currently out of stock and unavailable.') {
@@ -62,22 +58,25 @@ module.exports = {
 
         await page.close()
 
-        client.stock.set('products',
-            [
-                ...products,
-                {
-                    uuid: titleUuid,
-                    name: productTitleText,
-                    url: productUrl,
-                    imageUrl,
-                    stocked,
-                    restockReminders: [interaction.user.id],
-                    allStrains: [],
-                    strainStock: []
-                }
-            ]
-        )
+        // Add product to the stock list
+        client.stock.set('products', [
+            ...products,
+            {
+                uuid: titleUuid,
+                name: productTitleText,
+                url: productUrl,
+                imageUrl,
+                stocked,
+                restockReminders: [interaction.user.id],
+                allStrains: [],
+                strainStock: []
+            }
+        ])
 
-        await interaction.editReply({ content: `Product added for restock watching, right now this product is ${stocked ? 'in stock!' : 'out of stock. You will get a message when the product is back in stock.'}`, ephemeral: true })
+        await interaction.editReply({
+            content: `Product added for restock watching, right now this product is ${stocked ? 'in stock!' : 'out of stock. You will get a message when the product is back in stock.'}`,
+            ephemeral: true
+        })
+
     }
 }
