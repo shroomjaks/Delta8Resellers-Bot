@@ -1,4 +1,4 @@
-const { ApplicationCommandOptionType, AutocompleteInteraction, ChatInputCommandInteraction, EmbedBuilder } = require('discord.js')
+const { ApplicationCommandOptionType, AutocompleteInteraction, ChatInputCommandInteraction, EmbedBuilder, ButtonBuilder, ButtonStyle, ActionRowBuilder } = require('discord.js')
 
 const JSONdb = require('simple-json-db')
 
@@ -29,23 +29,29 @@ module.exports = {
         const autocompleteResults = []
 
         for (const result of searchResults.suggestions) {
-            if (result.type !== 'product') continue
+            if (result.type === 'product') {
 
-            const urlMatch = result.thumb_html.match(/src="([^"]+)"/)
-            const imageUrl = urlMatch ? urlMatch[1] : null
+                const urlMatch = result.thumb_html.match(/src="([^"]+)"/)
+                const imageUrl = urlMatch ? urlMatch[1] : null
 
-            autocompleteResults.push({
-                name: result.value,
-                value: result.post_id.toString()
-            })
+                autocompleteResults.push({
+                    name: result.value,
+                    value: result.post_id.toString()
+                })
 
-            if (search.has(result.post_id)) continue
-            
-            search.set(result.post_id, {
-                name: result.value,
-                url: result.url,
-                imageUrl: imageUrl
-            })
+                if (search.has(result.post_id)) continue
+
+                search.set(result.post_id, {
+                    name: result.value,
+                    url: result.url,
+                    imageUrl: imageUrl
+                })
+            } else if (result.type === 'more_products') {
+                autocompleteResults.push({
+                    name: 'See all products',
+                    value: result.url
+                })
+            }
         }
 
         await interaction.respond(autocompleteResults)
@@ -56,6 +62,18 @@ module.exports = {
      */
     execute: async function (interaction) {
         const query = interaction.options.getString('query')
+
+        if (query.startsWith('https://delta8resellers.com')) {
+            const button = new ButtonBuilder()
+                .setStyle(ButtonStyle.Link)
+                .setLabel('See all products')
+                .setURL(query)
+
+            const row = new ActionRowBuilder()
+                .addComponents(button)
+
+            return await interaction.reply({ components: [row] })
+        }
 
         const product = search.get(query)
 
