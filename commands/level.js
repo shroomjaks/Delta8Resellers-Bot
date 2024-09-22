@@ -1,4 +1,4 @@
-const { Client, ChatInputCommandInteraction, ApplicationCommandOptionType } = require('discord.js')
+const { ChatInputCommandInteraction, ApplicationCommandOptionType } = require('discord.js')
 
 const { createCanvas, loadImage } = require('@napi-rs/canvas')
 
@@ -16,15 +16,14 @@ module.exports = {
     ],
     /**
      * 
-     * @param {Client} client 
      * @param {ChatInputCommandInteraction} interaction
      */
-    execute: async function (interaction, client) {
+    execute: async function (interaction) {
         await interaction.deferReply()
 
         const user = interaction.options.getUser('user') || interaction.user
 
-        const profile = await client.xp.get(user.id)
+        const profile = client.xp.get(user.id)
 
         if (!profile) return await interaction.editReply({ content: 'This user has no XP profile.' })
 

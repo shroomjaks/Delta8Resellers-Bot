@@ -31,7 +31,7 @@ module.exports = {
      * @param {ChatInputCommandInteraction} interaction 
      * @param {BaseClient} client 
      */
-    execute: async function (interaction, client) {
+    execute: async function (interaction) {
         const member = interaction.options.getMember('member')
         const reason = interaction.options.getString('reason')
         const deleteMessages = interaction.options.getBoolean('deleteMessages')

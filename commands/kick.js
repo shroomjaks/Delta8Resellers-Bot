@@ -1,4 +1,4 @@
-const { BaseInteraction, BaseClient, PermissionsBitField, ApplicationCommandOptionType, CommandInteraction, ChatInputCommandInteraction } = require('discord.js')
+const { PermissionsBitField, ApplicationCommandOptionType, CommandInteraction, ChatInputCommandInteraction } = require('discord.js')
 
 module.exports = {
     name: 'kick',
@@ -23,9 +23,8 @@ module.exports = {
     /**
      * 
      * @param {ChatInputCommandInteraction} interaction 
-     * @param {BaseClient} client 
      */
-    execute: async function (interaction, client) {
+    execute: async function (interaction) {
         const member = interaction.options.getMember('member')
         const reason = interaction.options.getString('reason')
 
