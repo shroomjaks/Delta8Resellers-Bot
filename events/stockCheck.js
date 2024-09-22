@@ -153,7 +153,7 @@ module.exports = {
                     const embed = new EmbedBuilder()
                         .setTitle(product.name)
                         .setDescription(`*${strain.strainName}* is now out of stock. 😢`)
-                        .setThumbnail(strain.imageUrl)
+                        .setThumbnail(dbStock.imageUrl)
                         .setURL(`${product.url}?attribute_pa_flavor=${strain.strainValue}`)
                         .setTimestamp(Date.now())
                         .setColor('#FF0000')

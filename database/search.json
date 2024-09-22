@@ -19,6 +19,11 @@
         "url": "https://delta8resellers.com/product/hidden-hills-live-resin-cartridge/",
         "imageUrl": "https://delta8resellers.com/wp-content/uploads/2022/12/hidden-hills-cartridges-cherry-splash-64x64.jpg"
     },
+    "325364": {
+        "name": "Exotic Red Bull Energy Drink | 250ml",
+        "url": "https://delta8resellers.com/product/exotic-red-bull-energy-drink-250ml/",
+        "imageUrl": "https://delta8resellers.com/wp-content/uploads/2023/01/exotic-redbull-yellow-can-short-64x64.jpg"
+    },
     "365004": {
         "name": "Modus Tap Out Blend Disposables | 3g",
         "url": "https://delta8resellers.com/product/modus-tap-out-blend-disposables-3g/",
@@ -63,6 +68,11 @@
         "name": "Hidden Hills Liquid VVS Diamond THC-A Cartridge | 2g",
         "url": "https://delta8resellers.com/product/hidden-hills-liquid-diamonds-thc-a-cartridge-vape-2g/",
         "imageUrl": "https://delta8resellers.com/wp-content/uploads/2023/07/hidden-hills-night-night-blend-cartridge-2g-peachy-bombay-64x64.jpg"
+    },
+    "594931": {
+        "name": "Exotic Ghost Energy Drink | 473mL",
+        "url": "https://delta8resellers.com/product/exotic-warheads-ghost-energy-drink-473ml/",
+        "imageUrl": "https://delta8resellers.com/wp-content/uploads/2023/07/ghost-energy-drink-sour-patch-kids-redberry-64x64.jpg"
     },
     "596798": {
         "name": "Canna River HHC Disposable | 2g",
@@ -139,6 +149,26 @@
         "url": "https://delta8resellers.com/product/chapo-azul-blue-lotus-disposable-3-5g/",
         "imageUrl": "https://delta8resellers.com/wp-content/uploads/2023/11/chapo-azul-blue-lotus-3.5g-disposable-strawberry-banana-64x64.jpg"
     },
+    "786419": {
+        "name": "Modus Kratom Flo Malay Capsules",
+        "url": "https://delta8resellers.com/product/modus-kratom-flo-malay-capsules/",
+        "imageUrl": "https://delta8resellers.com/wp-content/uploads/2023/11/Modus-6ct-Kratom-Pills-Flo-64x64.jpg"
+    },
+    "786456": {
+        "name": "Modus Kratom Mello Indo Capsules",
+        "url": "https://delta8resellers.com/product/modus-kratom-mello-indo-capsules/",
+        "imageUrl": "https://delta8resellers.com/wp-content/uploads/2023/11/Modus-6ct-Kratom-Pills-Mello-64x64.jpg"
+    },
+    "788617": {
+        "name": "Modus Gold Series Kratom Shot Flo",
+        "url": "https://delta8resellers.com/product/modus-gold-series-kratom-shot-flo/",
+        "imageUrl": "https://delta8resellers.com/wp-content/uploads/2023/11/modus-kratom-shot-flo-64x64.jpg"
+    },
+    "789534": {
+        "name": "Modus Kratom Shots Zing",
+        "url": "https://delta8resellers.com/product/modus-kratom-maeng-da-shots/",
+        "imageUrl": "https://delta8resellers.com/wp-content/uploads/2023/11/modus-kratom-shot-zing-64x64.jpg"
+    },
     "813116": {
         "name": "FVKD Exotics Blue Lotus Disposable | 3.5g",
         "url": "https://delta8resellers.com/product/fvkd-exotics-blue-lotus-disposable-3-5g/",
@@ -199,6 +229,11 @@
         "url": "https://delta8resellers.com/product/hidden-hills-fresh-frozen-badder-3g/",
         "imageUrl": "https://delta8resellers.com/wp-content/uploads/2024/03/hidden-hills-fresh-frozen-badder-3g-Space-Candy-64x64.jpg"
     },
+    "1029497": {
+        "name": "Modus Kratom Gummies | 1000mg",
+        "url": "https://delta8resellers.com/product/modus-kratom-gummies-1000mg/",
+        "imageUrl": "https://delta8resellers.com/wp-content/uploads/2023/11/modus-kratom-gummies-flo-64x64.jpg"
+    },
     "1043694": {
         "name": "Tre House Magic Mushroom Syrup | (4oz) 1150mg",
         "url": "https://delta8resellers.com/product/tre-house-magic-mushroom-syrup-4oz-1150mg/",
@@ -229,10 +264,30 @@
         "url": "https://delta8resellers.com/product/good-girl-thc-p-thc-a-disposable-6g/",
         "imageUrl": "https://delta8resellers.com/wp-content/uploads/2024/05/good-girl-thcp-6g-disposable-Watermelon-64x64.jpg"
     },
+    "1154811": {
+        "name": "Exotic Monster Energy Zero Sugar Ultra | 500mL",
+        "url": "https://delta8resellers.com/product/exotic-monster-energy-zero-sugar-ultra-500ml/",
+        "imageUrl": "https://delta8resellers.com/wp-content/uploads/2024/04/monster-energy-zero-sugar-ultra-fiesta-mango-64x64.jpg"
+    },
+    "1154842": {
+        "name": "Exotic Monster Energy Juiced Drink | 500mL",
+        "url": "https://delta8resellers.com/product/exotic-monster-energy-juiced-drink-500ml/",
+        "imageUrl": "https://delta8resellers.com/wp-content/uploads/2024/04/monster-energy-juiced-monarch-64x64.jpg"
+    },
+    "1154943": {
+        "name": "Exotic Monster Energy Soda | 500mL",
+        "url": "https://delta8resellers.com/product/exotic-monster-energy-soda-500ml/",
+        "imageUrl": "https://delta8resellers.com/wp-content/uploads/2024/04/monster-energy-pacific-punch-64x64.jpg"
+    },
     "1171168": {
         "name": "Good Girl Gummies | (20ct) 5000mg",
         "url": "https://delta8resellers.com/product/good-girl-gummies-20ct-5000mg/",
         "imageUrl": "https://delta8resellers.com/wp-content/uploads/2024/05/good-girl-d8-thca-thcp-5000mg-20pc-gummies-sweet-peach-64x64.jpg"
+    },
+    "1173694": {
+        "name": "Modus THCA Dabs | 2g",
+        "url": "https://delta8resellers.com/product/modus-thca-dabs-2g/",
+        "imageUrl": "https://delta8resellers.com/wp-content/uploads/2024/05/modus-dabs-thca-diamonds-2g-Red-Velvet-64x64.jpg"
     },
     "1187589": {
         "name": "Flying Monkey Snowballs THC-A Flower | 5g",
@@ -269,10 +324,25 @@
         "url": "https://delta8resellers.com/product/opms-silver-super-green-borneo-powder/",
         "imageUrl": "https://delta8resellers.com/wp-content/uploads/2024/07/opms-silver-super-green-borneo-kratom-powder-16oz-64x64.jpg"
     },
+    "1254012": {
+        "name": "Modus 7-OH Tablets | 6 Count",
+        "url": "https://delta8resellers.com/product/modus-7-hydroxymitragynine-tablets-6-count/",
+        "imageUrl": "https://delta8resellers.com/wp-content/uploads/2024/07/Modus-7-Hydroxymitragynine-Tablets-6-Count-2-64x64.jpg"
+    },
+    "1260362": {
+        "name": "Exotic C4 Energy Drink Zero Sugar | 473ml",
+        "url": "https://delta8resellers.com/product/exotic-c4-energy-drink-zero-sugar-473ml/",
+        "imageUrl": "https://delta8resellers.com/wp-content/uploads/2024/07/c4-energy-zero-sugar-x-popsicle-cherry-64x64.jpg"
+    },
     "1260902": {
         "name": "FVKD THC-A + D9 Gummies | (10ct) 6000mg",
         "url": "https://delta8resellers.com/product/fvkd-thc-a-d9-gummies-10ct-6000mg/",
         "imageUrl": "https://delta8resellers.com/wp-content/uploads/2024/07/fvkd-thca-d9-6000mg-gummies-blueberry-64x64.jpg"
+    },
+    "1289596": {
+        "name": "Exotic Monster Energy Extra Strength | 150ml",
+        "url": "https://delta8resellers.com/product/exotic-monster-energy-extra-strength-150ml/",
+        "imageUrl": "https://delta8resellers.com/wp-content/uploads/2024/07/monster-energy-extra-strength-64x64.jpg"
     },
     "1289705": {
         "name": "Exotic Leda Princess Lollipop | 15g",
