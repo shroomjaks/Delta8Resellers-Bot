@@ -26,6 +26,15 @@ module.exports = {
         const response = await fetch(`https://delta8resellers.com/?wc-ajax=dgwt_wcas_ajax_search&s=${focusedValue}`)
         const searchResults = await response.json()
 
+        if (!searchResults.suggestions) {
+            await interaction.respond([
+                {
+                    name: 'No results',
+                    value: 'noresults'
+                }
+            ])
+        }
+
         const autocompleteResults = []
 
         for (const result of searchResults.suggestions) {
@@ -62,6 +71,8 @@ module.exports = {
      */
     execute: async function (interaction) {
         const query = interaction.options.getString('query')
+
+        if (query === 'noresults') return await interaction.reply({ content: 'No results.', ephemeral: true })
 
         if (query.startsWith('https://delta8resellers.com')) {
             const button = new ButtonBuilder()
