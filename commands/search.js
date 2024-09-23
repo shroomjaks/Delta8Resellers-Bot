@@ -23,25 +23,17 @@ module.exports = {
     autocomplete: async function (interaction) {
         const focusedValue = interaction.options.getFocused()
 
-        const response = await fetch(`https://delta8resellers.com/?wc-ajax=dgwt_wcas_ajax_search&s=${focusedValue}`)
+        const response = await fetch(`https://delta8resellers.com/?wc-ajax=dgwt_wcas_ajax_search&s=${focusedValue}`, {
+            cache: 'force-cache'
+        })
         const searchResults = await response.json()
 
         console.log(searchResults.suggestions)
-
-        if (searchResults.suggestions.length < 1) {
-            await interaction.respond([
-                {
-                    name: 'No results',
-                    value: 'noresults'
-                }
-            ])
-        }
 
         const autocompleteResults = []
 
         for (const result of searchResults.suggestions) {
             if (result.type === 'product') {
-
                 const urlMatch = result.thumb_html.match(/src="([^"]+)"/)
                 const imageUrl = urlMatch ? urlMatch[1] : null
 
