@@ -23,14 +23,15 @@ module.exports = {
     autocomplete: async function (interaction) {
         const focusedValue = interaction.options.getFocused()
 
-        const start = Date.now()
+        if (focusedValue.length < 3) return await interaction.respond([])
+
         const response = await fetch(`https://delta8resellers.com/?wc-ajax=dgwt_wcas_ajax_search&s=${focusedValue}`, {
-            cache: 'force-cache'
+            cache: 'force-cache',
+            signal: AbortSignal.timeout(2900)
         })
-        const timeSpentSeconds = (Date.now() - start) / 1000
 
-        console.log(`Got result in ${timeSpentSeconds} seconds.`)
-
+        if (!response.ok) return await interaction.respond([])
+        
         const searchResults = await response.json()
 
         const autocompleteResults = []
@@ -68,8 +69,6 @@ module.exports = {
      */
     execute: async function (interaction) {
         const query = interaction.options.getString('query')
-
-        if (query === 'noresults') return await interaction.reply({ content: 'No results.', ephemeral: true })
 
         if (query.startsWith('https://delta8resellers.com')) {
             const button = new ButtonBuilder()
