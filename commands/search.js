@@ -26,7 +26,9 @@ module.exports = {
         const response = await fetch(`https://delta8resellers.com/?wc-ajax=dgwt_wcas_ajax_search&s=${focusedValue}`)
         const searchResults = await response.json()
 
-        if (!searchResults.suggestions) {
+        console.log(searchResults.suggestions)
+
+        if (searchResults.suggestions.length < 1) {
             await interaction.respond([
                 {
                     name: 'No results',
