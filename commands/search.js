@@ -23,12 +23,15 @@ module.exports = {
     autocomplete: async function (interaction) {
         const focusedValue = interaction.options.getFocused()
 
+        const start = Date.now()
         const response = await fetch(`https://delta8resellers.com/?wc-ajax=dgwt_wcas_ajax_search&s=${focusedValue}`, {
             cache: 'force-cache'
         })
-        const searchResults = await response.json()
+        const timeSpentSeconds = (Date.now() - start) / 1000
 
-        console.log(searchResults.suggestions)
+        console.log(`Got result in ${timeSpentSeconds} seconds.`)
+
+        const searchResults = await response.json()
 
         const autocompleteResults = []
 
