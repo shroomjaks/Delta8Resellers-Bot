@@ -1,6 +1,6 @@
 const { WebhookClient, EmbedBuilder } = require('discord.js')
 
-const webhook = new WebhookClient({ url: 'https://discord.com/api/webhooks/1276620993720225833/C4g1-L9bYl8F5r7XLViIMUoqObna7trRWOHL_MhQwLoVdza5BTTwlB9K6PdNotP2Uaar' })
+const webhook = new WebhookClient({ url: process.env.WEBHOOK_1 })
 
 module.exports = {
     online: async function (date) {
