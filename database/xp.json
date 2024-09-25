@@ -1,43 +1,43 @@
 {
     "1272403208635154467": {
-        "xp": 301,
+        "xp": 442,
         "level": 31,
-        "messageCount": 1887
+        "messageCount": 1894
     },
     "813777484922486825": {
-        "xp": 34,
+        "xp": 105,
         "level": 11,
-        "messageCount": 152
+        "messageCount": 156
     },
     "967607704203972618": {
-        "xp": 2160,
-        "level": 25,
-        "messageCount": 1169
+        "xp": 1384,
+        "level": 26,
+        "messageCount": 1243
     },
     "1018373360142520440": {
-        "xp": 1065,
-        "level": 17,
-        "messageCount": 470
+        "xp": 727,
+        "level": 19,
+        "messageCount": 582
     },
     "1054271676449312809": {
-        "xp": 692,
-        "level": 15,
-        "messageCount": 335
+        "xp": 446,
+        "level": 16,
+        "messageCount": 373
     },
     "1186512883513823244": {
-        "xp": 1035,
+        "xp": 1385,
         "level": 19,
-        "messageCount": 593
+        "messageCount": 611
     },
     "678750952613871636": {
-        "xp": 1195,
+        "xp": 1420,
         "level": 28,
-        "messageCount": 1487
+        "messageCount": 1499
     },
     "1207152094927130635": {
-        "xp": 1077,
+        "xp": 1463,
         "level": 27,
-        "messageCount": 1347
+        "messageCount": 1366
     },
     "932100637481648179": {
         "xp": 95,
@@ -50,14 +50,14 @@
         "messageCount": 7
     },
     "266743417235570688": {
-        "xp": 129,
+        "xp": 147,
         "level": 6,
-        "messageCount": 53
+        "messageCount": 54
     },
     "540302379027791902": {
-        "xp": 427,
-        "level": 24,
-        "messageCount": 975
+        "xp": 237,
+        "level": 25,
+        "messageCount": 1068
     },
     "823691202548465694": {
         "xp": 597,
@@ -65,9 +65,9 @@
         "messageCount": 208
     },
     "264240866267365378": {
-        "xp": 53,
-        "level": 2,
-        "messageCount": 10
+        "xp": 45,
+        "level": 4,
+        "messageCount": 23
     },
     "508107273533521930": {
         "xp": 254,
@@ -75,9 +75,9 @@
         "messageCount": 780
     },
     "642913536284033035": {
-        "xp": 227,
+        "xp": 244,
         "level": 13,
-        "messageCount": 226
+        "messageCount": 227
     },
     "976936304807911444": {
         "xp": 468,
@@ -125,9 +125,9 @@
         "messageCount": 115
     },
     "1048724483214680076": {
-        "xp": 16,
+        "xp": 198,
         "level": 10,
-        "messageCount": 125
+        "messageCount": 134
     },
     "842556818483707916": {
         "xp": 190,
@@ -165,9 +165,9 @@
         "messageCount": 5
     },
     "884532532857683990": {
-        "xp": 506,
-        "level": 13,
-        "messageCount": 245
+        "xp": 41,
+        "level": 14,
+        "messageCount": 261
     },
     "1126588992561873097": {
         "xp": 44,
@@ -185,9 +185,9 @@
         "messageCount": 1039
     },
     "693803511590289438": {
-        "xp": 137,
-        "level": 3,
-        "messageCount": 20
+        "xp": 0,
+        "level": 6,
+        "messageCount": 43
     },
     "443090264068718592": {
         "xp": 36,
@@ -295,14 +295,14 @@
         "messageCount": 3
     },
     "915304327118200912": {
-        "xp": 19,
-        "level": 1,
-        "messageCount": 4
+        "xp": 103,
+        "level": 2,
+        "messageCount": 12
     },
     "557647328568279060": {
-        "xp": 0,
+        "xp": 19,
         "level": 4,
-        "messageCount": 21
+        "messageCount": 22
     },
     "717077116335816774": {
         "xp": 20,
@@ -425,9 +425,9 @@
         "messageCount": 1
     },
     "1172967675568332835": {
-        "xp": 37,
-        "level": 0,
-        "messageCount": 2
+        "xp": 0,
+        "level": 1,
+        "messageCount": 3
     },
     "1013210473098907728": {
         "xp": 15,
@@ -485,14 +485,14 @@
         "messageCount": 1
     },
     "792147248335028225": {
-        "xp": 81,
-        "level": 4,
-        "messageCount": 25
+        "xp": 0,
+        "level": 10,
+        "messageCount": 122
     },
     "775714025161752607": {
-        "xp": 18,
+        "xp": 33,
         "level": 3,
-        "messageCount": 14
+        "messageCount": 15
     },
     "483671807375835147": {
         "xp": 49,
@@ -503,5 +503,10 @@
         "xp": 41,
         "level": 4,
         "messageCount": 24
+    },
+    "992287403890987108": {
+        "xp": 18,
+        "level": 1,
+        "messageCount": 4
     }
 }
