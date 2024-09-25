@@ -173,15 +173,15 @@
                 {
                     "strainValue": "alien-kush",
                     "strainName": "Alien Kush",
-                    "stock": 15,
+                    "stock": 2,
                     "restockReminders": [],
                     "imageUrl": "https://delta8resellers.com/wp-content/uploads/2024/07/fvkd-sugar-thca-3.5g-disposable-alien-kush.jpg",
-                    "sentLimitedStockWarning": false
+                    "sentLimitedStockWarning": true
                 },
                 {
                     "strainValue": "blue-dream",
                     "strainName": "Blue Dream",
-                    "stock": 46,
+                    "stock": 32,
                     "restockReminders": [],
                     "imageUrl": "https://delta8resellers.com/wp-content/uploads/2024/07/fvkd-sugar-thca-3.5g-disposable-blue-dream.jpg",
                     "sentLimitedStockWarning": false
@@ -189,7 +189,7 @@
                 {
                     "strainValue": "mimosa",
                     "strainName": "Mimosa",
-                    "stock": 99,
+                    "stock": 85,
                     "restockReminders": [],
                     "imageUrl": "https://delta8resellers.com/wp-content/uploads/2024/07/fvkd-sugar-thca-3.5g-disposable-mimosa.jpg",
                     "sentLimitedStockWarning": false
@@ -197,7 +197,7 @@
                 {
                     "strainValue": "strawberry-cough",
                     "strainName": "Strawberry Cough",
-                    "stock": 49,
+                    "stock": 34,
                     "restockReminders": [],
                     "imageUrl": "https://delta8resellers.com/wp-content/uploads/2024/07/fvkd-sugar-thca-3.5g-disposable-strawberry-cough.jpg",
                     "sentLimitedStockWarning": false
@@ -205,7 +205,7 @@
                 {
                     "strainValue": "granddaddy-purp",
                     "strainName": "Granddaddy Purp",
-                    "stock": 90,
+                    "stock": 76,
                     "restockReminders": [],
                     "imageUrl": "https://delta8resellers.com/wp-content/uploads/2024/07/fvkd-sugar-thca-3.5g-disposable-granddaddy-purp.jpg",
                     "sentLimitedStockWarning": false

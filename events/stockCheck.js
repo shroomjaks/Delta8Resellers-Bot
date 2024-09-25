@@ -98,6 +98,8 @@ module.exports = {
                     const strainName = stockedStrainNames[stockedStrainValues.indexOf(strainValue)]
                     const dbStock = product.strainStock.find(strain => strain.strainValue === strainValue)
 
+                    if (!dbStock) continue
+
                     dbStock.stock = strainStockAmount
 
                     if (!dbStock.imageUrl) dbStock.imageUrl = strainImage
