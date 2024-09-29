@@ -32,7 +32,7 @@ module.exports = {
                 const unstockedStrains = product.allStrains.filter(strain => !stockedStrainValues.includes(strain.strainValue))
 
                 const oldStocked = product.stocked
-                
+
                 if (!stock) {
                     // If no stock element is found, assume it's in stock (or handle it as you prefer)
                     product.stocked = true
@@ -43,8 +43,7 @@ module.exports = {
                     // Otherwise, mark it as out of stock
                     product.stocked = false
                 }
-                
-                
+
                 // Product restock or out-of-stock status changes
                 if (product.stocked && !oldStocked) {
                     const embed = new EmbedBuilder()
@@ -84,7 +83,7 @@ module.exports = {
                     const actionRow = new ActionRowBuilder().addComponents(reminderButton)
                     await updateChannel.send({ embeds: [embed], components: [actionRow] })
                 }
-                
+
                 // Handle each strain
                 for (const strainValue of stockedStrainValues) {
                     await page.select('#pa_flavor', strainValue)

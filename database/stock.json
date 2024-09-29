@@ -4,7 +4,7 @@
             "uuid": "4276af25-d4b4-547d-a041-2e8dcb06b951",
             "name": "FVKD EXOTICS THC-A ROSIN DISPOSABLE | 3.5G",
             "url": "https://delta8resellers.com/product/fvkd-exotics-thc-a-rosin-disposable-3-5g",
-            "imageUrl": "https://delta8resellers.com/wp-content/uploads/2024/01/fvkd-exotics-thca-rosin-3.5g-disposable-la-kush-cake.jpg",
+            "imageUrl": "https://cdn.discordapp.com/attachments/1290000849669722167/1290001314767442011/fvkd-rosin-thca-la-kush-cake.webp",
             "stocked": true,
             "restockReminders": [
                 "540302379027791902",
@@ -57,7 +57,7 @@
                         "540302379027791902",
                         "709029069315899462"
                     ],
-                    "imageUrl": "https://delta8resellers.com/wp-content/uploads/2024/01/fvkd-exotics-thca-rosin-3.5g-disposable-blueberry-kush.jpg",
+                    "imageUrl": "https://cdn.discordapp.com/attachments/1290000849669722167/1290001113181065349/fvkd-rosin-thca-blueberry-kush.webp",
                     "sentLimitedStockWarning": true
                 },
                 {
@@ -67,7 +67,7 @@
                     "restockReminders": [
                         "540302379027791902"
                     ],
-                    "imageUrl": "https://delta8resellers.com/wp-content/uploads/2024/01/fvkd-exotics-thca-rosin-3.5g-disposable-fruit-punch.jpg",
+                    "imageUrl": "https://cdn.discordapp.com/attachments/1290000849669722167/1290001216910266428/fvkd-rosin-thca-fruit-punch.webp",
                     "sentLimitedStockWarning": false
                 },
                 {
@@ -77,17 +77,17 @@
                     "restockReminders": [
                         "540302379027791902"
                     ],
-                    "imageUrl": "https://delta8resellers.com/wp-content/uploads/2023/12/fvkd-exotics-tha-rosin-vape-sie-by-side-space-cake.jpg",
+                    "imageUrl": "https://cdn.discordapp.com/attachments/1290000849669722167/1290001404416753695/fvkd-rosin-thca-space-cake.webp",
                     "sentLimitedStockWarning": true
                 },
                 {
                     "strainValue": "watermelon-zkittlez",
-                    "strainName": "Watermelon Z",
+                    "strainName": "Watermelon Zkittlez",
                     "stock": 283,
                     "restockReminders": [
                         "540302379027791902"
                     ],
-                    "imageUrl": "https://delta8resellers.com/wp-content/uploads/2024/01/fvkd-exotics-thca-rosin-3.5g-disposable-watermelon-zkittlez.jpg",
+                    "imageUrl": "https://cdn.discordapp.com/attachments/1290000849669722167/1290001462079914004/fvkd-rosin-thca-watermelon-zkittlez.webp",
                     "sentLimitedStockWarning": true
                 },
                 {
@@ -97,7 +97,7 @@
                     "restockReminders": [
                         "540302379027791902"
                     ],
-                    "imageUrl": "https://delta8resellers.com/wp-content/uploads/2024/01/fvkd-exotics-thca-rosin-3.5g-disposable-alaskan-thunder-fvkd.jpg",
+                    "imageUrl": "https://cdn.discordapp.com/attachments/1290000849669722167/1290001113181065349/fvkd-rosin-thca-blueberry-kush.webp",
                     "sentLimitedStockWarning": false
                 },
                 {
@@ -105,7 +105,7 @@
                     "strainName": "Mandarin Cookies",
                     "stock": 142,
                     "restockReminders": [],
-                    "imageUrl": "https://delta8resellers.com/wp-content/uploads/2023/12/fvkd-exotics-tha-rosin-vape-sie-by-side-mandarin-cookies.jpg",
+                    "imageUrl": "https://cdn.discordapp.com/attachments/1290000849669722167/1290001359248293888/fvkd-rosin-thca-mandarin-cookies.webp",
                     "sentLimitedStockWarning": true
                 },
                 {
@@ -113,7 +113,7 @@
                     "strainName": "Forbidden Fruit",
                     "stock": 281,
                     "restockReminders": [],
-                    "imageUrl": "https://delta8resellers.com/wp-content/uploads/2024/01/fvkd-exotics-thca-rosin-3.5g-disposable-forbidden-fruit.jpg",
+                    "imageUrl": "https://cdn.discordapp.com/attachments/1290000849669722167/1290001164280139849/fvkd-rosin-thca-forbidden-fruit.webp",
                     "sentLimitedStockWarning": false
                 },
                 {
@@ -121,7 +121,7 @@
                     "strainName": "LA Kush Cake",
                     "stock": 265,
                     "restockReminders": [],
-                    "imageUrl": "https://delta8resellers.com/wp-content/uploads/2024/01/fvkd-exotics-thca-rosin-3.5g-disposable-la-kush-cake.jpg",
+                    "imageUrl": "https://cdn.discordapp.com/attachments/1290000849669722167/1290001314767442011/fvkd-rosin-thca-la-kush-cake.webp",
                     "sentLimitedStockWarning": false
                 },
                 {
@@ -129,7 +129,7 @@
                     "strainName": "Wedding Cake",
                     "stock": 253,
                     "restockReminders": [],
-                    "imageUrl": "https://delta8resellers.com/wp-content/uploads/2024/01/fvkd-exotics-thca-rosin-3.5g-disposable-watermelon-zkittlez.jpg",
+                    "imageUrl": "https://cdn.discordapp.com/attachments/1290000849669722167/1290001513334308935/fvkd-rosin-thca-wedding-cake.webp",
                     "sentLimitedStockWarning": false
                 }
             ]
@@ -139,6 +139,7 @@
             "name": "FVKD THCA SUGAR DISPOSABLE | 3.5G",
             "url": "https://delta8resellers.com/product/fvkd-thca-sugar-disposable-3-5g",
             "imageUrl": "https://delta8resellers.com/wp-content/uploads/2024/07/fvkd-sugar-thca-3.5g-disposable-blue-dream.jpg",
+            "messageImageId": "1290001829442224282",
             "stocked": true,
             "restockReminders": [
                 "540302379027791902"
@@ -175,7 +176,7 @@
                     "strainName": "Alien Kush",
                     "stock": 0,
                     "restockReminders": [],
-                    "imageUrl": "https://delta8resellers.com/wp-content/uploads/2024/07/fvkd-sugar-thca-3.5g-disposable-alien-kush.jpg",
+                    "imageUrl": "https://cdn.discordapp.com/attachments/1290000849669722167/1290001648822915204/fvkd-sugar-thca-alien-kush.webp",
                     "sentLimitedStockWarning": true
                 },
                 {
@@ -183,7 +184,7 @@
                     "strainName": "Blue Dream",
                     "stock": 0,
                     "restockReminders": [],
-                    "imageUrl": "https://delta8resellers.com/wp-content/uploads/2024/07/fvkd-sugar-thca-3.5g-disposable-blue-dream.jpg",
+                    "imageUrl": "https://cdn.discordapp.com/attachments/1290000849669722167/1290001829203017860/fvkd-sugar-thca-blue-dream.webp",
                     "sentLimitedStockWarning": true
                 },
                 {
@@ -191,7 +192,7 @@
                     "strainName": "Mimosa",
                     "stock": 65,
                     "restockReminders": [],
-                    "imageUrl": "https://delta8resellers.com/wp-content/uploads/2024/07/fvkd-sugar-thca-3.5g-disposable-mimosa.jpg",
+                    "imageUrl": "https://cdn.discordapp.com/attachments/1290000849669722167/1290001932521308262/fvkd-sugar-thca-mimosa.webp",
                     "sentLimitedStockWarning": false
                 },
                 {
@@ -199,7 +200,7 @@
                     "strainName": "Strawberry Cough",
                     "stock": 16,
                     "restockReminders": [],
-                    "imageUrl": "https://delta8resellers.com/wp-content/uploads/2024/07/fvkd-sugar-thca-3.5g-disposable-strawberry-cough.jpg",
+                    "imageUrl": "https://cdn.discordapp.com/attachments/1290000849669722167/1290001971280871475/fvkd-sugar-thca-strawberry-cough.webp",
                     "sentLimitedStockWarning": false
                 },
                 {
@@ -207,15 +208,7 @@
                     "strainName": "Granddaddy Purp",
                     "stock": 45,
                     "restockReminders": [],
-                    "imageUrl": "https://delta8resellers.com/wp-content/uploads/2024/07/fvkd-sugar-thca-3.5g-disposable-granddaddy-purp.jpg",
-                    "sentLimitedStockWarning": false
-                },
-                {
-                    "strainValue": "granddaddy-purp",
-                    "strainName": "Granddaddy Purp",
-                    "stock": 0,
-                    "restockReminders": [],
-                    "imageUrl": "",
+                    "imageUrl": "https://cdn.discordapp.com/attachments/1290000849669722167/1290001889920024768/fvkd-sugar-thca-granddaddy-purp.webp",
                     "sentLimitedStockWarning": false
                 },
                 {
@@ -223,7 +216,7 @@
                     "strainName": "Tropicana Cookies",
                     "stock": 278,
                     "restockReminders": [],
-                    "imageUrl": "https://delta8resellers.com/wp-content/uploads/2024/07/fvkd-sugar-thca-3.5g-disposable-tropicana-cookies.jpg",
+                    "imageUrl": "https://cdn.discordapp.com/attachments/1290000849669722167/1290002023139250288/fvkd-sugar-thca-tropicana-cookies.webp",
                     "sentLimitedStockWarning": false
                 }
             ]
