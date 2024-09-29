@@ -52,7 +52,7 @@
                 {
                     "strainValue": "blueberry-kush",
                     "strainName": "Blueberry Kush",
-                    "stock": 276,
+                    "stock": 274,
                     "restockReminders": [
                         "540302379027791902",
                         "709029069315899462"
@@ -63,7 +63,7 @@
                 {
                     "strainValue": "fruit-punch",
                     "strainName": "Fruit Punch",
-                    "stock": 113,
+                    "stock": 100,
                     "restockReminders": [
                         "540302379027791902"
                     ],
@@ -73,7 +73,7 @@
                 {
                     "strainValue": "space-cake",
                     "strainName": "Space Cake",
-                    "stock": 128,
+                    "stock": 109,
                     "restockReminders": [
                         "540302379027791902"
                     ],
@@ -83,7 +83,7 @@
                 {
                     "strainValue": "watermelon-zkittlez",
                     "strainName": "Watermelon Zkittlez",
-                    "stock": 283,
+                    "stock": 272,
                     "restockReminders": [
                         "540302379027791902"
                     ],
@@ -103,7 +103,7 @@
                 {
                     "strainValue": "mandarin-cookies",
                     "strainName": "Mandarin Cookies",
-                    "stock": 142,
+                    "stock": 128,
                     "restockReminders": [],
                     "imageUrl": "https://cdn.discordapp.com/attachments/1290000849669722167/1290001359248293888/fvkd-rosin-thca-mandarin-cookies.webp",
                     "sentLimitedStockWarning": true
@@ -111,7 +111,7 @@
                 {
                     "strainValue": "forbidden-fruit",
                     "strainName": "Forbidden Fruit",
-                    "stock": 281,
+                    "stock": 266,
                     "restockReminders": [],
                     "imageUrl": "https://cdn.discordapp.com/attachments/1290000849669722167/1290001164280139849/fvkd-rosin-thca-forbidden-fruit.webp",
                     "sentLimitedStockWarning": false
@@ -119,7 +119,7 @@
                 {
                     "strainValue": "la-kush-cake",
                     "strainName": "LA Kush Cake",
-                    "stock": 265,
+                    "stock": 257,
                     "restockReminders": [],
                     "imageUrl": "https://cdn.discordapp.com/attachments/1290000849669722167/1290001314767442011/fvkd-rosin-thca-la-kush-cake.webp",
                     "sentLimitedStockWarning": false
@@ -127,7 +127,7 @@
                 {
                     "strainValue": "wedding-cake",
                     "strainName": "Wedding Cake",
-                    "stock": 253,
+                    "stock": 243,
                     "restockReminders": [],
                     "imageUrl": "https://cdn.discordapp.com/attachments/1290000849669722167/1290001513334308935/fvkd-rosin-thca-wedding-cake.webp",
                     "sentLimitedStockWarning": false
@@ -189,7 +189,7 @@
                 {
                     "strainValue": "mimosa",
                     "strainName": "Mimosa",
-                    "stock": 65,
+                    "stock": 60,
                     "restockReminders": [],
                     "imageUrl": "https://cdn.discordapp.com/attachments/1290000849669722167/1290001932521308262/fvkd-sugar-thca-mimosa.webp",
                     "sentLimitedStockWarning": false
@@ -197,15 +197,15 @@
                 {
                     "strainValue": "strawberry-cough",
                     "strainName": "Strawberry Cough",
-                    "stock": 16,
+                    "stock": 10,
                     "restockReminders": [],
                     "imageUrl": "https://cdn.discordapp.com/attachments/1290000849669722167/1290001971280871475/fvkd-sugar-thca-strawberry-cough.webp",
-                    "sentLimitedStockWarning": false
+                    "sentLimitedStockWarning": true
                 },
                 {
                     "strainValue": "granddaddy-purp",
                     "strainName": "Granddaddy Purp",
-                    "stock": 45,
+                    "stock": 44,
                     "restockReminders": [],
                     "imageUrl": "https://cdn.discordapp.com/attachments/1290000849669722167/1290001889920024768/fvkd-sugar-thca-granddaddy-purp.webp",
                     "sentLimitedStockWarning": false
@@ -213,7 +213,7 @@
                 {
                     "strainValue": "tropicana-cookies",
                     "strainName": "Tropicana Cookies",
-                    "stock": 278,
+                    "stock": 270,
                     "restockReminders": [],
                     "imageUrl": "https://cdn.discordapp.com/attachments/1290000849669722167/1290002023139250288/fvkd-sugar-thca-tropicana-cookies.webp",
                     "sentLimitedStockWarning": false
@@ -331,7 +331,7 @@
                 {
                     "strainValue": "blue-dream",
                     "strainName": "Blue Dream",
-                    "stock": 38,
+                    "stock": 37,
                     "restockReminders": [],
                     "imageUrl": "https://delta8resellers.com/wp-content/uploads/2023/07/Canna-River-2G-HHC-Blue-Dream.jpg",
                     "sentLimitedStockWarning": false
@@ -753,7 +753,7 @@
                 {
                     "strainValue": "blue-razz",
                     "strainName": "Blue Razz",
-                    "stock": 44,
+                    "stock": 43,
                     "restockReminders": [],
                     "imageUrl": "https://delta8resellers.com/wp-content/uploads/2023/07/Canna-River-2G-D8-Blue-Razz.jpg",
                     "sentLimitedStockWarning": false
@@ -833,7 +833,7 @@
                 {
                     "strainValue": "strawberry-fields",
                     "strainName": "Strawberry Fields",
-                    "stock": 62,
+                    "stock": 61,
                     "restockReminders": [],
                     "imageUrl": "https://delta8resellers.com/wp-content/uploads/2023/07/Canna-River-2G-D8-Strawberry-Fields.jpg",
                     "sentLimitedStockWarning": false
@@ -1253,7 +1253,7 @@
                 {
                     "strainValue": "tangie-banana",
                     "strainName": "Tangie Banana",
-                    "stock": 27,
+                    "stock": 25,
                     "restockReminders": [],
                     "imageUrl": "https://delta8resellers.com/wp-content/uploads/2023/11/urb-thca-live-sugar-gummies-5000mg-tangie-banana.jpg",
                     "sentLimitedStockWarning": false
@@ -1261,7 +1261,7 @@
                 {
                     "strainValue": "guava-gelato",
                     "strainName": "Guava Gelato",
-                    "stock": 15,
+                    "stock": 14,
                     "restockReminders": [],
                     "imageUrl": "https://delta8resellers.com/wp-content/uploads/2023/11/urb-thca-live-sugar-gummies-5000mg-guava-gelato.jpg",
                     "sentLimitedStockWarning": false
@@ -1277,10 +1277,10 @@
                 {
                     "strainValue": "watermelon-sangria",
                     "strainName": "Watermelon Sangria",
-                    "stock": 13,
+                    "stock": 10,
                     "restockReminders": [],
                     "imageUrl": "https://delta8resellers.com/wp-content/uploads/2023/11/urb-thca-live-sugar-gummies-5000mg-watermelon-sangria.jpg",
-                    "sentLimitedStockWarning": false
+                    "sentLimitedStockWarning": true
                 },
                 {
                     "strainValue": "strawberry-shortcake",
@@ -1342,7 +1342,7 @@
                 {
                     "strainValue": "fruit-punch",
                     "strainName": "Fruit Punch",
-                    "stock": 34,
+                    "stock": 33,
                     "restockReminders": [],
                     "imageUrl": "https://delta8resellers.com/wp-content/uploads/2024/07/wild-orcahrd-thca-diamonds-1.5g-cartridge-Fruit-Punch.jpg",
                     "sentLimitedStockWarning": false
@@ -1398,7 +1398,7 @@
                 {
                     "strainValue": "crimson-toro",
                     "strainName": "Crimson Toro",
-                    "stock": 189,
+                    "stock": 188,
                     "restockReminders": [],
                     "imageUrl": "https://delta8resellers.com/wp-content/uploads/2024/09/wild-orcahrd-thca-diamonds-1.5g-cartridge-Crimson-Toro.jpg",
                     "sentLimitedStockWarning": false
@@ -1538,7 +1538,7 @@
                 {
                     "strainValue": "green-crack",
                     "strainName": "Green Crack",
-                    "stock": 88,
+                    "stock": 86,
                     "restockReminders": [],
                     "imageUrl": "https://delta8resellers.com/wp-content/uploads/2023/06/Canna-River-HHC-Cartridge-1000mg-Green-Crack-600x600.webp",
                     "sentLimitedStockWarning": false
@@ -1546,7 +1546,7 @@
                 {
                     "strainValue": "hawaiian-snowcap",
                     "strainName": "Hawaiian Snowcap",
-                    "stock": 79,
+                    "stock": 77,
                     "restockReminders": [],
                     "imageUrl": "https://delta8resellers.com/wp-content/uploads/2023/06/Canna-River-HHC-Cartridge-1000mg-Hawaiian-Snowcap-600x600.webp",
                     "sentLimitedStockWarning": false
@@ -1554,7 +1554,7 @@
                 {
                     "strainValue": "hindu-honeycrisp",
                     "strainName": "Hindu Honeycrisp",
-                    "stock": 78,
+                    "stock": 76,
                     "restockReminders": [],
                     "imageUrl": "https://delta8resellers.com/wp-content/uploads/2023/06/Canna-River-HHC-Cartridge-1000mg-Hindu-Honeycrisp-600x600.webp",
                     "sentLimitedStockWarning": false
@@ -1562,7 +1562,7 @@
                 {
                     "strainValue": "lemon-jack",
                     "strainName": "Lemon Jack",
-                    "stock": 92,
+                    "stock": 90,
                     "restockReminders": [],
                     "imageUrl": "https://delta8resellers.com/wp-content/uploads/2023/06/Canna-River-HHC-Cartridge-1000mg-Lemon-Jack-600x600.webp",
                     "sentLimitedStockWarning": false
@@ -1578,7 +1578,7 @@
                 {
                     "strainValue": "purple-kush",
                     "strainName": "Purple Kush",
-                    "stock": 30,
+                    "stock": 29,
                     "restockReminders": [],
                     "imageUrl": "https://delta8resellers.com/wp-content/uploads/2023/06/Canna-River-HHC-Cartridge-1000mg-Purple-Kush-600x600.webp",
                     "sentLimitedStockWarning": false
@@ -1586,7 +1586,7 @@
                 {
                     "strainValue": "rainbow-sherbet",
                     "strainName": "Rainbow Sherbet",
-                    "stock": 86,
+                    "stock": 85,
                     "restockReminders": [],
                     "imageUrl": "https://delta8resellers.com/wp-content/uploads/2023/06/Canna-River-HHC-Cartridge-1000mg-Rainbow-Sherbet-600x600.webp",
                     "sentLimitedStockWarning": false
@@ -1602,7 +1602,7 @@
                 {
                     "strainValue": "strawberry-tartz",
                     "strainName": "Strawberry Tartz",
-                    "stock": 86,
+                    "stock": 85,
                     "restockReminders": [],
                     "imageUrl": "https://delta8resellers.com/wp-content/uploads/2023/06/Canna-River-HHC-Cartridge-1000mg-Strawberry-Tartz-600x600.webp",
                     "sentLimitedStockWarning": false
@@ -1642,7 +1642,7 @@
                 {
                     "strainValue": "pineapple-express",
                     "strainName": "Pineapple Express",
-                    "stock": 8,
+                    "stock": 6,
                     "restockReminders": [],
                     "imageUrl": "https://delta8resellers.com/wp-content/uploads/2023/06/Canna-River-HHC-Cartridge-1000mg-Cherry-AK-600x600.webp",
                     "sentLimitedStockWarning": true

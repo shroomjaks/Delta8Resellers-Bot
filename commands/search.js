@@ -1,8 +1,9 @@
 const { ApplicationCommandOptionType, AutocompleteInteraction, ChatInputCommandInteraction, EmbedBuilder, ButtonBuilder, ButtonStyle, ActionRowBuilder } = require('discord.js')
 
 const JSONdb = require('simple-json-db')
-
 const search = new JSONdb('./database/search.json')
+
+const { getAverageColor } = require('fast-average-color-node')
 
 module.exports = {
     name: 'search',
@@ -86,11 +87,14 @@ module.exports = {
 
         if (!product) return await interaction.reply({ content: 'Product not found.', ephemeral: true })
 
+        const color = await getAverageColor(product.imageUrl)
+
         const embed = new EmbedBuilder()
             .setTitle(product.name)
             .setThumbnail(product.imageUrl)
             .setURL(product.url)
+            .setColor(color.hex)
 
-        await interaction.reply({ embeds: [embed] })
+        await interaction.reply({ embeds: [embed], ephemeral: true })
     }
 }

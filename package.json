@@ -11,11 +11,11 @@
   "dependencies": {
     "@napi-rs/canvas": "^0.1.56",
     "@remove-background-ai/rembg.js": "^1.1.9",
-    "discord.js": "^14.16.2",
+    "discord.js": "^14.16.3",
     "fast-average-color-node": "^3.1.0",
     "humanize-duration": "^3.32.1",
     "parse-duration": "^1.1.0",
-    "puppeteer-core": "^23.4.0",
+    "puppeteer-core": "^23.4.1",
     "simple-json-db": "^2.0.0",
     "uuid-by-string": "^4.0.0"
   },
