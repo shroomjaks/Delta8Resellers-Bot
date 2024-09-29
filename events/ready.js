@@ -1,4 +1,4 @@
-const { Events, Client } = require('discord.js')
+const { Events, Client, EmbedBuilder } = require('discord.js')
 
 const JSONdb = require('simple-json-db')
 
@@ -32,6 +32,7 @@ module.exports = {
         // Set the global variables to be accessed from eval
         globalThis['client'] = client
         globalThis['require'] = require
+        globalThis['EmbedBuilder'] = EmbedBuilder
 
         client.stock = stock
         client.xp = xp

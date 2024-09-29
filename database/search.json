@@ -29,6 +29,11 @@
         "url": "https://delta8resellers.com/product/canna-river-pet-cbd-tinctures/",
         "imageUrl": "https://delta8resellers.com/wp-content/uploads/2022/07/Canna-river-Chicken-64x64.webp"
     },
+    "194950": {
+        "name": "Delta Extrax Goliath Pods | 4g",
+        "url": "https://delta8resellers.com/product/delta-extrax-goliath-pods-2g/",
+        "imageUrl": "https://delta8resellers.com/wp-content/uploads/2023/05/delta-extrax-goliath-2g-pods-berry-blue-64x64.jpg"
+    },
     "225742": {
         "name": "TRĒ House HHC Syrup Purple Stuff | 1000mg",
         "url": "https://delta8resellers.com/product/tre-house-hhc-syrup-purple-stuff-1000mg/",
@@ -43,6 +48,11 @@
         "name": "Flying Monkey HHC Pre Roll | 2 Pack",
         "url": "https://delta8resellers.com/product/flying-monkey-hhc-pre-roll-2-pack/",
         "imageUrl": "https://delta8resellers.com/wp-content/uploads/2022/12/flying-monkey-hhc-preroll-king-louis-xiii-64x64.jpg"
+    },
+    "280872": {
+        "name": "Cake Coldpack Gummies | 500mg",
+        "url": "https://delta8resellers.com/product/cake-coldpack-gummies/",
+        "imageUrl": "https://delta8resellers.com/wp-content/uploads/2022/12/cake-coldpack-gummies-strawnana-64x64.jpg"
     },
     "303502": {
         "name": "Hidden Hills Live Resin Cartridge | 2g",
@@ -259,6 +269,11 @@
         "url": "https://delta8resellers.com/product/hidden-hills-live-sugar-gummies-7500mg/",
         "imageUrl": "https://delta8resellers.com/wp-content/uploads/2023/10/hidden-hills-7500mg-gummies-rizz-blast-64x64.jpg"
     },
+    "772301": {
+        "name": "Exotic Spicy Pringles Texas Style BBQ | 97g",
+        "url": "https://delta8resellers.com/product/exotic-spicy-pringles-texas-style-bbq-97g/",
+        "imageUrl": "https://delta8resellers.com/wp-content/uploads/2023/11/pringles-chips-spicy-texas-style-bbq-64x64.jpg"
+    },
     "784223": {
         "name": "Chapo Azul Blue Lotus Disposable | 3.5g",
         "url": "https://delta8resellers.com/product/chapo-azul-blue-lotus-disposable-3-5g/",
@@ -323,6 +338,11 @@
         "name": "Mmelt Mushroom Chocolate Bar by Cali Extrax | 10 Count",
         "url": "https://delta8resellers.com/product/mmelt-mushroom-chocolate-bar-10-count/",
         "imageUrl": "https://delta8resellers.com/wp-content/uploads/2024/08/cali-mmelt-mushroom-chocolate-bar-6g-birthday-cake-64x64.jpg"
+    },
+    "923939": {
+        "name": "Cake Stax THC-A Disposable | 3g",
+        "url": "https://delta8resellers.com/product/cake-stax-thc-a-disposable-3g/",
+        "imageUrl": "https://delta8resellers.com/wp-content/uploads/2024/01/cake-stax-thca-3g-disposable-cookie-wreck-64x64.jpg"
     },
     "936124": {
         "name": "Exotic Hello Kitty Unicorn Tails Cotton Candy | 50g",
@@ -439,6 +459,11 @@
         "url": "https://delta8resellers.com/product/tre-house-hhc-gummies-40ct-1000mg/",
         "imageUrl": "https://delta8resellers.com/wp-content/uploads/2024/04/trehouse-hhc-1000mg-gummies-strawberry-burst-64x64.jpg"
     },
+    "1111558": {
+        "name": "Devine D8 + D9 Chocolate Bar | (15pc) 300mg",
+        "url": "https://delta8resellers.com/product/devine-cannabis-confections-chocolate-bar-15ct-300mg/",
+        "imageUrl": "https://delta8resellers.com/wp-content/uploads/2024/04/devine-d9-300mg-chocolate-bar-graham-cracker-marshmallow-girl-svout-cookie-64x64.jpg"
+    },
     "1144147": {
         "name": "Good Girl THC-P Flower | 4g",
         "url": "https://delta8resellers.com/product/good-girl-thc-p-flower-4g/",
@@ -474,6 +499,16 @@
         "url": "https://delta8resellers.com/product/good-girl-gummies-20ct-5000mg/",
         "imageUrl": "https://delta8resellers.com/wp-content/uploads/2024/05/good-girl-d8-thca-thcp-5000mg-20pc-gummies-sweet-peach-64x64.jpg"
     },
+    "1171494": {
+        "name": "TRĒ House Liquid Budder THC-A Disposable | 2g",
+        "url": "https://delta8resellers.com/product/tre-house-liquid-budder-thc-a-disposable-2g/",
+        "imageUrl": "https://delta8resellers.com/wp-content/uploads/2024/05/trehouse-liquid-budder-thca-2g-disposable-white-widow-64x64.jpg"
+    },
+    "1173658": {
+        "name": "Modus Presidential Pre-Rolls | (2ct) 4g",
+        "url": "https://delta8resellers.com/product/modus-presidential-pre-rolls-2ct-4g/",
+        "imageUrl": "https://delta8resellers.com/wp-content/uploads/2024/05/modus-presidential-blend-2g-2ct-pre-rolls-Royal-Runtz-64x64.jpg"
+    },
     "1173694": {
         "name": "Modus THCA Dabs | 2g",
         "url": "https://delta8resellers.com/product/modus-thca-dabs-2g/",
@@ -484,6 +519,16 @@
         "url": "https://delta8resellers.com/product/flying-monkey-snowballs-thc-a-flower-5g/",
         "imageUrl": "https://delta8resellers.com/wp-content/uploads/2024/06/flying-monkey-snowballs-thca-flower-purple-punch-64x64.jpg"
     },
+    "1189872": {
+        "name": "Coastal Clouds HHC + CBN + HHC-P Disposable | 2g",
+        "url": "https://delta8resellers.com/product/coastal-clouds-hhc-cbn-hhc-p-disposable-2g/",
+        "imageUrl": "https://delta8resellers.com/wp-content/uploads/2024/06/Coastal-Clouds-Hemp-HHC-CBN-HHCP-2g-disposable-Fruity-Cereal-Milk-64x64.jpg"
+    },
+    "1197989": {
+        "name": "Juicy Kush Diamond Rosin Cartridge | 1g",
+        "url": "https://delta8resellers.com/product/juicy-kush-diamond-rosin-cartridge-1g/",
+        "imageUrl": "https://delta8resellers.com/wp-content/uploads/2024/06/juicy-kush-thca-diamond-rosin-1g-cartridge-blackberry-kush-64x64.jpg"
+    },
     "1198314": {
         "name": "Hidden Hills Mini Mart Bar Device | 1g",
         "url": "https://delta8resellers.com/product/hidden-hills-mini-mart-bar-device-1g/",
@@ -493,6 +538,16 @@
         "name": "Zombi HHC/D9/THC-P Chocolate Bar | 12 Count",
         "url": "https://delta8resellers.com/product/zombi-hhc-d9-thc-p-chocolate-bar-12-count/",
         "imageUrl": "https://delta8resellers.com/wp-content/uploads/2024/06/zombi-hhc-d9-thcp-200mg-chocolate-bar-milk-chocolate-64x64.jpg"
+    },
+    "1210784": {
+        "name": "Elyxr THC-A Caviar Blunt | 2g",
+        "url": "https://delta8resellers.com/product/elyxr-thc-a-caviar-blunt-2g/",
+        "imageUrl": "https://delta8resellers.com/wp-content/uploads/2024/06/elyxr-thca-caviar-blunt-2g-grape-cod-64x64.jpg"
+    },
+    "1221190": {
+        "name": "Eat Ohmz Kratom Capsules | 4 Count",
+        "url": "https://delta8resellers.com/product/eat-ohmz-kratom-capsules-4-count/",
+        "imageUrl": "https://delta8resellers.com/wp-content/uploads/2024/06/exodus-eat-ohmz-kratom-tablets-18mg-4ct-64x64.jpg"
     },
     "1227505": {
         "name": "Canna River Pain Gummies | 30 Count",
@@ -583,6 +638,16 @@
         "name": "Mmelt Mushroom Gummies by Cali Extrax | 10 Count",
         "url": "https://delta8resellers.com/product/mmelt-mushroom-gummies-by-cali-extrax-10-count/",
         "imageUrl": "https://delta8resellers.com/wp-content/uploads/2024/08/cali-mmelt-mushroom-gummies-10ct-berry-blitz-64x64.jpg"
+    },
+    "1312479": {
+        "name": "Brez THC + Lion's Mane Drink | 12oz",
+        "url": "https://delta8resellers.com/product/brez-hemp-lions-mane-can-12oz/",
+        "imageUrl": "https://delta8resellers.com/wp-content/uploads/2024/09/brez-5mg-thc-10mg-cbd-2200mg-lions-mane-12oz-lemon-elderflower-64x64.jpg"
+    },
+    "1333277": {
+        "name": "Shaka Sweets Magic Mushroom + Hemp Gummies | 8cnt",
+        "url": "https://delta8resellers.com/product/shaka-sweets-magic-mushroom-hemp-gummies-8cnt/",
+        "imageUrl": "https://delta8resellers.com/wp-content/uploads/2024/08/shaka-sweets-magic-mushroom-thcv-gummies-8ct-pog-64x64.jpg"
     },
     "1353807": {
         "name": "Urb Flight Fuel 510 Cartridges | 2g",
