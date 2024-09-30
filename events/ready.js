@@ -27,6 +27,7 @@ module.exports = {
 
         // Start 60 minute stock and 2 hour deal checks
         setInterval(() => client.emit('stockCheck', client), 60 * 60 * 1000)
+        setInterval(() => client.emit('redditCheck'), 30 * 30 * 1000)
         setInterval(() => client.emit('dealCheck', client), 90 * 60 * 1000)
 
         // Set the global variables to be accessed from eval
