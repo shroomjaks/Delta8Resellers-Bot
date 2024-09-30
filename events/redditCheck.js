@@ -1,5 +1,3 @@
-const { parseStringPromise } = require('xml2js')
-
 const { getAverageColor } = require('fast-average-color-node')
 
 const JSONdb = require('simple-json-db')
@@ -27,13 +25,13 @@ module.exports = {
 
             const avatarUrl = authorJson.data.icon_img
 
-            const color = await getAverageColor(avatarUrl)
+            const color = await getAverageColor(avatarUrl).catch(() => null)
 
             const embed = new EmbedBuilder()
                 .setTitle(post.data.title)
                 .setAuthor({ name: username, iconURL: avatarUrl, url: `https://reddit.com/user/${username}` })
                 .setURL(`https://www.reddit.com${post.data.permalink}`)
-                .setColor(color.hex)
+                .setColor(color?.hex || '#FF4500')
 
             if (post.data.selftext.length >= 1) embed.setDescription(post.data.selftext)
             console.log(post.data?.thumbnail)

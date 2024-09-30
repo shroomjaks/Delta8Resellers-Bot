@@ -17,9 +17,7 @@
     "parse-duration": "^1.1.0",
     "puppeteer-core": "^23.4.1",
     "simple-json-db": "^2.0.0",
-    "simple-xml-to-json": "^1.2.3",
-    "uuid-by-string": "^4.0.0",
-    "xml2js": "^0.6.2"
+    "uuid-by-string": "^4.0.0"
   },
   "scripts": {
     "start": "bun run index.js",
