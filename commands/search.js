@@ -1,7 +1,6 @@
 const { ApplicationCommandOptionType, AutocompleteInteraction, ChatInputCommandInteraction, EmbedBuilder, ButtonBuilder, ButtonStyle, ActionRowBuilder } = require('discord.js')
 
-const JSONdb = require('simple-json-db')
-const search = new JSONdb('./database/search.json')
+const results = new Map()
 
 module.exports = {
     name: 'search',
@@ -30,7 +29,7 @@ module.exports = {
         })
 
         if (!response.ok) return await interaction.respond([])
-        
+
         const searchResults = await response.json()
 
         const autocompleteResults = []
@@ -45,9 +44,7 @@ module.exports = {
                     value: result.post_id.toString()
                 })
 
-                if (search.has(result.post_id)) continue
-
-                search.set(result.post_id, {
+                results.set(result.post_id.toString(), {
                     name: result.value,
                     url: result.url,
                     imageUrl: imageUrl
@@ -81,7 +78,7 @@ module.exports = {
             return await interaction.reply({ components: [row] })
         }
 
-        const product = search.get(query)
+        const product = results.get(query)
 
         if (!product) return await interaction.reply({ content: 'Product not found.', ephemeral: true })
 
