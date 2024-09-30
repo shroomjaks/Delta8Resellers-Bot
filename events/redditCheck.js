@@ -13,17 +13,19 @@ module.exports = {
         const redditChannel = await client.channels.fetch('1290122497186074706')
 
         const feed = await fetch('https://www.reddit.com/r/delta8resellers/new/.json')
-        const json = await feed.json()
+        const feedJson = await feed.json()
 
-        for (const post of json.data.children) {
+        if (!feedJson || !feedJson.data) return console.error('Failed to fetch Reddit feed.')
+
+        for (const post of feedJson.data.children) {
             if (rss.has(post.data.id)) continue
 
             const username = post.data.author
 
-            const request = await fetch(`https://api.reddit.com/user/${username}/about?raw_json=1`)
-            const authorInfo = await request.json()
+            const author = await fetch(`https://api.reddit.com/user/${username}/about?raw_json=1`)
+            const authorJson = await author.json()
 
-            const avatarUrl = authorInfo.data.icon_img
+            const avatarUrl = authorJson.data.icon_img
 
             const color = await getAverageColor(avatarUrl)
 
@@ -34,9 +36,10 @@ module.exports = {
                 .setColor(color.hex)
 
             if (post.data.selftext.length >= 1) embed.setDescription(post.data.selftext)
-            if (post.data?.thumbnail) embed.setThumbnail(post.data.thumbnail)
+            console.log(post.data?.thumbnail)
+            if (post.data?.thumbnail && post.data?.thumbnail !== 'nsfw' && post.data?.thumbnail !== 'self') embed.setThumbnail(post.data.thumbnail)
 
-            redditChannel.send({ embeds: [embed] })
+            await redditChannel.send({ embeds: [embed] })
 
             rss.set(post.data.id, true)
         }
