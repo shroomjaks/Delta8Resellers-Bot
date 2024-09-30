@@ -46,6 +46,7 @@ module.exports = {
                     .setURL(post.link[0].$.href)
                     .setThumbnail(post['media:thumbnail']?.[0]?.['$']?.url)
                     .setColor(color.hex)
+                    .setTimestamp(Date.parse(post.published[0]))
 
                 redditChannel.send({ embeds: [embed] })
             } else {
@@ -55,6 +56,7 @@ module.exports = {
                     .setURL(post.link[0].$.href)
                     .setThumbnail(post['media:thumbnail']?.[0]?.['$']?.url)
                     .setColor(color.hex)
+                    .setTimestamp(Date.parse(post.published[0]))
 
                 redditChannel.send({ embeds: [embed] })
             }
