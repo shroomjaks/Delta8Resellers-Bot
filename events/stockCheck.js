@@ -51,7 +51,6 @@ module.exports = {
                         .setDescription('This entire product has been restocked! 🎉')
                         .setThumbnail(product.imageUrl)
                         .setURL(product.url)
-                        .setTimestamp(Date.now())
                         .setColor('#05ef9d')
 
                     await updateChannel.send({ embeds: [embed] })
@@ -71,7 +70,6 @@ module.exports = {
                         .setDescription('This entire product is now out of stock. 😢')
                         .setThumbnail(product.imageUrl)
                         .setURL(product.url)
-                        .setTimestamp(Date.now())
                         .setColor('#FF0000')
                         .setFooter({ text: 'Press the button below to be reminded when this product is restocked.' })
 
@@ -111,7 +109,6 @@ module.exports = {
                             .setDescription(`*${strainName}* is now in stock. 🎉`)
                             .setThumbnail(dbStock.imageUrl)
                             .setURL(`${product.url}?attribute_pa_flavor=${strainValue}`)
-                            .setTimestamp(Date.now())
                             .setColor('#05ef9d')
 
                         await updateChannel.send({ embeds: [embed] })
@@ -132,7 +129,6 @@ module.exports = {
                             .setDescription(`Only **${strainStockAmount}** *${strainName}* left! ⚠️`)
                             .setThumbnail(dbStock.imageUrl)
                             .setURL(`${product.url}?attribute_pa_flavor=${strainValue}`)
-                            .setTimestamp(Date.now())
                             .setColor('#FFA500')
 
                         await updateChannel.send({ embeds: [embed] })
@@ -156,7 +152,6 @@ module.exports = {
                         .setDescription(`*${strain.strainName}* is now out of stock. 😢`)
                         .setThumbnail(dbStock.imageUrl)
                         .setURL(`${product.url}?attribute_pa_flavor=${strain.strainValue}`)
-                        .setTimestamp(Date.now())
                         .setColor('#FF0000')
                         .setFooter({ text: 'Press the button below to be reminded when this strain is restocked.' })
 
