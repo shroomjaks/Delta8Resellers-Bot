@@ -82,6 +82,11 @@ module.exports = {
                     await updateChannel.send({ embeds: [embed], components: [actionRow] })
                 }
 
+                if (!stockedStrainValues) {
+                    console.log('No strains found')
+                    continue
+                }
+
                 // Handle each strain
                 for (const strainValue of stockedStrainValues) {
                     await page.select('#pa_flavor', strainValue)
