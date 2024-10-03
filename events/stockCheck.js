@@ -19,6 +19,8 @@ module.exports = {
             var page = await client.browser.newPage() // Reuse the same page for all products
 
             for (const product of products) {
+                console.log(`Checking stock for ${product.name}`)
+
                 await page.goto(product.url, { waitUntil: 'domcontentloaded' })
 
                 // Collect stock and strain info
@@ -32,7 +34,7 @@ module.exports = {
                 const oldStocked = product.stocked
 
                 if (!stock) {
-                    // If no stock element is found, assume it's in stock (or handle it as you prefer)
+                    // If no stock element is found, assume it's in stock
                     product.stocked = true
                 } else if (stockText && !stockText.includes('This product is currently out of stock and unavailable.')) {
                     // If stockText is found and it's not the "out of stock" message, mark it as stocked
@@ -54,7 +56,7 @@ module.exports = {
                     await updateChannel.send({ embeds: [embed] })
 
                     // Notify users in parallel
-                    await Promise.all(product.restockReminders.map(async (userId) => {
+                    await Promise.all(product.restockReminders.map(async function (userId) {
                         const user = await client.users.fetch(userId)
                         try {
                             await user.send({ embeds: [embed] })
@@ -94,12 +96,9 @@ module.exports = {
                     const dbStock = product.strainStock.find(strain => strain.strainValue === strainValue)
 
                     if (!dbStock) continue
-
-                    dbStock.stock = strainStockAmount
-
                     if (!dbStock.imageUrl) dbStock.imageUrl = strainImage
 
-                    console.log(`Strain: ${strainName}, Amount: ${strainStockAmount}`)
+                    dbStock.stock = strainStockAmount
 
                     if (dbStock.stock === 0 && strainStockAmount > 1) {
                         const embed = new EmbedBuilder()
