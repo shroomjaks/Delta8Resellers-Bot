@@ -95,7 +95,12 @@ module.exports = {
                     const strainName = stockedStrainNames[stockedStrainValues.indexOf(strainValue)]
                     const dbStock = product.strainStock.find(strain => strain.strainValue === strainValue)
 
-                    if (!dbStock) continue
+                    console.log(`${strainName}, ${strainStockAmount}`)
+
+                    if (!dbStock) {
+                        console.log(`No stock for ${strainValue}`)
+                        continue
+                    }
                     if (!dbStock.imageUrl) dbStock.imageUrl = strainImage
 
                     dbStock.stock = strainStockAmount
@@ -138,10 +143,11 @@ module.exports = {
 
                 // Handle unstocked strains
                 for (const strain of unstockedStrains) {
+                    console.log(`${strain.strainName}, 0`)
+
                     const dbStock = product.strainStock.find(dbStrain => dbStrain.strainValue === strain.strainValue)
 
                     if (dbStock.stock === 0) continue
-
                     dbStock.stock = 0
 
                     if (!product.stocked) continue

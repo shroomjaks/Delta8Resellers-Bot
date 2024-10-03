@@ -1116,6 +1116,18 @@
                 {
                     "strainValue": "island-peach",
                     "strainName": "Island Peach"
+                },
+                {
+                    "strainValue": "knockout-punch",
+                    "strainName": "Knockout Punch"
+                },
+                {
+                    "strainValue": "sour-waterberry",
+                    "strainName": "Sour Waterberry"
+                },
+                {
+                    "strainValue": "voodoo-sunrise",
+                    "strainName": "Voodoo Sunrise"
                 }
             ],
             "strainStock": [
