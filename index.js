@@ -26,7 +26,6 @@ for (const commandFile of commandsFolder) {
     if (!commandFile.endsWith('.js')) continue 
 
     const command = require(path.join(__dirname, 'commands', commandFile))
-
     client.commands.push(command)
 }
 
@@ -34,7 +33,6 @@ for (const eventFile of eventsFolder) {
     if (!eventFile.endsWith('.js')) continue 
 
     const event = require(path.join(__dirname, 'events', eventFile))
-
     client.events.push(event)
 
     if (event?.disabled) continue

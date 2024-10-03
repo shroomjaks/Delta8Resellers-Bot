@@ -29,8 +29,6 @@ module.exports = {
                     page.$$eval('#pa_flavor option', el => el.map(e => e.innerText).filter(n => n !== 'Choose an option')).catch(() => null)
                 ])
 
-                const unstockedStrains = product.allStrains.filter(strain => !stockedStrainValues.includes(strain.strainValue))
-
                 const oldStocked = product.stocked
 
                 if (!stock) {
@@ -136,6 +134,8 @@ module.exports = {
                         dbStock.sentLimitedStockWarning = true
                     }
                 }
+
+                const unstockedStrains = product.allStrains.filter(strain => !stockedStrainValues.includes(strain.strainValue))
 
                 // Handle unstocked strains
                 for (const strain of unstockedStrains) {
