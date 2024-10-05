@@ -5,7 +5,18 @@ const JSONdb = require('simple-json-db')
 const stock = new JSONdb('./database/stock.json')
 const xp = new JSONdb('./database/xp.json')
 
-const puppeteer = require('puppeteer-core')
+const puppeteer = require('puppeteer-extra')
+
+const { DEFAULT_INTERCEPT_RESOLUTION_PRIORITY } = require('puppeteer')
+
+const adblockPlugin = require('puppeteer-extra-plugin-adblocker')
+ 
+puppeteer.use(
+    adblockPlugin({
+        interceptResolutionPriority: DEFAULT_INTERCEPT_RESOLUTION_PRIORITY,
+        blockTrackers: true
+    })
+)
 
 module.exports = {
     event: Events.ClientReady,

@@ -21,17 +21,17 @@ module.exports = {
             for (const product of products) {
                 console.log(`Checking stock for ${product.name}`)
 
-                await page.goto(product.url, { waitUntil: 'domcontentloaded' })
+                await page.goto(product.url, { waitUntil: 'load' })
+
+                console.log('Page finished loading')
 
                 // Collect stock and strain info
                 const [stock, stockText, stockedStrainValues, stockedStrainNames] = await Promise.all([
-                    page.$('.stock out-of-stock').catch(() => null),
+                    page.$('.stock').catch(() => null),
                     page.$eval('.stock', el => el.innerText).catch(() => null),
                     page.$$eval('#pa_flavor option', el => el.map(e => e.value).filter(v => v !== '')).catch(() => null),
                     page.$$eval('#pa_flavor option', el => el.map(e => e.innerText).filter(n => n !== 'Choose an option')).catch(() => null)
                 ])
-
-                console.log(stockText)
 
                 const oldStocked = product.stocked
 
@@ -47,7 +47,7 @@ module.exports = {
                 }
 
                 // Product restock or out-of-stock status changes
-                if (product.stocked && !oldStocked) {
+                if (product.stocked === true && oldStocked === false) {
                     const embed = new EmbedBuilder()
                         .setTitle(product.name)
                         .setDescription('This entire product has been restocked! 🎉')
@@ -66,7 +66,7 @@ module.exports = {
                             console.error(error)
                         }
                     }))
-                } else if (!product.stocked && oldStocked) {
+                } else if (product.stocked === false && oldStocked === true) {
                     const embed = new EmbedBuilder()
                         .setTitle(product.name)
                         .setDescription('This entire product is now out of stock. 😢')
