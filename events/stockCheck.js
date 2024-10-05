@@ -21,30 +21,14 @@ module.exports = {
             for (const product of products) {
                 console.log(`Checking stock for ${product.name}`)
 
-                await page.goto(product.url, { waitUntil: 'load' })
+                await page.goto(product.url)
 
-                console.log('Page finished loading')
-
-                // Collect stock and strain info
-                const [stock, stockText, stockedStrainValues, stockedStrainNames] = await Promise.all([
-                    page.$('.stock').catch(() => null),
-                    page.$eval('.stock', el => el.innerText).catch(() => null),
-                    page.$$eval('#pa_flavor option', el => el.map(e => e.value).filter(v => v !== '')).catch(() => null),
-                    page.$$eval('#pa_flavor option', el => el.map(e => e.innerText).filter(n => n !== 'Choose an option')).catch(() => null)
-                ])
-
+                let isStocked = await page.locator('.stock').innerText().then(text => text.includes('This product is currently out of stock and unavailable.') ? false : true).catch(() => true)
                 const oldStocked = product.stocked
 
-                if (!stock) {
-                    // If no stock element is found, assume it's in stock
-                    product.stocked = true
-                } else if (stockText && !stockText.includes('This product is currently out of stock and unavailable.')) {
-                    // If stockText is found and it's not the "out of stock" message, mark it as stocked
-                    product.stocked = true
-                } else {
-                    // Otherwise, mark it as out of stock
-                    product.stocked = false
-                }
+                console.log(`Stocked: ${isStocked}`)
+
+                product.stocked = isStocked
 
                 // Product restock or out-of-stock status changes
                 if (product.stocked === true && oldStocked === false) {
@@ -84,6 +68,22 @@ module.exports = {
                     await updateChannel.send({ embeds: [embed], components: [actionRow] })
                 }
 
+                const optionSelect = await page.$('#pa_flavor')
+
+                const stockedStrainValues = await page.$$('.attached')
+                    .then(async (elements) => {
+                        return await Promise.all(elements.map(async (element) => {
+                            return await element.evaluate(el => el.value)
+                        }))
+                    })
+
+                const stockedStrainNames = await page.$$('.attached')
+                    .then(async (elements) => {
+                        return await Promise.all(elements.map(async (element) => {
+                            return await element.evaluate(el => el.innerText)
+                        }))
+                    })
+
                 if (!stockedStrainValues) {
                     console.log('No strains found')
                     continue
@@ -91,12 +91,11 @@ module.exports = {
 
                 // Handle each strain
                 for (const strainValue of stockedStrainValues) {
-                    await page.select('#pa_flavor', strainValue)
+                    await optionSelect.selectOption({ value: strainValue })
 
-                    const [strainStock, strainImage] = await Promise.all([
-                        page.$eval('.stock', el => el.innerText).catch(() => null),
-                        page.$eval('.iconic-woothumbs-images__image', el => el.src).catch(() => null)
-                    ])
+
+                    const strainStock = await page.$eval('.stock', el => el.innerText)
+                    const strainImage = await page.$eval('.iconic-woothumbs-images__image', el => el.src)
 
                     const strainStockAmount = parseInt(strainStock.match(/\d+/g))
                     const strainName = stockedStrainNames[stockedStrainValues.indexOf(strainValue)]

@@ -5,18 +5,7 @@ const JSONdb = require('simple-json-db')
 const stock = new JSONdb('./database/stock.json')
 const xp = new JSONdb('./database/xp.json')
 
-const puppeteer = require('puppeteer-extra')
-
-const { DEFAULT_INTERCEPT_RESOLUTION_PRIORITY } = require('puppeteer')
-
-const adblockPlugin = require('puppeteer-extra-plugin-adblocker')
- 
-puppeteer.use(
-    adblockPlugin({
-        interceptResolutionPriority: DEFAULT_INTERCEPT_RESOLUTION_PRIORITY,
-        blockTrackers: true
-    })
-)
+const { chromium } = require('playwright')
 
 module.exports = {
     event: Events.ClientReady,
@@ -36,10 +25,9 @@ module.exports = {
         const verifyMessage = await verifyChannel.messages.fetch('1277129869565759510')
         await verifyMessage.react('✅')
 
-        // Start 60 minute stock and 2 hour deal checks
         setInterval(() => client.emit('stockCheck', client), 60 * 60 * 1000)
         setInterval(() => client.emit('redditCheck'), 30 * 30 * 1000)
-        setInterval(() => client.emit('dealCheck', client), 90 * 60 * 1000)
+        setInterval(() => client.emit('dealCheck', client), 150 * 60 * 1000)
 
         // Set the global variables to be accessed from eval
         globalThis['client'] = client
@@ -49,10 +37,9 @@ module.exports = {
         client.stock = stock
         client.xp = xp
 
-        client.browser = await puppeteer.launch({
+        client.browser = await chromium.launch({ 
             executablePath: '/usr/bin/chromium',
-            headless: true,
-            args: ['--no-sandbox'],
+            headless: true 
         })
 
         console.log(`Logged in as ${client.user.username}`)
