@@ -1,15 +1,17 @@
+const { WebhookClient } = require('discord.js')
+
 const { getAverageColor } = require('fast-average-color-node')
 
 const JSONdb = require('simple-json-db')
 const rss = new JSONdb('./database/rss.json')
+
+const redditWebhook = new WebhookClient({ url: process.env.WEBHOOK_3 })
 
 module.exports = {
     event: 'redditCheck',
     once: false,
     disabled: false,
     execute: async function (client) {
-        const redditChannel = await client.channels.fetch('1290122497186074706')
-
         const feed = await fetch('https://www.reddit.com/r/delta8resellers/new/.json')
         const feedJson = await feed.json()
 
@@ -45,10 +47,9 @@ module.exports = {
                 .setColor(color?.hex || '#FF4500')
 
             if (post.data.selftext.length >= 1) embed.setDescription(post.data.selftext)
-            console.log(post.data?.thumbnail)
             if (post.data?.thumbnail && post.data?.thumbnail !== 'nsfw' && post.data?.thumbnail !== 'self' && post.data?.thumbnail !== 'default') embed.setThumbnail(post.data.thumbnail)
 
-            await redditChannel.send({ embeds: [embed] })
+            await redditWebhook.send({ embeds: [embed] })
 
             alreadyPosted.push(post.data.id)
 
