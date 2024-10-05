@@ -15,6 +15,11 @@ module.exports = {
 
         if (!feedJson || !feedJson.data) return console.error('Failed to fetch Reddit feed.')
 
+        // Delete any IDs that arent in the feed
+        for (const id of rss.JSON()) {
+            if (!feedJson.data.children.find(post => post.data.id === id)) rss.delete(id)
+        }
+
         for (const post of feedJson.data.children) {
             if (rss.has(post.data.id)) continue
 
