@@ -16,12 +16,18 @@ module.exports = {
         if (!feedJson || !feedJson.data) return console.error('Failed to fetch Reddit feed.')
 
         // Delete any IDs that arent in the feed
-        for (const id of rss.JSON()) {
-            if (!feedJson.data.children.find(post => post.data.id === id)) rss.delete(id)
+        let alreadyPosted = rss.get('alreadyPosted')
+
+        for (const id of alreadyPosted) {
+            if (!feedJson.data.children.find(post => post.data.id === id)) {
+                alreadyPosted.splice(alreadyPosted.indexOf(id), 1)
+            }
         }
 
         for (const post of feedJson.data.children) {
-            if (rss.has(post.data.id)) continue
+            if (alreadyPosted.includes(post.data.id)) continue
+
+            console.log(`Posting Reddit post ${post.data.id}`)
 
             const username = post.data.author
 
@@ -43,7 +49,9 @@ module.exports = {
 
             await redditChannel.send({ embeds: [embed] })
 
-            rss.set(post.data.id, true)
+            alreadyPosted.push(post.data.id)
+
+            rss.set('alreadyPosted', alreadyPosted)
         }
     }
 }

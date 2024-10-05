@@ -15,7 +15,7 @@ module.exports = {
 
         const page = await client.browser.newPage()
 
-        await page.goto('https://delta8resellers.com/')
+        await page.goto('https://delta8resellers.com')
 
         const allDeals = await page.evaluate(function () {
             let deals = []

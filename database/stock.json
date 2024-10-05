@@ -95,7 +95,8 @@
                     "strainName": "Alaskan Thunder FVKD",
                     "stock": 0,
                     "restockReminders": [
-                        "540302379027791902"
+                        "540302379027791902",
+                        "576879414894133260"
                     ],
                     "imageUrl": "https://cdn.discordapp.com/attachments/1290000849669722167/1290001113181065349/fvkd-rosin-thca-blueberry-kush.webp",
                     "sentLimitedStockWarning": false
@@ -790,7 +791,7 @@
                 {
                     "strainValue": "hindu-honeycrisp",
                     "strainName": "Hindu Honeycrisp",
-                    "stock": 39,
+                    "stock": 38,
                     "restockReminders": [],
                     "imageUrl": "https://delta8resellers.com/wp-content/uploads/2023/07/Canna-River-2G-D8-Hindu-Honeycrisp.jpg",
                     "sentLimitedStockWarning": false
@@ -822,7 +823,7 @@
                 {
                     "strainValue": "purple-kush",
                     "strainName": "Purple Kush",
-                    "stock": 29,
+                    "stock": 28,
                     "restockReminders": [],
                     "imageUrl": "https://delta8resellers.com/wp-content/uploads/2023/07/Canna-River-2G-D8-Purple-Kush.jpg",
                     "sentLimitedStockWarning": false
@@ -898,7 +899,7 @@
             "name": "ALSO KNOWN AS THCA FLOWER | 3.5G",
             "url": "https://delta8resellers.com/product/also-known-as-thca-flower-3-5g",
             "imageUrl": "https://delta8resellers.com/wp-content/uploads/2024/06/aka-3.5g-thca-flower-sour-diesel.jpg",
-            "stocked": true,
+            "stocked": false,
             "restockReminders": [
                 "540302379027791902",
                 "452589691498266656",
@@ -1546,7 +1547,7 @@
                 {
                     "strainValue": "cherry-ak",
                     "strainName": "Cherry AK",
-                    "stock": 60,
+                    "stock": 59,
                     "restockReminders": [],
                     "imageUrl": "https://delta8resellers.com/wp-content/uploads/2023/06/Canna-River-HHC-Cartridge-1000mg-Cherry-AK-600x600.webp",
                     "sentLimitedStockWarning": false
@@ -1562,7 +1563,7 @@
                 {
                     "strainValue": "green-crack",
                     "strainName": "Green Crack",
-                    "stock": 74,
+                    "stock": 73,
                     "restockReminders": [],
                     "imageUrl": "https://delta8resellers.com/wp-content/uploads/2023/06/Canna-River-HHC-Cartridge-1000mg-Green-Crack-600x600.webp",
                     "sentLimitedStockWarning": false
@@ -1602,7 +1603,7 @@
                 {
                     "strainValue": "purple-kush",
                     "strainName": "Purple Kush",
-                    "stock": 18,
+                    "stock": 17,
                     "restockReminders": [],
                     "imageUrl": "https://delta8resellers.com/wp-content/uploads/2023/06/Canna-River-HHC-Cartridge-1000mg-Purple-Kush-600x600.webp",
                     "sentLimitedStockWarning": false
