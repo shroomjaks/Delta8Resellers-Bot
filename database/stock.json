@@ -52,7 +52,7 @@
                 {
                     "strainValue": "blueberry-kush",
                     "strainName": "Blueberry Kush",
-                    "stock": 47,
+                    "stock": 41,
                     "restockReminders": [
                         "540302379027791902",
                         "709029069315899462"
@@ -104,7 +104,7 @@
                 {
                     "strainValue": "mandarin-cookies",
                     "strainName": "Mandarin Cookies",
-                    "stock": 7,
+                    "stock": 6,
                     "restockReminders": [],
                     "imageUrl": "https://cdn.discordapp.com/attachments/1290000849669722167/1290001359248293888/fvkd-rosin-thca-mandarin-cookies.webp",
                     "sentLimitedStockWarning": true
@@ -120,7 +120,7 @@
                 {
                     "strainValue": "la-kush-cake",
                     "strainName": "LA Kush Cake",
-                    "stock": 162,
+                    "stock": 160,
                     "restockReminders": [],
                     "imageUrl": "https://cdn.discordapp.com/attachments/1290000849669722167/1290001314767442011/fvkd-rosin-thca-la-kush-cake.webp",
                     "sentLimitedStockWarning": false
@@ -128,7 +128,7 @@
                 {
                     "strainValue": "wedding-cake",
                     "strainName": "Wedding Cake",
-                    "stock": 120,
+                    "stock": 114,
                     "restockReminders": [],
                     "imageUrl": "https://cdn.discordapp.com/attachments/1290000849669722167/1290001513334308935/fvkd-rosin-thca-wedding-cake.webp",
                     "sentLimitedStockWarning": false
@@ -217,7 +217,7 @@
                 {
                     "strainValue": "tropicana-cookies",
                     "strainName": "Tropicana Cookies",
-                    "stock": 170,
+                    "stock": 164,
                     "restockReminders": [],
                     "imageUrl": "https://cdn.discordapp.com/attachments/1290000849669722167/1290002023139250288/fvkd-sugar-thca-tropicana-cookies.webp",
                     "sentLimitedStockWarning": false
@@ -441,7 +441,7 @@
                 {
                     "strainValue": "watermelon-zkittles",
                     "strainName": "Watermelon Zkittlez",
-                    "stock": 28,
+                    "stock": 27,
                     "restockReminders": [],
                     "imageUrl": "https://delta8resellers.com/wp-content/uploads/2023/07/Canna-River-2G-HHC-Purple-Kush.jpg",
                     "sentLimitedStockWarning": false
@@ -449,7 +449,7 @@
                 {
                     "strainValue": "wedding-cake",
                     "strainName": "Wedding Cake",
-                    "stock": 30,
+                    "stock": 29,
                     "restockReminders": [],
                     "imageUrl": "https://delta8resellers.com/wp-content/uploads/2023/07/Canna-River-2G-HHC-Wedding-Cake.jpg",
                     "sentLimitedStockWarning": false
@@ -1052,7 +1052,7 @@
                 {
                     "strainValue": "dragonberry-lemonade",
                     "strainName": "Dragonberry Lemonade",
-                    "stock": 104,
+                    "stock": 103,
                     "restockReminders": [],
                     "imageUrl": "https://delta8resellers.com/wp-content/uploads/2024/03/urb-d9-350mg-gummies-dragonberry-lemonade.jpg",
                     "sentLimitedStockWarning": false
@@ -1168,7 +1168,7 @@
                 {
                     "strainValue": "apple-berri",
                     "strainName": "Apple Berri",
-                    "stock": 159,
+                    "stock": 157,
                     "restockReminders": [],
                     "imageUrl": "https://delta8resellers.com/wp-content/uploads/2022/12/urb-d8-d9-live-resin-gummies-apple-berri.jpg",
                     "sentLimitedStockWarning": false
@@ -1184,7 +1184,7 @@
                 {
                     "strainValue": "spiked-kiwi",
                     "strainName": "Spiked Kiwi",
-                    "stock": 167,
+                    "stock": 164,
                     "restockReminders": [],
                     "imageUrl": "https://delta8resellers.com/wp-content/uploads/2022/12/urb-d8-d9-live-resin-gummies-spiked-kiwi.jpg",
                     "sentLimitedStockWarning": false
@@ -1270,7 +1270,7 @@
                 {
                     "strainValue": "sour-blueberry",
                     "strainName": "Sour Blueberry",
-                    "stock": 165,
+                    "stock": 159,
                     "restockReminders": [],
                     "imageUrl": "https://delta8resellers.com/wp-content/uploads/2023/11/urb-thca-live-sugar-gummies-5000mg-sour-blueberry.jpg",
                     "sentLimitedStockWarning": true
@@ -1310,7 +1310,7 @@
                 {
                     "strainValue": "strawberry-shortcake",
                     "strainName": "Strawberry Shortcake",
-                    "stock": 168,
+                    "stock": 161,
                     "restockReminders": [],
                     "imageUrl": "https://delta8resellers.com/wp-content/uploads/2023/11/urb-thca-live-sugar-gummies-5000mg-strawberry-shortcake.jpg",
                     "sentLimitedStockWarning": false
@@ -1619,7 +1619,7 @@
                 {
                     "strainValue": "strawberry-fields",
                     "strainName": "Strawberry Fields",
-                    "stock": 65,
+                    "stock": 64,
                     "restockReminders": [],
                     "imageUrl": "https://delta8resellers.com/wp-content/uploads/2023/06/Canna-River-HHC-Cartridge-1000mg-Strawberry-Fields-600x600.webp",
                     "sentLimitedStockWarning": false
@@ -1659,7 +1659,7 @@
                 {
                     "strainValue": "wedding-cake",
                     "strainName": "Wedding Cake",
-                    "stock": 86,
+                    "stock": 85,
                     "restockReminders": [],
                     "imageUrl": "https://delta8resellers.com/wp-content/uploads/2023/06/Canna-River-HHC-Cartridge-1000mg-Wedding-Cake-600x600.webp",
                     "sentLimitedStockWarning": false

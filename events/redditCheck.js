@@ -46,7 +46,7 @@ module.exports = {
 
             if (post.data.selftext.length >= 1) embed.setDescription(post.data.selftext)
             console.log(post.data?.thumbnail)
-            if (post.data?.thumbnail && post.data?.thumbnail !== 'nsfw' && post.data?.thumbnail !== 'self') embed.setThumbnail(post.data.thumbnail)
+            if (post.data?.thumbnail && post.data?.thumbnail !== 'nsfw' && post.data?.thumbnail !== 'self' && post.data?.thumbnail !== 'default') embed.setThumbnail(post.data.thumbnail)
 
             await redditChannel.send({ embeds: [embed] })
 
