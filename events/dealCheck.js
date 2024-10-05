@@ -11,16 +11,11 @@ module.exports = {
     execute: async function (client) {
         let deals = client.stock.get('deals')
 
-        if (!deals) {
-            deals = []
-            client.stock.set('products', deals)
-        }
-
         console.log('Checking deals...')
 
         const page = await client.browser.newPage()
 
-        await page.goto('https://delta8resellers.com/', { waitUntil: 'domcontentloaded' })
+        await page.goto('https://delta8resellers.com/')
 
         const allDeals = await page.evaluate(function () {
             let deals = []
