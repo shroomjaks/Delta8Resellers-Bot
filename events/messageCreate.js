@@ -59,7 +59,6 @@ module.exports = {
                 const code = message.content.replace(regex, '')
 
                 globalThis['msg'] = message
-                globalThis['__dirname'] = __dirname
                 const result = await Object.getPrototypeOf(async function () { }).constructor(code)()
                 globalThis['msg'] = null
 
