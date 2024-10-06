@@ -13,7 +13,7 @@ module.exports = {
 
         console.log('Checking deals...')
 
-        const page = await client.browser.newPage()
+        var page = await client.browser.newPage()
 
         await page.goto('https://delta8resellers.com')
 

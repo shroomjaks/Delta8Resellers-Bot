@@ -39,7 +39,7 @@ module.exports = {
 
         client.browser = await chromium.launch({ 
             executablePath: '/usr/bin/chromium',
-            headless: true 
+            headless: true
         })
 
         console.log(`Logged in as ${client.user.username}`)
