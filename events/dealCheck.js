@@ -13,7 +13,20 @@ module.exports = {
 
         console.log('Checking deals...')
 
-        var page = await client.browser.newPage()
+        const context = await client.browser.newContext({
+            baseURL: 'https://delta8resellers.com'
+        })
+
+
+        await context.route('**/*', function (route) {
+            if (route.request().resourceType() === 'image') {
+                return route.abort()
+            }
+
+            route.continue()
+        })
+
+        const page = await context.newPage()
 
         await page.goto('https://delta8resellers.com')
 

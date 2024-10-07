@@ -17,7 +17,7 @@ module.exports = {
         const systemUptime = Math.floor((Date.now() / 1000) - os.uptime())
         const botUptime = Math.floor(client.readyTime / 1000)
 
-        const ping = Date.now() - interaction.createdTimestamp
+        const ping = interaction.createdTimestamp - Date.now()
 
         const embed1 = new EmbedBuilder()
             .setTitle('Pong! 🏓')
