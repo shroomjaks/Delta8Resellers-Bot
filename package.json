@@ -15,7 +15,7 @@
     "fast-average-color-node": "^3.1.0",
     "humanize-duration": "^3.32.1",
     "parse-duration": "^1.1.0",
-    "playwright": "^1.47.2",
+    "playwright": "^1.48.0",
     "simple-json-db": "^2.0.0",
     "uuid-by-string": "^4.0.0"
   },
