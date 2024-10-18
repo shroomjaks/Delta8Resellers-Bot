@@ -12,19 +12,16 @@ module.exports = {
      * @param {ChatInputCommandInteraction} interaction 
      */
     execute: async function (interaction) {
-        const processMemoryMB = Math.round(process.memoryUsage().heapUsed / 1024 / 1024)
-
         const systemUptime = Math.floor((Date.now() / 1000) - os.uptime())
         const botUptime = Math.floor(client.readyTime / 1000)
 
-        const ping = interaction.createdTimestamp - Date.now()
+        const ping = Math.abs(interaction.createdTimestamp - Date.now())
 
         const embed1 = new EmbedBuilder()
             .setTitle('Pong! 🏓')
             .setFields(
                 { name: '🤖 Bot Latency', value: `${ping}ms`, inline: true },
                 { name: '🌐 API Latency', value: `${client.ws.ping}ms`, inline: true },
-                { name: '🧠 Bot Memory Usage', value: `${processMemoryMB}MB`, inline: true },
                 { name: '⌚ System Start Up', value: `<t:${systemUptime}:R>`, inline: true },
                 { name: '⌚ Bot Start Up', value: `<t:${botUptime}:R>`, inline: true }
             )

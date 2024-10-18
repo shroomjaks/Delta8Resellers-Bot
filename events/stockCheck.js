@@ -1,5 +1,8 @@
 const { BaseClient, EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require('discord.js')
 
+const { PlaywrightBlocker } = require('@ghostery/adblocker-playwright')
+const fetch = require('cross-fetch')
+
 module.exports = {
     event: 'stockCheck',
     once: false,
@@ -17,6 +20,8 @@ module.exports = {
 
         try {
             var page = await client.browser.newPage() // Reuse the same page for all products
+            const adblock = await PlaywrightBlocker.fromPrebuiltAdsAndTracking(fetch)
+            await adblock.enableBlockingInPage(page)
 
             for (const product of products) {
                 console.log(`Checking stock for ${product.name}`)

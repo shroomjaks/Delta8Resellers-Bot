@@ -1,5 +1,8 @@
 const { Client } = require('discord.js')
 
+const { PlaywrightBlocker } = require('@ghostery/adblocker-playwright')
+const fetch = require('cross-fetch')
+
 module.exports = {
     event: 'dealCheck',
     once: false,
@@ -13,20 +16,9 @@ module.exports = {
 
         console.log('Checking deals...')
 
-        const context = await client.browser.newContext({
-            baseURL: 'https://delta8resellers.com'
-        })
-
-
-        await context.route('**/*', function (route) {
-            if (route.request().resourceType() === 'image') {
-                return route.abort()
-            }
-
-            route.continue()
-        })
-
-        const page = await context.newPage()
+        const page = await client.browser.newPage()
+        const adblock = await PlaywrightBlocker.fromPrebuiltAdsAndTracking(fetch)
+        await adblock.enableBlockingInPage(page)
 
         await page.goto('https://delta8resellers.com')
 
