@@ -2,6 +2,9 @@ const { BaseClient, EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle }
 
 const { PlaywrightBlocker } = require('@ghostery/adblocker-playwright')
 const fetch = require('cross-fetch')
+
+const ansis = require('ansis')
+
 module.exports = {
     event: 'stockCheck',
     once: false,
@@ -23,13 +26,13 @@ module.exports = {
             await adblock.enableBlockingInPage(page)
 
             for (const product of products) {
-                console.log(`\nNavigating to ${product.name}`)
+                console.log(`\nNavigating to ${ansis.bold(product.name)}`)
 
                 await page.goto(product.url)
 
-                console.log(`Checking stock...`)
+                process.stdout.write('Stocked: ')
 
-                const isStocked = await page.evaluate(() => {
+                const isStocked = await page.evaluate(function () {
                     const stockElement = document.querySelector('.stock');
                     if (stockElement) {
                         return !stockElement.textContent.includes('This product is currently out of stock and unavailable.')
@@ -40,7 +43,11 @@ module.exports = {
 
                 const oldStocked = product.stocked
 
-                console.log(`Stocked: ${isStocked}`)
+                if (isStocked) {
+                    process.stdout.write(ansis.greenBright('true'))
+                } else {
+                    process.stdout.write(ansis.redBright('false'))
+                }
 
                 product.stocked = isStocked
 
@@ -99,7 +106,7 @@ module.exports = {
                     })
 
                 if (!stockedStrainValues) {
-                    console.log('No strains found')
+                    console.log(ansis.red('No strains found'))
                     continue
                 }
 
@@ -115,10 +122,10 @@ module.exports = {
                     const strainName = stockedStrainNames[stockedStrainValues.indexOf(strainValue)]
                     const dbStock = product.strainStock.find(strain => strain.strainValue === strainValue)
 
-                    console.log(`${strainName}, ${strainStockAmount}`)
+                    console.log(`${ansis.bold(strainName)}, ${ansis.greenBright(strainStockAmount)}`)
 
                     if (!dbStock) {
-                        console.log(`No stock for ${strainValue}`)
+                        console.log(ansis.red(`No stock for ${strainValue}`))
                         continue
                     }
                     if (!dbStock.imageUrl) dbStock.imageUrl = strainImage
@@ -126,6 +133,8 @@ module.exports = {
                     dbStock.stock = strainStockAmount
 
                     if (dbStock.stock === 0 && strainStockAmount > 1) {
+                        console.log(`${ansis.bold(strainName)} is now in stock.`)
+
                         const embed = new EmbedBuilder()
                             .setTitle(product.name)
                             .setDescription(`*${strainName}* is now in stock. 🎉`)
@@ -163,7 +172,7 @@ module.exports = {
 
                 // Handle unstocked strains
                 for (const strain of unstockedStrains) {
-                    console.log(`${strain.strainName}, 0`)
+                    console.log(`${ansis.bold(strain.strainName)}, ${ansis.redBright('0')}`)
 
                     const dbStock = product.strainStock.find(dbStrain => dbStrain.strainValue === strain.strainValue)
 

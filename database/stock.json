@@ -66,7 +66,7 @@
                 {
                     "strainValue": "fruit-punch",
                     "strainName": "Fruit Punch",
-                    "stock": 96,
+                    "stock": 79,
                     "restockReminders": [
                         "540302379027791902"
                     ],
@@ -111,7 +111,7 @@
                 {
                     "strainValue": "mandarin-cookies",
                     "strainName": "Mandarin Cookies",
-                    "stock": 146,
+                    "stock": 129,
                     "restockReminders": [],
                     "imageUrl": "https://cdn.discordapp.com/attachments/1290000849669722167/1290001359248293888/fvkd-rosin-thca-mandarin-cookies.webp",
                     "sentLimitedStockWarning": true
@@ -139,7 +139,7 @@
                 {
                     "strainValue": "wedding-cake",
                     "strainName": "Wedding Cake",
-                    "stock": 36,
+                    "stock": 19,
                     "restockReminders": [],
                     "imageUrl": "https://cdn.discordapp.com/attachments/1290000849669722167/1290001513334308935/fvkd-rosin-thca-wedding-cake.webp",
                     "sentLimitedStockWarning": false
@@ -187,7 +187,7 @@
                 {
                     "strainValue": "alien-kush",
                     "strainName": "Alien Kush",
-                    "stock": 132,
+                    "stock": 122,
                     "restockReminders": [
                         "664231679782682671"
                     ],
@@ -205,7 +205,7 @@
                 {
                     "strainValue": "mimosa",
                     "strainName": "Mimosa",
-                    "stock": 104,
+                    "stock": 99,
                     "restockReminders": [],
                     "imageUrl": "https://cdn.discordapp.com/attachments/1290000849669722167/1290001932521308262/fvkd-sugar-thca-mimosa.webp",
                     "sentLimitedStockWarning": true
@@ -224,7 +224,7 @@
                 {
                     "strainValue": "granddaddy-purp",
                     "strainName": "Granddaddy Purp",
-                    "stock": 116,
+                    "stock": 111,
                     "restockReminders": [],
                     "imageUrl": "https://cdn.discordapp.com/attachments/1290000849669722167/1290001889920024768/fvkd-sugar-thca-granddaddy-purp.webp",
                     "sentLimitedStockWarning": true
@@ -1742,14 +1742,6 @@
                     "strainValue": "3-count",
                     "strainName": "3 Count",
                     "stock": 502,
-                    "restockReminders": [],
-                    "imageUrl": "https://delta8resellers.com/wp-content/uploads/2024/05/psilly-dots-mega-dose-6-servings.jpg",
-                    "sentLimitedStockWarning": false
-                },
-                {
-                    "strainValue": "5-count",
-                    "strainName": "5 Count",
-                    "stock": 0,
                     "restockReminders": [],
                     "imageUrl": "https://delta8resellers.com/wp-content/uploads/2024/05/psilly-dots-mega-dose-6-servings.jpg",
                     "sentLimitedStockWarning": false
