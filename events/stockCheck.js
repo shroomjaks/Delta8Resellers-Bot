@@ -5,6 +5,8 @@ const fetch = require('cross-fetch')
 
 const ansis = require('ansis')
 
+const humanize = require('humanize-duration')
+
 module.exports = {
     event: 'stockCheck',
     once: false,
@@ -15,6 +17,8 @@ module.exports = {
      */
     execute: async function () {
         try {
+            var startTime = Date.now()
+
             var products = client.stock.get('products')
 
             console.log('Checking stock...')
@@ -197,12 +201,15 @@ module.exports = {
                     await updateChannel.send({ embeds: [embed], components: [actionRow] })
                 }
             }
+
+            var endTime = Date.now()
         } catch (error) {
             console.error(error)
         } finally {
             await page.close()
+
             client.stock.set('products', products)
-            console.log('\nStock check complete.\n')
+            console.log(`\nStock check complete. Time taken: ${humanize(endTime - startTime)}`)
         }
     }
 }
