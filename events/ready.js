@@ -5,7 +5,7 @@ const JSONdb = require('simple-json-db')
 const stock = new JSONdb('./database/stock.json')
 const xp = new JSONdb('./database/xp.json')
 
-const { chromium } = require('playwright')
+const { chromium, firefox } = require('playwright')
 
 module.exports = {
     event: Events.ClientReady,
@@ -37,8 +37,8 @@ module.exports = {
         client.stock = stock
         client.xp = xp
 
-        client.browser = await chromium.launch({ 
-            executablePath: '/usr/bin/chromium',
+        client.browser = await firefox.launch({ 
+            // executablePath: '/usr/bin/chromium',
             headless: true
         })
 

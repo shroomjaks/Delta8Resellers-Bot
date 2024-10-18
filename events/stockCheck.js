@@ -2,7 +2,6 @@ const { BaseClient, EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle }
 
 const { PlaywrightBlocker } = require('@ghostery/adblocker-playwright')
 const fetch = require('cross-fetch')
-
 module.exports = {
     event: 'stockCheck',
     once: false,
@@ -11,24 +10,34 @@ module.exports = {
      * 
      * @param {BaseClient} client 
      */
-    execute: async function (client) {
-        let products = client.stock.get('products')
-
-        console.log('Checking stock...')
-
-        const updateChannel = await client.channels.fetch('1276548924936814755')
-
+    execute: async function () {
         try {
+            var products = client.stock.get('products')
+
+            console.log('Checking stock...')
+
+            const updateChannel = await client.channels.fetch('1276548924936814755')
+
             var page = await client.browser.newPage() // Reuse the same page for all products
             const adblock = await PlaywrightBlocker.fromPrebuiltAdsAndTracking(fetch)
             await adblock.enableBlockingInPage(page)
 
             for (const product of products) {
-                console.log(`Checking stock for ${product.name}`)
+                console.log(`\nNavigating to ${product.name}`)
 
                 await page.goto(product.url)
 
-                let isStocked = await page.locator('.stock').innerText().then(text => text.includes('This product is currently out of stock and unavailable.') ? false : true).catch(() => true)
+                console.log(`Checking stock...`)
+
+                const isStocked = await page.evaluate(() => {
+                    const stockElement = document.querySelector('.stock');
+                    if (stockElement) {
+                        return !stockElement.textContent.includes('This product is currently out of stock and unavailable.')
+                    }
+                    return true // If stock element is not found, default to stocked (true)
+                })
+
+
                 const oldStocked = product.stocked
 
                 console.log(`Stocked: ${isStocked}`)

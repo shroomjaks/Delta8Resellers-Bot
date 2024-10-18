@@ -40,7 +40,7 @@ module.exports = {
                 profile.level++
                 profile.xp = 0
 
-                const levelUp = await message.channel.send({ content: `Congratulations, ${message.author.username}! You have leveled up to level **${profile.level}**.` })
+                const levelUp = await message.channel.send({ content: `Congratulations, **${message.author.displayName}**! You have leveled up to level **${profile.level}**.` })
 
                 setTimeout(async () => {
                     await levelUp.delete()
