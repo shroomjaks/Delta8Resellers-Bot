@@ -44,9 +44,9 @@ module.exports = {
                 const oldStocked = product.stocked
 
                 if (isStocked) {
-                    process.stdout.write(ansis.greenBright('true'))
+                    process.stdout.write(ansis.greenBright('true\n'))
                 } else {
-                    process.stdout.write(ansis.redBright('false'))
+                    process.stdout.write(ansis.redBright('false\n'))
                 }
 
                 product.stocked = isStocked
@@ -89,11 +89,11 @@ module.exports = {
                     await updateChannel.send({ embeds: [embed], components: [actionRow] })
                 }
 
-                const optionSelect = await page.$('#pa_flavor')
+                const optionSelect = await page.$('#pa_flavor') || await page.$('#pa_size')
 
                 const stockedStrainValues = await page.$$('.attached')
                     .then(async (elements) => {
-                        return await Promise.all(elements.map(async (element) => {
+                        return await Promise.all(elements.map(async function (element) {
                             return await element.evaluate(el => el.value)
                         }))
                     })
@@ -114,7 +114,6 @@ module.exports = {
                 for (const strainValue of stockedStrainValues) {
                     await optionSelect.selectOption({ value: strainValue })
 
-
                     const strainStock = await page.$eval('.stock', el => el.innerText)
                     const strainImage = await page.$eval('.iconic-woothumbs-images__image', el => el.src)
 
@@ -122,7 +121,7 @@ module.exports = {
                     const strainName = stockedStrainNames[stockedStrainValues.indexOf(strainValue)]
                     const dbStock = product.strainStock.find(strain => strain.strainValue === strainValue)
 
-                    console.log(`${ansis.bold(strainName)}, ${ansis.greenBright(strainStockAmount)}`)
+                    console.log(`${ansis.bold(strainName)}: ${ansis.greenBright(strainStockAmount)}`)
 
                     if (!dbStock) {
                         console.log(ansis.red(`No stock for ${strainValue}`))
@@ -172,7 +171,7 @@ module.exports = {
 
                 // Handle unstocked strains
                 for (const strain of unstockedStrains) {
-                    console.log(`${ansis.bold(strain.strainName)}, ${ansis.redBright('0')}`)
+                    console.log(`${ansis.bold(strain.strainName)}: ${ansis.redBright('0')}`)
 
                     const dbStock = product.strainStock.find(dbStrain => dbStrain.strainValue === strain.strainValue)
 
@@ -203,7 +202,7 @@ module.exports = {
         } finally {
             await page.close()
             client.stock.set('products', products)
-            console.log('Stock check complete.\n')
+            console.log('\nStock check complete.\n')
         }
     }
 }
